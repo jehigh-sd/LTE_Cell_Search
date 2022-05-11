@@ -138,12 +138,21 @@ void avg_within_frame(DTYPE IN_R,DTYPE IN_I,DTYPE& freq, int& valid)
   freq = 119.3662*curr_ang;
 }
 
-void multiplyWithConstant(int input[31], int output[31], int constant)
+void amplitudescale(int input[31], int output[31], int constant)
 {
-	int a = sizeof(input);
+	int a = sizeof(input[31])/sizeof(int);
 	for (int i=0; i<a; i++)
 	{
 		output[i] = input[i] * constant;
+	}
+}
+
+void amplitudeshift(int input[31], int output[31])
+{
+	int a = sizeof(input[31])/sizeof(int);
+	for (int i=0; i<a; i++)
+	{
+		output[i] = 1-input[i];
 	}
 }
 
@@ -179,7 +188,7 @@ void multiplyMatrices(int first[31][1],
 void swapArrayElements(int input[31], int output[31], int swapNumber)
 {
 	int temparray[swapNumber];
-	int array_size = sizeof(input);
+	int array_size = sizeof(input[31])/sizeof(int);
 
 	//Storing frist number elements defined by "swapNumber" of the input array
 	for(int i = 0; i < swapNumber; i++)
@@ -207,12 +216,14 @@ void swapArrayElements(int input[31], int output[31], int swapNumber)
 }
 
 
-void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num)
+void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[64])
 {
 
 	DTYPE qp, q, mp, m0, m1;
-	int s_td[31], c_td[31], z_td[31], s_td_out[31], c_td_out[31], z_td_out[31], s0_m0[31], s1_m1[31], c0[31], c1[31], z1_m0[31], z1_m1[31];
-	DTYPE s[64];
+	int s_td_out[31], c_td_out[31], z_td_out[31], s0_m0[31], s1_m1[31], c0[31], c1[31], z1_m0[31], z1_m1[31];
+	int s_td[31] = {0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1};
+	int c_td[31] = {0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1};
+	int z_td[31] = {0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1};
 
 	if ((slot_num!=0)&&(slot_num==10))
 	{
@@ -226,17 +237,14 @@ void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num)
 	m1 = fmod(m0+floor(mp/31)+1,31);
 
 
-	s_td = (0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1);
-	multiplyWithConstant(s_td, s_td_out, 2);
-	s_td = 1-s_td_out;
+	amplitudescale(s_td, s_td_out, 2);
+	amplitudeshift(s_td_out, s_td);
 
-	c_td = (0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1);
-	multiplyWithConstant(c_td, c_td_out, 2);
-	c_td = 1-c_td_out;
+	amplitudescale(c_td, c_td_out, 2);
+	amplitudeshift(c_td_out, c_td);
 
-	z_td = (0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1);
-	multiplyWithConstant(z_td, z_td_out, 2);
-	z_td = 1-z_td_out;
+	amplitudescale(z_td, z_td_out, 2);
+	amplitudeshift(z_td_out, z_td);
 
 
 	//s0_m0=s_td[mod(m0:30+m0,31)+1];
@@ -371,58 +379,59 @@ void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num)
 
 //Generate PSS signal Zadoff-Chu Sequences for NID=0
 
-void generate_PSS_Zadoff_Chu()
-{
-	uint_6 u_shift[3] = (25, 29, 34);
-	uint_6 d_u_0 [61];
-	uint_6 d_u_1 [61];
-	uint_6 d_u_2 [61];
-
-	uint_6 u_0, u_1, u_2;
-	DTYPE d_0, d_1, d_2;
-
-	for(int n = 0; n > 61; n++)
-	{
-		    u_0 = u_shift[1];
-		    u_1 = u_shift[2];
-		    u_2 = u_shift[3];
-
-		    if (n <= 30)
-		    {
-		    	//-j = sqrt(-1)
-		        d_0 = exp(-sqrt(-1)*pi*u_0*n*(n+1)/63);
-		        d_1 = exp(-sqrt(-1)*pi*u_1*n*(n+1)/63);
-		        d_2 = exp(-sqrt(-1)*pi*u_2*n*(n+1)/63);
-		    }
-
-		    else
-		    {
-		        d_0 = exp(-sqrt(-1)*pi*u_0*(n+1)*(n+2)/63);
-		        d_1 = exp(-sqrt(-1)*pi*u_1*(n+1)*(n+2)/63);
-		        d_2 = exp(-sqrt(-1)*pi*u_2*(n+1)*(n+2)/63);
-		    }
-
-		    d_u_0[n] = d_0;
-		    d_u_1[n] = d_1;
-		    d_u_2[n] = d_2;
-	}
-
-}
+//void generate_PSS_Zadoff_Chu()
+//{
+//	uint_6 u_shift[3] = {25, 29, 34};
+//	uint_6 d_u_0 [61];
+//	uint_6 d_u_1 [61];
+//	uint_6 d_u_2 [61];
+//
+//	uint_6 u_0, u_1, u_2;
+//	DTYPE d_0, d_1, d_2;
+//
+//	for(int n = 0; n > 61; n++)
+//	{
+//		    u_0 = u_shift[1];
+//		    u_1 = u_shift[2];
+//		    u_2 = u_shift[3];
+//
+//		    if (n <= 30)
+//		    {
+//		    	//-j = sqrt(-1)
+//		        d_0 = exp(-sqrt(-1)*pi*u_0*n*(n+1)/63);
+//		        d_1 = exp(-sqrt(-1)*pi*u_1*n*(n+1)/63);
+//		        d_2 = exp(-sqrt(-1)*pi*u_2*n*(n+1)/63);
+//		    }
+//
+//		    else
+//		    {
+//		        d_0 = exp(-sqrt(-1)*pi*u_0*(n+1)*(n+2)/63);
+//		        d_1 = exp(-sqrt(-1)*pi*u_1*(n+1)*(n+2)/63);
+//		        d_2 = exp(-sqrt(-1)*pi*u_2*(n+1)*(n+2)/63);
+//		    }
+//
+//		    d_u_0[n] = d_0;
+//		    d_u_1[n] = d_1;
+//		    d_u_2[n] = d_2;
+//	}
+//
+//}
 
 //Correlation with PSS Sequence-0/1/2
 
-void pss_correlation(DTYPE downsampled[], DTYPE pss_rslts_0[], DTYPE pss_rslts_1[], DTYPE pss_rslts_2[], int t)
-{
-	for(int i = 0; i < 1088*t; i++)
-	{
-	    A = downsampled(i:i+127);
-	    temp0 = A.'*td_pss_0';
-	    temp1 = A.'*td_pss_1';
-	    temp2 = A.'*td_pss_2';
-	    pss_rslts_0(i) = abs(temp0);
-	    pss_rslts_1(i) = abs(temp1);
-	    pss_rslts_2(i) = abs(temp2);
-	}
+
+//void pss_correlation(DTYPE downsampled[], DTYPE pss_rslts_0[], DTYPE pss_rslts_1[], DTYPE pss_rslts_2[], int t)
+//{
+//	for(int i = 0; i < 1088*t; i++)
+//	{
+//	    A = downsampled(i:i+127);
+//	    temp0 = A.'*td_pss_0';
+//	    temp1 = A.'*td_pss_1';
+//	    temp2 = A.'*td_pss_2';
+//	    pss_rslts_0(i) = abs(temp0);
+//	    pss_rslts_1(i) = abs(temp1);
+//	    pss_rslts_2(i) = abs(temp2);
+//	}
 
 
 //void avg_within_cp(DTYPE IN_R,DTYPE IN_I,DTYPE& OUT_R,DTYPE& OUT_I)
@@ -451,14 +460,61 @@ void pss_correlation(DTYPE downsampled[], DTYPE pss_rslts_0[], DTYPE pss_rslts_1
 //	  OUT_R = 0.125*corr_sum_r;
 //	  OUT_I = 0.125*corr_sum_i;
 
-}
+//}
 
-void sss_correlation(int n_id_2_est, DTYPE results_sss_1_PSS_1[], DTYPE results_sss_1_PSS_2[], DTYPE results_sss_2_PSS_1[], DTYPE results_sss_2_PSS_2[])
+void sss_correlation(C_DATA results_sss_1_PSS_1[168], C_DATA results_sss_1_PSS_2[168], C_DATA results_sss_2_PSS_1[168], C_DATA results_sss_2_PSS_2[168])
 {
+	DTYPE temp_sss_1[64],temp_sss_2[64];
+	DTYPE sec_sync_sig_1_try[128] = {0};
+	DTYPE sec_sync_sig_2_try[128] = {0};
+	DTYPE acc_temp_11_i,acc_temp_11_r,acc_temp_21_i,acc_temp_21_r,acc_temp_12_i,acc_temp_12_r,acc_temp_22_i,acc_temp_22_r;
+
 	for(int i = 0; i < 167; i++)
 	{
+		//parameter n_id_2_est=2;
+		sss(i,2,0,temp_sss_1);
+		sss(i,2,10,temp_sss_2);
 
-		//Need to convert to VITIS C
+		int m = 33;
+		for (int j = 0; j < 31; j++)
+		{
+			sec_sync_sig_1_try[m] = temp_sss_1[j];
+			sec_sync_sig_2_try[m] = temp_sss_2[j];
+			m += 1;
+		}
+		m += 1;
+		for (int j = 31; j < 62; j++)
+		{
+			sec_sync_sig_1_try[m] = temp_sss_1[j];
+			sec_sync_sig_2_try[m] = temp_sss_2[j];
+			m += 1;
+		}
+
+		for (int j = 0; j < 128; j++)
+		{
+			acc_temp_11_i += sec_sync_sig_1_try[j]*-1*sss_recv_1_imag[j];
+			acc_temp_11_r += sec_sync_sig_1_try[j]*sss_recv_1_real[j];
+
+			acc_temp_21_i += sec_sync_sig_2_try[j]*-1*sss_recv_1_imag[j];
+			acc_temp_21_r += sec_sync_sig_2_try[j]*sss_recv_1_real[j];
+
+			acc_temp_12_i += sec_sync_sig_1_try[j]*-1*sss_recv_2_imag[j];
+			acc_temp_12_r += sec_sync_sig_1_try[j]*sss_recv_2_real[j];
+
+			acc_temp_22_i += sec_sync_sig_2_try[j]*-1*sss_recv_2_imag[j];
+			acc_temp_22_r += sec_sync_sig_2_try[j]*sss_recv_2_real[j];
+		}
+		results_sss_1_PSS_1[i].i = acc_temp_11_i;
+		results_sss_1_PSS_1[i].r = acc_temp_11_r;
+
+		results_sss_2_PSS_1[i].i = acc_temp_21_i;
+		results_sss_2_PSS_1[i].r = acc_temp_21_r;
+
+		results_sss_1_PSS_2[i].i = acc_temp_12_i;
+		results_sss_1_PSS_2[i].r = acc_temp_12_r;
+
+		results_sss_2_PSS_2[i].i = acc_temp_22_i;
+		results_sss_2_PSS_2[i].r = acc_temp_22_r;
 
 //		  sss_1_try=sss(t,n_id_2_est,0);
 //		  sss_2_try=sss(t,n_id_2_est,10);
@@ -501,10 +557,10 @@ void write_output(DTYPE IN,hls::stream<data_pkt> &OUT, int run, int valid)
   }
 }
 
-void cp_corr_dataflow(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<data_pkt> &OUT)
-{
-
-}
+//void cp_corr_dataflow(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<data_pkt> &OUT)
+//{
+//
+//}
 
 void cp_corr(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<data_pkt> &OUT)
 {
