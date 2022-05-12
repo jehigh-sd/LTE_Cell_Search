@@ -216,7 +216,7 @@ void swapArrayElements(int input[31], int output[31], int swapNumber)
 }
 
 
-void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[64])
+void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE &s[64])
 {
 
 	DTYPE qp, q, mp, m0, m1;
@@ -489,6 +489,15 @@ void sss_correlation(C_DATA results_sss_1_PSS_1[168], C_DATA results_sss_1_PSS_2
 			sec_sync_sig_2_try[m] = temp_sss_2[j];
 			m += 1;
 		}
+
+		acc_temp_11_i= 0;
+		acc_temp_11_r= 0;
+		acc_temp_21_i= 0;
+		acc_temp_21_r= 0;
+		acc_temp_12_i= 0;
+		acc_temp_12_r= 0;
+		acc_temp_22_i= 0;
+		acc_temp_22_r= 0;
 
 		for (int j = 0; j < 128; j++)
 		{
