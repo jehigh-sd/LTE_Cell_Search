@@ -216,7 +216,7 @@ void swapArrayElements(int input[31], int output[31], int swapNumber)
 }
 
 
-void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE &s[64])
+void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[64])
 {
 
 	DTYPE qp, q, mp, m0, m1;
@@ -462,18 +462,34 @@ void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE &s[64])
 
 //}
 
-void sss_correlation(C_DATA results_sss_1_PSS_1[168], C_DATA results_sss_1_PSS_2[168], C_DATA results_sss_2_PSS_1[168], C_DATA results_sss_2_PSS_2[168])
+void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const DTYPE RX2_REAL[128], const DTYPE RX2_IMAG[128], hls::stream<cdata_pkt> results_sss_1_PSS_1[168], hls::stream<cdata_pkt> results_sss_1_PSS_2[168], hls::stream<cdata_pkt> results_sss_2_PSS_1[168], hls::stream<cdata_pkt> results_sss_2_PSS_2[168])
 {
 	DTYPE temp_sss_1[64],temp_sss_2[64];
 	DTYPE sec_sync_sig_1_try[128] = {0};
 	DTYPE sec_sync_sig_2_try[128] = {0};
+	cdata_pkt out_11[168], out_12[168], out_21[168], out_22[168];
 	DTYPE acc_temp_11_i,acc_temp_11_r,acc_temp_21_i,acc_temp_21_r,acc_temp_12_i,acc_temp_12_r,acc_temp_22_i,acc_temp_22_r;
+
+	//Input data
+	//sss_recv_1 = fftshift(fft(downsampled));
+	//sss_recv_2 = fftshift(fft(downsampled));
+	//sss_recv_1_imag
+	//sss_recv_1_real
+	//sss_recv_2_imag
+	//sss_recv_2_real
+
 
 	for(int i = 0; i < 167; i++)
 	{
 		//parameter n_id_2_est=2;
 		sss(i,2,0,temp_sss_1);
 		sss(i,2,10,temp_sss_2);
+
+		for (int n = 0; n < 128; n++)
+		{
+			sec_sync_sig_1_try[n] = 0;
+			sec_sync_sig_2_try[n] = 0;
+		}
 
 		int m = 33;
 		for (int j = 0; j < 31; j++)
@@ -501,29 +517,49 @@ void sss_correlation(C_DATA results_sss_1_PSS_1[168], C_DATA results_sss_1_PSS_2
 
 		for (int j = 0; j < 128; j++)
 		{
-			acc_temp_11_i += sec_sync_sig_1_try[j]*-1*sss_recv_1_imag[j];
-			acc_temp_11_r += sec_sync_sig_1_try[j]*sss_recv_1_real[j];
+			acc_temp_11_i += sec_sync_sig_1_try[j]*-1*RX1_IMAG[j];
+			acc_temp_11_r += sec_sync_sig_1_try[j]*RX1_REAL[j];
 
-			acc_temp_21_i += sec_sync_sig_2_try[j]*-1*sss_recv_1_imag[j];
-			acc_temp_21_r += sec_sync_sig_2_try[j]*sss_recv_1_real[j];
+			acc_temp_21_i += sec_sync_sig_2_try[j]*-1*RX1_IMAG[j];
+			acc_temp_21_r += sec_sync_sig_2_try[j]*RX1_REAL[j];
 
-			acc_temp_12_i += sec_sync_sig_1_try[j]*-1*sss_recv_2_imag[j];
-			acc_temp_12_r += sec_sync_sig_1_try[j]*sss_recv_2_real[j];
+			acc_temp_12_i += sec_sync_sig_1_try[j]*-1*RX2_IMAG[j];
+			acc_temp_12_r += sec_sync_sig_1_try[j]*RX2_REAL[j];
 
-			acc_temp_22_i += sec_sync_sig_2_try[j]*-1*sss_recv_2_imag[j];
-			acc_temp_22_r += sec_sync_sig_2_try[j]*sss_recv_2_real[j];
+			acc_temp_22_i += sec_sync_sig_2_try[j]*-1*RX2_IMAG[j];
+			acc_temp_22_r += sec_sync_sig_2_try[j]*RX2_REAL[j];
 		}
-		results_sss_1_PSS_1[i].i = acc_temp_11_i;
-		results_sss_1_PSS_1[i].r = acc_temp_11_r;
 
-		results_sss_2_PSS_1[i].i = acc_temp_21_i;
-		results_sss_2_PSS_1[i].r = acc_temp_21_r;
 
-		results_sss_1_PSS_2[i].i = acc_temp_12_i;
-		results_sss_1_PSS_2[i].r = acc_temp_12_r;
+//		results_sss_1_PSS_1[i].i = acc_temp_11_i;
+//		results_sss_1_PSS_1[i].r = acc_temp_11_r;
+//
+//		results_sss_2_PSS_1[i].i = acc_temp_21_i;
+//		results_sss_2_PSS_1[i].r = acc_temp_21_r;
+//
+//		results_sss_1_PSS_2[i].i = acc_temp_12_i;
+//		results_sss_1_PSS_2[i].r = acc_temp_12_r;
+//
+//		results_sss_2_PSS_2[i].i = acc_temp_22_i;
+//		results_sss_2_PSS_2[i].r = acc_temp_22_r;
 
-		results_sss_2_PSS_2[i].i = acc_temp_22_i;
-		results_sss_2_PSS_2[i].r = acc_temp_22_r;
+
+		out_11[i].data.i = acc_temp_11_i;
+		out_11[i].data.r = acc_temp_11_r;
+
+		out_21[i].data.i = acc_temp_21_i;
+		out_21[i].data.r = acc_temp_21_r;
+
+		out_12[i].data.i = acc_temp_12_i;
+		out_12[i].data.r = acc_temp_12_r;
+
+		out_22[i].data.i = acc_temp_22_i;
+		out_22[i].data.r = acc_temp_22_r;
+
+		results_sss_1_PSS_1->write(out_11[i]);
+		results_sss_1_PSS_2->write(out_12[i]);
+		results_sss_2_PSS_1->write(out_21[i]);
+		results_sss_2_PSS_2->write(out_22[i]);
 
 //		  sss_1_try=sss(t,n_id_2_est,0);
 //		  sss_2_try=sss(t,n_id_2_est,10);
@@ -595,5 +631,84 @@ void cp_corr(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream
   }
 }
 
+
+void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<PSS_RESULTS> &out)
+{
+#pragma HLS INTERFACE axis port=IN_R
+#pragma HLS INTERFACE axis port=IN_I
+#pragma HLS INTERFACE axis port=OUT
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+
+  DTYPE IN_real[128],IN_imag[128],output;
+  DTYPE acc_0_r,acc_1_r,acc_2_r,acc_0_i,acc_1_i,acc_2_i;
+  PSS_RESULTS write_out;
+  int run = 1, valid = 0, k = 0;
+
+  while(run)
+  {
+	acc_0_r = 0;
+	acc_1_r = 0;
+	acc_2_r = 0;
+	acc_0_i = 0;
+	acc_1_i = 0;
+	acc_2_i = 0;
+
+#pragma HLS DATAFLOW
+	for (int i = 0; i < 128; i++)
+	{
+		copy_input(IN_R,IN_real[i],IN_I,IN_imag[i],run);
+	}
+	//do pss calculation with stored sequences
+	for (int j = 0; j < 128; j++)
+	{
+		acc_0_r += IN_real[j] * td_pss_0_real[j];
+		acc_1_r += IN_real[j] * td_pss_1_real[j];
+		acc_2_r += IN_real[j] * td_pss_2_real[j];
+
+		acc_0_i += IN_imag[j] * td_pss_0_imag[j];
+		acc_1_i += IN_imag[j] * td_pss_1_imag[j];
+		acc_2_i += IN_imag[j] * td_pss_2_imag[j];
+	}
+
+	write_out.pss_rslts_0_r = acc_0_r;
+	write_out.pss_rslts_0_i = acc_0_i;
+	write_out.pss_rslts_1_r = acc_1_r;
+	write_out.pss_rslts_1_i = acc_1_i;
+	write_out.pss_rslts_2_r = acc_2_r;
+	write_out.pss_rslts_2_i = acc_2_i;
+	out.write(write_out);
+  }
+}
+
+
+void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
+{
+#pragma HLS INTERFACE axis port=IN_R
+#pragma HLS INTERFACE axis port=IN_I
+#pragma HLS INTERFACE axis port=sss_1_PSS_1
+#pragma HLS INTERFACE axis port=sss_1_PSS_2
+#pragma HLS INTERFACE axis port=sss_2_PSS_1
+#pragma HLS INTERFACE axis port=sss_2_PSS_2
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+
+  DTYPE IN_real[128],IN_imag[128],output;
+  DTYPE avg_r,avg_i, avg_slot_r,avg_slot_i, freq;
+  int run = 1, valid = 0, k = 0;
+
+  while(run)
+  {
+#pragma HLS DATAFLOW
+	for (int i = 0; i < 128; i++)
+	{
+		copy_input(IN_R,IN_real[i],IN_I,IN_imag[i],run);
+	}
+
+	//do fft on 128 values, fftshift: IN_real, IN_imag,
+	//becomes complex received data: sss_recv_1, sss_recv_2
+
+	sss_correlation(sss_recv_1_real, sss_recv_1_imag, sss_recv_2_real, sss_recv_2_imag, &sss_1_PSS_1, &sss_1_PSS_2, &sss_2_PSS_1, &sss_2_PSS_2);
+
+  }
+}
 
 
