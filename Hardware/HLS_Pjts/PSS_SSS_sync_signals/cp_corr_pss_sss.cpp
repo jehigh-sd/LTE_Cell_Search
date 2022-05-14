@@ -636,7 +636,7 @@ void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::strea
 {
 #pragma HLS INTERFACE axis port=IN_R
 #pragma HLS INTERFACE axis port=IN_I
-#pragma HLS INTERFACE axis port=OUT
+#pragma HLS INTERFACE axis port=out
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
   DTYPE IN_real[128],IN_imag[128],output;
@@ -711,4 +711,11 @@ void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::strea
   }
 }
 
+#if 0
+void cp_corr_pss_sss()
+{
+	void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<PSS_RESULTS> &out)
+	void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
 
+}
+#endif
