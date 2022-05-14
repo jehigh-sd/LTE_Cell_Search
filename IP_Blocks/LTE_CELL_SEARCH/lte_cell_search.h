@@ -11,16 +11,20 @@
 #define SL_NUM             822
 #define NUM_SAMP_IN_SLOT   960
 #define NUM_SLOT           20
-#define SAMPLES_PER_CYCLE  8
-#define SCALE_FACTOR       260000.0
 
+#define SCALE_FACTOR       2048.0
+#define SAMPLES_PER_CYCLE  8
 #define NUM_INPUT_SAMPLES  96000 * SAMPLES_PER_CYCLE
 #define NUM_OUTPUT_SAMPLES 100
 
 #define SAMPLE_SELECT      0
-#define FILTER_SAMPLES
+#define FILTER_SAMPLES     0
 
-
-void lteCellSearch(hls::stream<sample_pkt> &ADC0_IN_REAL, hls::stream<sample_pkt> &ADC0_IN_IMAG,
-                   hls::stream<freq_pkt> &OUT);
-#endif
+#ifdef SIMULATION
+void lteCellSearch(hls::stream<sample_pkt> &IN_R,  hls::stream<sample_pkt> &IN_I,
+				   hls::stream<freq_pkt> &OUT_F);
+#else
+void lteCellSearch(hls::stream<sample_pkt> &IN_R,  hls::stream<sample_pkt> &IN_I,
+				   int *OUT_F);
+#endif /* SIMULATION */
+#endif /* LTE_CELL_SEARCH_H_ */
