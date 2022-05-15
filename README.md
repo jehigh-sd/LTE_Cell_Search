@@ -1,5 +1,5 @@
-# LTE_Cell_Search
-This system will perform cell search, establishes timing and frequency synchronization and optionally decodes MIB.
+# LTE Cell Search
+This system will perform cell search, establishes timing, frequency synchronization and displays cell ID.
 <div id="top"></div>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -25,20 +25,20 @@ This system will perform cell search, establishes timing and frequency synchroni
 <br />
 <div align="center">
   <a href="https://github.com/jehigh-sd/LTE_Cell_Search">
-    <img src="Images/lte_cell_download.jpg" alt="Logo" width="160" height="160">
+    <img src="Images/BD.png" alt="Logo" width="660" height="360">
   </a>
 
-  <h3 align="center">LTE Cell Search</h3>
+  <h3 align="center">System Block Diagram of LTE Cell Search</h3>
 
   <p align="center">
-    LTE Cell Search implementation on Xilinx RF SoC.
+    LTE Cell Search algorithm implementation on Xilinx RF SoC.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jehigh-sd/LTE_Cell_Search"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/jehigh-sd/LTE_Cell_Search">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/jehigh-sd/LTE_Cell_Search/issues">Report Bug</a>
   </p>
 </div>
 
@@ -92,19 +92,12 @@ The BCH is transmitted in the middle six resource blocks (RBs) of an LTE transmi
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This section shows RF SoC Image, schematic and details.
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [RF Soc Image](http://www.pynq.io/board.html)
+* [RF SoC Schematic](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
