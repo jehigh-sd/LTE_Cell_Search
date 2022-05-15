@@ -164,6 +164,42 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- Synchronization Signals -->
 ## Synchronization Signals (PSS and SSS)
 
+In LTE, there are two downlink synchronization signals which are used by the UE to obtain the cell identity and frame timing.
+
+  * Primary synchronization signal (PSS)
+
+  * Secondary synchronization signal (SSS)
+
+The division into two signals is aimed to reduce the complexity of the cell search process.
+
+**Cell Identity Arrangement**
+
+ The physical cell identity, NcellID, is defined by the equation:
+
+ NCELLID=3N(1)ID+N(2)ID
+
+  * N(1)ID is the physical layer cell identity group (0 to 167).
+  * N(2)ID is the identity within the group (0 to 2).
+
+  This arrangement creates 504 unique physical cell identities
+
+**Synchronization Signals and Determining Cell Identity**
+
+ The primary synchronization signal (PSS) is linked to the cell identity within the group (N(2)ID). The secondary synchronization signal (SSS) is linked to the cell identity group (N(1)ID) and the cell identity within the group (N(2)ID).
+
+ You can obtain N(2)ID by successfully demodulating the PSS. The SSS can then be demodulated and combined with knowledge of N(2)ID to obtain N(1)ID. Once you establish the values of N(1)ID and N(2)ID, you can determine the cell identity (NcellID).
+
+**Primary Synchronization Signal (PSS)**
+
+  The primary synchronization signal (PSS) is based on a frequency-domain Zadoff-Chu sequence.
+
+ * Zadoff-Chu Sequences
+
+  Zadoff-Chu sequences are a construction of Frank-Zadoff sequences defined by D. C. Chu. These codes have the useful property of having zero cyclic autocorrelation at all nonzero lags. When used as a synchronization code, the correlation between the ideal sequence and a received sequence is greatest when the lag is zero. When there is any lag between the two sequences, the correlation is zero. This property is illustrated in this figure.
+  
+  ![image](https://user-images.githubusercontent.com/77175120/168496835-99a35c7a-5d69-4238-94dc-a2d6246cbbfb.png)
+  ![image](https://user-images.githubusercontent.com/77175120/168496949-d12a2782-7ba4-4c5f-95c6-ce3f87ba5c62.png)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MIB Decode Steps -->
