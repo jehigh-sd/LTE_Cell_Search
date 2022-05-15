@@ -63,6 +63,10 @@ This system will perform cell search, establishes timing, frequency synchronizat
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#documentation">Documentation</a></li>
+      <ul>
+        <li><a href="#Synchronization_Signals">Synchronization Signals (PSS and SSS)</a></li>
+        <li><a href="#MIB_Decode_Steps">MIB Decode Steps</a></li>
+      </ul>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">Demo</a></li>
@@ -92,7 +96,7 @@ The BCH is transmitted in the middle six resource blocks (RBs) of an LTE transmi
 
 
 <!-- RFSOC-DETAILS -->
-## RF Soc Details
+### RF Soc Details
 
 This section shows RF SoC Image, schematic and details.
 
@@ -155,6 +159,17 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 * [Synchronization Signals (PSS and SSS)](http://www.pynq.io/board.html)
 * [MIB_Decode_Steps](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- Synchronization Signals -->
+## Synchronization Signals (PSS and SSS)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MIB Decode Steps -->
+## MIB Decode Steps
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -218,32 +233,9 @@ Use this space to list resources you find helpful and would like to give credit 
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
 
 <!-- REFERENCES -->
 ## References
@@ -258,3 +250,5 @@ Use this space to list resources you find helpful and would like to give credit 
 * [8]ML Estimation of Time and Frequency Offset in OFDM Systems (IEEE paper)
 * [9]https://www.mathworks.com/help/lte/ug/cell-search-mib-and-sib1-recovery.html
 * [10]https://www.sharetechnote.com/html/FrameStructure_DL.html#Overview
+
+<p align="right">(<a href="#top">back to top</a>)</p>
