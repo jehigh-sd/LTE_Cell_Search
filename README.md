@@ -51,7 +51,7 @@ This system will perform cell search, establishes timing, frequency synchronizat
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#rfsoc-details">RF Soc Details</a></li>
       </ul>
     </li>
     <li>
@@ -62,11 +62,13 @@ This system will perform cell search, establishes timing, frequency synchronizat
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#documentation">Documentation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">Demo</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#references">References</a></li>
   </ol>
 </details>
 
@@ -89,13 +91,15 @@ The BCH is transmitted in the middle six resource blocks (RBs) of an LTE transmi
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-### Built With
+<!-- RFSOC-DETAILS -->
+## RF Soc Details
 
 This section shows RF SoC Image, schematic and details.
 
-* [RF Soc Image](http://www.pynq.io/board.html)
-* [RF SoC Schematic](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
+* [Image](http://www.pynq.io/board.html)
+* [Schematics](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
+* [User Manual](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
+* [Accessories](https://www.rfsoc-pynq.io/accessories.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -145,6 +149,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- DOCUMENTATION -->
+## Documentation
+
+* [Synchronization Signals (PSS and SSS)](http://www.pynq.io/board.html)
+* [MIB_Decode_Steps](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
 
 
 <!-- ROADMAP -->
@@ -235,3 +244,17 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
+
+<!-- REFERENCES -->
+## References
+
+* [1]https://www.rfsoc-pynq.io/overlays.html
+* [2]https://www.rfsoc-pynq.io/base_overlay.html
+* [3]git clone https://github.com/Xilinx/RFSoC2x2-PYNQ.git
+* [4]https://github.com/strath-sdr/rfsoc_sam
+* [5]https://github.com/strath-sdr/rfsoc_ofdm
+* [6]https://www.mathworks.com/help/wireless-hdl/ug/lte-hdl-cell-search.html 
+* [7]https://www.mathworks.com/help/lte/ug/synchronization-signals-pss-and-sss.html
+* [8]ML Estimation of Time and Frequency Offset in OFDM Systems (IEEE paper)
+* [9]https://www.mathworks.com/help/lte/ug/cell-search-mib-and-sib1-recovery.html
+* [10]https://www.sharetechnote.com/html/FrameStructure_DL.html#Overview
