@@ -131,10 +131,6 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -224,8 +220,27 @@ The division into two signals is aimed to reduce the complexity of the cell sear
 <a id="LNA"></a>
 ### Low Noise Amplifier:
 
+* Used Vega Barebones - Ultra Low-Noise Variable Gain Amplifier (VGA) Module for RF & Software Defined Radio (SDR) from Nooelec.
+* Highly Linear & Wideband 30MHz-4000MHz Frequency Capability w/Bias Tee & USB Power Options.
+* Characterized Nooelec LNA for its Gain modes and return loss performance using KeySight E5071C vector network Analyzer
+* Measured Gain (S21) for different Analog gain modes.
+* Conclusion: ~40 dB of gain around ~1GHz and ~34 dB of gain around ~2GHz
+* Return loss (S11) performance is reasonable in the entire bandwidth
 
+Gain across frequency with 5 Gain modes
+![image](https://user-images.githubusercontent.com/77175120/168521348-b243b478-aff8-4194-b9dc-a5173fda35cb.png)
 
+Gain (S21) and Return Loss (S11) performing at Max Gain mode
+
+![image](https://user-images.githubusercontent.com/77175120/168521435-544ce17e-8b10-4732-b39c-dec93d782e19.png)
+
+Image of nooelec LNA:
+
+![image](https://user-images.githubusercontent.com/77175120/168521577-a6aacffe-198c-483e-a1d5-c59fa8132f9a.png)
+
+![image](https://user-images.githubusercontent.com/77175120/168521692-72d2b6f1-8484-420d-ad5d-51efcae6ebc0.png)
+
+![image](https://user-images.githubusercontent.com/77175120/168521749-ad4f0d0c-f598-40bd-b067-a1a6232aa335.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -287,6 +302,9 @@ The division into two signals is aimed to reduce the complexity of the cell sear
 <!-- TEST BENCH -->
 <a id="Test_Bench"></a>
 ## Test Bench:
+
+
+![image](https://user-images.githubusercontent.com/77175120/168521307-bde56b3c-8cd0-4a36-a6ca-82908db87317.png)
 
 
 
