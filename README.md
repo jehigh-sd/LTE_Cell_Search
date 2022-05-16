@@ -54,6 +54,7 @@ This system will perform cell search, establishes timing, frequency synchronizat
 1. [Simulation](#Simulation)
 1. [Hardware](#Hardware)
 	1. [RF SoC](#RF_SoC)
+	1. [RF SoC LMX Configuration](#lmx)
 	1. [Low Noise Amplifier](#LNA)
 	1. [Band Pass Filter](#BPF)
 	1. [Antenna](#Antenna)
@@ -95,8 +96,9 @@ The BCH is transmitted in the middle six resource blocks (RBs) of an LTE transmi
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get start with your RF Soc visit below page for instructions:
+
+[Getting started on RF SoC ](https://www.rfsoc-pynq.io/getting_started.html)
 
 ### Prerequisites
 
@@ -204,13 +206,42 @@ The division into two signals is aimed to reduce the complexity of the cell sear
 <a id="Hardware"></a>
 ## Hardware:
 
+<!-- RF SoC -->
+<a id="RF_SoC"></a>
+### RF SoC:
+
+Xilinx’s Radio Frequency System-on-Chip (RFSoC) device combine high-accuracy ADCs and DACs operating at Giga samples per second (Gsps), with programmable heterogeneous compute engines. RFSoC 2x2 board with 2 RF DAC and 2 RF ADC channels. The RFSoC 2x2 has a Zynq Ultrascale+ XCZU28DR-FFVG1517AAZ with an Quad-core ARM Cortex A53 Processing System (PS) and Xilinx Ultrascale+ Programmable Logic (PL). There are BALUNs between the SMA connectors and the Zynq RFSoC on the board, which means that antenna and external signal sources can be connected directly to the board.
+
+**RFSoC Board:**
+
+![image](https://user-images.githubusercontent.com/77175120/168524070-e34712db-e864-4dd9-b182-6a35b00d5852.png)
+
+**RFSoC Block Diagram:**
+
+![image](https://user-images.githubusercontent.com/77175120/168524116-8beba6e0-f300-4990-b298-17b5d1e52188.png)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- RF SoC -->
-<a id="RF_SoC"></a>
-### RF SoC:
+<!-- RF SoC LMX Configuration -->
+<a id="lmx"></a>
+### RF SoC LMX Configuration:
+
+* [LMX2596 Configuration files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/Hardware/LMX_Settings)
+
+* Configured ADC Clock for LTE OTA RF input
+* RFSoC Range = 1024 MHz to 4096 MHz
+    * Max decimation supported RF data converter (x8)
+* Live Signal Target = 30.72 MHz
+* ADC Sample Rate = 1.96608 GHz
+* Need of IP Block: Decimate 245.76 MHz to 30.72 MHz
+
+
+**LMX Configuration to configure to 245.76MHz**
+![image](https://user-images.githubusercontent.com/77175120/168522940-0c458bac-967c-44a3-8043-116fa8b4533c.png)
+
+**245.76MHz Tone measured in the Spectrum Analyzer after configuring LMX 2596**
+![image](https://user-images.githubusercontent.com/77175120/168523024-419aa3f3-1ba4-4538-be6c-b5d92e9d7672.png)
 
 
 
@@ -303,11 +334,25 @@ Image of nooelec LNA:
 <a id="Test_Bench"></a>
 ## Test Bench:
 
+* Need PYNQ board,Pluto SDR and RTL digitizer to build this test bench.
+* Install Matlab Pluto SDR driver from below link:
+	[Pluto SDR driver](https://www.mathworks.com/help/supportpkg/plutoradio/ug/install-support-package-for-pluto-radio.html)
+* To create test bench for this project, used LTE Cell scanner open-source software from GitHub and compiled on the PYNQ board.
+	[LTE Cell Scanner](https://github.com/Evrytania/LTE-Cell-Scanner)
+* Verified test bench with NAR bands – 900MHz, able to detect different MIB’s from different Cells
+* Picked non-NAR region band – 860MHz to generate LTE Test signal
+* Used Matlab "Wireless waveform Generator" application and Generated LTE Test signal using Matlab– 5MHz, 25 RB, 64QAM, Cell ID: 11 with PSS, SSS, PBCH.
+* Exported this signal to MatLab to play from Pluto SDR
+* Play LTE test signal continuously from Pluto SDR and run cell search algorithm in PYNQ to capture the transmitted LTE test signal.
 
+**"Wireless waveform Generator" application in Matlab**
 ![image](https://user-images.githubusercontent.com/77175120/168521307-bde56b3c-8cd0-4a36-a6ca-82908db87317.png)
 
+**Block diagram of Test Bench**
+![image](https://user-images.githubusercontent.com/77175120/168525137-b0576fe0-edb7-48d5-be1a-041e3c41d492.png)
 
-
+**LTE Cell Search Result from PYNQ Board**
+![image](https://user-images.githubusercontent.com/77175120/168525256-2f4d184c-fb22-4da8-9ad1-91684b45fcd7.png)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
