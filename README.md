@@ -1,13 +1,7 @@
 # LTE Cell Search
 This system will perform cell search, establishes timing, frequency synchronization and displays cell ID.
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+
 
 
 
@@ -44,38 +38,39 @@ This system will perform cell search, establishes timing, frequency synchronizat
 
 
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#rfsoc-details">RF Soc Details</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#documentation">Documentation</a></li>
-      <ul>
-        <li><a href="#Synchronization_Signals">Synchronization Signals (PSS and SSS)</a></li>
-        <li><a href="#MIB_Decode_Steps">MIB Decode Steps</a></li>
-      </ul>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">Demo</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-    <li><a href="#references">References</a></li>
-  </ol>
-</details>
+# Table of Contents
+<details open>
+<summary><b>(click to expand or hide)</b></summary>
+<!-- MarkdownTOC -->
 
+1. [About The Project](#about-the-project)
+1. [Getting Started](#getting-started)
+	1. [RF SoC Details](#rf-soc-details)
+	1. [Prerequisites](#prerequisites)
+	1. [Installation](#installation)
+1. [Documentation](#documentation)
+	1. [Synchronization Signals (PSS and SSS)](#Synchronization_Signals)
+	1. [MIB Decode Steps](#MIB_Decode_Steps)
+1. [Simulation](#Simulation)
+1. [Hardware](#Hardware)
+	1. [RF SoC](#RF_SoC)
+	1. [Low Noise Amplifier](#LNA)
+	1. [Band Pass Filter](#BPF)
+	1. [Antenna](#Antenna)
+1. [IP Blocks](#IP_Blocks)
+	1. [Hardware Description](#Hardware_Description)
+	1. [LTE Cell Search](#LTE_Cell_Search)
+	1. [Simulink Model](#Simulink_model)	
+1. [Test Bench](#Test_Bench)
+1. [Host software](#Host_Software)
+1. [Demo](#demo)
+1. [Contributing](#contributing)
+1. [Contact](#contact)
+1. [Acknowledgments](#acknowledgments)
+1. [References](#references)
+
+<!-- /MarkdownTOC -->
+</details>
 
 
 <!-- ABOUT THE PROJECT -->
@@ -91,19 +86,8 @@ LTE signal will be captured with SDR Radio hardware such as Xilinx Zynq-Based Ra
 
 The BCH is transmitted in the middle six resource blocks (RBs) of an LTE transmission, therefore a capture bandwidth of only 1.92 MHz is required to decode the MIB, regardless of the cell bandwidth. Only subframe #0 of a frame is required to decode the MIB
 
+![image](https://user-images.githubusercontent.com/77175120/168498051-bc56e4c7-d1d9-4f33-aa92-8c22ba1d3a62.png)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- RFSOC-DETAILS -->
-### RF Soc Details
-
-This section shows RF SoC Image, schematic and details.
-
-* [Image](http://www.pynq.io/board.html)
-* [Schematics](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
-* [User Manual](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
-* [Accessories](https://www.rfsoc-pynq.io/accessories.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -121,6 +105,18 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
+  
+<!-- RFSOC-DETAILS -->
+### RF SoC Details
+
+This section shows RF SoC Image, schematic and details.
+
+* [Image](http://www.pynq.io/board.html)
+* [Schematics](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
+* [User Manual](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
+* [Accessories](https://www.rfsoc-pynq.io/accessories.html)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Installation
 
@@ -129,7 +125,7 @@ _Below is an example of how you can instruct your audience on installing and set
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   https://github.com/jehigh-sd/LTE_Cell_Search.git
    ```
 3. Install NPM packages
    ```sh
@@ -142,17 +138,6 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- DOCUMENTATION -->
 ## Documentation
 
@@ -162,7 +147,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Synchronization Signals -->
-## Synchronization Signals (PSS and SSS)
+<a id="Synchronization_Signals"></a>
+# Synchronization Signals (PSS and SSS)
+
 
 In LTE, there are two downlink synchronization signals which are used by the UE to obtain the cell identity and frame timing.
 
@@ -203,29 +190,131 @@ The division into two signals is aimed to reduce the complexity of the cell sear
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MIB Decode Steps -->
-## MIB Decode Steps
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+<a id="MIB_Decode_Steps"></a>
+## MIB Decode Steps:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+
+<!-- SIMULATION -->
+<a id="Simulation"></a>
+## Simulation:
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- HARDWARE -->
+<a id="Hardware"></a>
+## Hardware:
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- RF SoC -->
+<a id="RF_SoC"></a>
+### RF SoC:
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- LNA -->
+<a id="LNA"></a>
+### Low Noise Amplifier:
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- BPF -->
+<a id="BPF"></a>
+### Band Pass Filter:
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ANTENNA -->
+<a id="Antenna"></a>
+### Antenna:
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- IP BLOCKS -->
+<a id="IP_Blocks"></a>
+## IP Blocks:
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- HARDWARE DESCRIPTION -->
+<a id="Hardware_Description"></a>
+### Hardware Description:
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- LTE CELL SEARCH -->
+<a id="LTE_Cell_Search"></a>
+### LTE Cell Search:
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- SIMULINK MODEL -->
+<a id="Simulink_model"></a>
+### Simulink Model:
+
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- TEST BENCH -->
+<a id="Test_Bench"></a>
+## Test Bench:
+
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- HOST SOFTWARE -->
+<a id="Host_Software"></a>
+## Host software:
+
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- DEMO -->
+<a id="demo"></a>
+## Demo:
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
-## Contributing
+<a id="contributing"></a>
+## Contributing:
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -239,16 +328,6 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
@@ -265,10 +344,10 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+We would like acknowledge
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Vitis HLS Guide](https://pp4fpgas.readthedocs.io/en/latest/)
+* [Kastner Research Group] https://kastner.ucsd.edu/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
