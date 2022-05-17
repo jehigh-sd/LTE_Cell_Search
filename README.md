@@ -184,6 +184,39 @@ The division into two signals is aimed to reduce the complexity of the cell sear
   
   ![image](https://user-images.githubusercontent.com/77175120/168496835-99a35c7a-5d69-4238-94dc-a2d6246cbbfb.png)
   ![image](https://user-images.githubusercontent.com/77175120/168496949-d12a2782-7ba4-4c5f-95c6-ce3f87ba5c62.png)
+  
+ **PSS Generation**
+
+ The PSS is a sequence of complex symbols, 62 symbols long. The sequence du(n) used for the PSS is generated according to these equations: (Note that following is in frequency domain)
+
+ du(n)=e−jπun(n+1)/63, for n=0,1,…,30
+
+ du(n)=e−jπu(n+1)(n+2)/63, for n=31,32,…,61
+
+ In the preceding equation, u is the Zadoff-Chu root sequence index and depends on the cell identity within the group N(2)ID.
+
+![image](https://user-images.githubusercontent.com/77175120/168730944-70032ba6-1b55-4952-99d3-ae5ed59673d6.png)
+
+**Mapping of the PSS**
+
+The PSS is mapped into the first 31 subcarriers either side of the DC subcarrier. Therefore, the PSS uses six resource blocks with five reserved subcarriers each side, as shown in this figure.
+
+![image](https://user-images.githubusercontent.com/77175120/168731411-282a49b0-490c-4d8c-ab35-8fa81ce9f302.png)
+
+As the DC subcarrier contains no information in LTE this corresponds to mapping onto the middle 62 subcarriers within an OFDM symbol in a resource grid. d(n) is mapped from lowest subcarrier to highest subcarrier. The PSS is mapped to different OFDM symbols depending on which frame type is used. Frame type 1 is frequency division duplex (FDD), and frame type 2 is time division duplex (TDD).
+
+FDD — The PSS is mapped to the last OFDM symbol in slots 0 and 10, as shown in this figure.
+
+![image](https://user-images.githubusercontent.com/77175120/168731596-a179ce00-7841-4a0b-bc4a-f21f278088a7.png)
+
+**SSS sequences**
+
+The SSS is organized into an interleaved concatenation of two length-31 binary sequences. To randomize the interference from the neighboring cells, the concatenated sequence is scrambled with a scrambling sequence given by the PSS. The combination of two length-31 sequences defining the SSS differs between subframe0 and subframe 5 according to 
+
+![image](https://user-images.githubusercontent.com/77175120/168732135-592f8441-ca4f-4092-8bbf-369474a6cfdb.png)
+
+where s(n) is SSS sequence, and c(n) and z(n) are scrambling sequence. The indices m_0 and m_1 are derived from Cell ID group N_ID.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
