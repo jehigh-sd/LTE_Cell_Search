@@ -22,8 +22,6 @@ This system will perform cell search, establishes timing, frequency synchronizat
     <img src="Images/BD.png" alt="Logo" width="660" height="360">
   </a>
 
-  <h3 align="center">System Block Diagram of LTE Cell Search</h3>
-
   <p align="center">
     LTE Cell Search algorithm implementation on Xilinx RF SoC.
     <br />
@@ -157,7 +155,7 @@ In LTE, there are two downlink synchronization signals which are used by the UE 
 
 The division into two signals is aimed to reduce the complexity of the cell search process.
 
-**Cell Identity Arrangement**
+**Cell Identity Arrangement:**
 
  The physical cell identity, NcellID, is defined by the equation:
 
@@ -168,13 +166,13 @@ The division into two signals is aimed to reduce the complexity of the cell sear
 
   This arrangement creates 504 unique physical cell identities
 
-**Synchronization Signals and Determining Cell Identity**
+**Synchronization Signals and Determining Cell Identity:**
 
  The primary synchronization signal (PSS) is linked to the cell identity within the group (N(2)ID). The secondary synchronization signal (SSS) is linked to the cell identity group (N(1)ID) and the cell identity within the group (N(2)ID).
 
  You can obtain N(2)ID by successfully demodulating the PSS. The SSS can then be demodulated and combined with knowledge of N(2)ID to obtain N(1)ID. Once you establish the values of N(1)ID and N(2)ID, you can determine the cell identity (NcellID).
 
-**Primary Synchronization Signal (PSS)**
+**Primary Synchronization Signal (PSS):**
 
   The primary synchronization signal (PSS) is based on a frequency-domain Zadoff-Chu sequence.
 
@@ -185,7 +183,7 @@ The division into two signals is aimed to reduce the complexity of the cell sear
   ![image](https://user-images.githubusercontent.com/77175120/168496835-99a35c7a-5d69-4238-94dc-a2d6246cbbfb.png)
   ![image](https://user-images.githubusercontent.com/77175120/168496949-d12a2782-7ba4-4c5f-95c6-ce3f87ba5c62.png)
   
- **PSS Generation**
+ **PSS Generation:**
 
  The PSS is a sequence of complex symbols, 62 symbols long. The sequence du(n) used for the PSS is generated according to these equations: (Note that following is in frequency domain)
 
@@ -197,7 +195,7 @@ The division into two signals is aimed to reduce the complexity of the cell sear
 
 ![image](https://user-images.githubusercontent.com/77175120/168730944-70032ba6-1b55-4952-99d3-ae5ed59673d6.png)
 
-**Mapping of the PSS**
+**Mapping of the PSS:**
 
 The PSS is mapped into the first 31 subcarriers either side of the DC subcarrier. Therefore, the PSS uses six resource blocks with five reserved subcarriers each side, as shown in this figure.
 
@@ -209,7 +207,7 @@ FDD — The PSS is mapped to the last OFDM symbol in slots 0 and 10, as shown in
 
 ![image](https://user-images.githubusercontent.com/77175120/168731596-a179ce00-7841-4a0b-bc4a-f21f278088a7.png)
 
-**SSS sequences**
+**SSS sequences:**
 
 The SSS is organized into an interleaved concatenation of two length-31 binary sequences. To randomize the interference from the neighboring cells, the concatenated sequence is scrambled with a scrambling sequence given by the PSS. The combination of two length-31 sequences defining the SSS differs between subframe0 and subframe 5 according to 
 
@@ -217,6 +215,22 @@ The SSS is organized into an interleaved concatenation of two length-31 binary s
 
 where s(n) is SSS sequence, and c(n) and z(n) are scrambling sequence. The indices m_0 and m_1 are derived from Cell ID group N_ID.
 
+**LTE Downlink Synchronization Signals:**
+
+ LTE provides two physical signals to aid the cell search and synchronization process. These are the Primary Synchronization Signal (PSS) and the Secondary Synchronization Signal (SSS).
+
+The cell ID of the eNodeB is encoded in the PSS and SSS. The duplex mode, cyclic prefix length, and frame timing can be determined from their positions within the received signal. The PSS and SSS are transmitted twice every frame. There are 3 possible PSS sequences, and the eNodeB transmits the same PSS every half frame. For each PSS, there are 168 possible SSS sequences in the first half of the frame and 168 different possible SSS sequences in the second half of the frame. This means that once a SSS has been detected, the receiver knows if it is in the first or second half of a frame. The PSS and SSS sequences depend on the cell ID, therefore, there are 3 * 168 = 504 possible cell IDs. The cell ID is
+
+ NCellID = 3*NCellID1 + NCellID2
+
+ where NCellID2 is the PSS sequence number from 0 to 2, and NCellID1 is the SSS sequence number from 0 to 167. Each instance of the PSS occupies the central 62 subcarriers of one OFDM symbol, as does each instance of the SSS. For normal cyclic prefix mode the locations of the PSS and SSS signals are follows:
+
+* FDD Mode: PSS is in symbol 6 of subframe 0, SSS is in symbol 5 of subframe 0
+* TDD Mode: PSS is in symbol 2 of subframe 1, SSS is in symbol 13 of subframe 0
+
+There are 14 symbols in each subframe, numbered from 0 to 13. Therefore, in FDD mode, the PSS is transmitted one OFDM symbol after the SSS, whereas in TDD mode the PSS is transmitted three OFDM symbols after the SSS. This difference in relative timing allows the receiver to discriminate between the two duplex modes. The positions of PSS and SSS within radio frames in FDD and TDD mode are illustrated below.
+	
+![image](https://user-images.githubusercontent.com/77175120/168732900-8f5bd697-78b3-4f9c-9643-ebdca11395ac.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
