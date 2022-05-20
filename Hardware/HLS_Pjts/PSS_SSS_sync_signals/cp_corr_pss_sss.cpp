@@ -633,6 +633,7 @@ void cp_corr(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream
 
 
 void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<PSS_RESULTS> &out)
+//void cp_corr_pss_sss(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<PSS_RESULTS> &out)
 {
 #pragma HLS INTERFACE axis port=IN_R
 #pragma HLS INTERFACE axis port=IN_I
@@ -670,18 +671,19 @@ void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::strea
 		acc_2_i += IN_imag[j] * td_pss_2_imag[j];
 	}
 
-	write_out.pss_rslts_0_r = acc_0_r;
-	write_out.pss_rslts_0_i = acc_0_i;
-	write_out.pss_rslts_1_r = acc_1_r;
-	write_out.pss_rslts_1_i = acc_1_i;
-	write_out.pss_rslts_2_r = acc_2_r;
-	write_out.pss_rslts_2_i = acc_2_i;
+	write_out.pss_rslts_0 = sqrt((acc_0_r*acc_0_r) + (acc_0_i*acc_0_i));
+	//write_out.pss_rslts_0_i = acc_0_i;
+	write_out.pss_rslts_1 = sqrt((acc_1_r*acc_1_r) + (acc_1_i*acc_1_i));
+	//write_out.pss_rslts_1_i = acc_1_i;
+	write_out.pss_rslts_2 = sqrt((acc_2_r*acc_2_r) + (acc_2_i*acc_2_i));
+	//write_out.pss_rslts_2_i = acc_2_i;
 	out.write(write_out);
   }
 }
 
 
-void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
+//void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
+void cp_corr_pss_sss(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
 {
 #pragma HLS INTERFACE axis port=IN_R
 #pragma HLS INTERFACE axis port=IN_I
@@ -694,7 +696,7 @@ void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::strea
   DTYPE IN_real[128],IN_imag[128],output;
   DTYPE avg_r,avg_i, avg_slot_r,avg_slot_i, freq;
   int run = 1, valid = 0, k = 0;
-
+  printf("IN sss_sync\n");
   while(run)
   {
 #pragma HLS DATAFLOW
@@ -703,11 +705,17 @@ void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::strea
 		copy_input(IN_R,IN_real[i],IN_I,IN_imag[i],run);
 	}
 
+	// For simulation
+	k += 1;
+	if(78 == k)
+	{
+		run = 0;
+	}
+	printf("count %d\n", k);
 	//do fft on 128 values, fftshift: IN_real, IN_imag,
 	//becomes complex received data: sss_recv_1, sss_recv_2
 
 	sss_correlation(sss_recv_1_real, sss_recv_1_imag, sss_recv_2_real, sss_recv_2_imag, &sss_1_PSS_1, &sss_1_PSS_2, &sss_2_PSS_1, &sss_2_PSS_2);
-
   }
 }
 
@@ -715,7 +723,7 @@ void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::strea
 void cp_corr_pss_sss()
 {
 	void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<PSS_RESULTS> &out)
-	void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
+	//void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
 
 }
 #endif

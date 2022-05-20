@@ -29,8 +29,9 @@ Rmse rmse;
 
 #define TEST_SIZE_IN 96000
 #define TEST_SIZE_OUT 100
-#define PSS_SIZE_IN 10880
-#define PSS_SIZE_OUT 10880
+#define PSS_SIZE_IN 10000 //10880
+#define PSS_SIZE_OUT 10000
+#define SSS_SIZE_IN 10000
 #define SSS_SIZE_OUT 168
 #ifdef FEATURE_STREAM
 hls::stream<data_pkt> In_R;
@@ -56,13 +57,15 @@ float In_R[TEST_SIZE_IN], In_I[TEST_SIZE_IN],Out[TEST_SIZE_OUT];
 
 int main()
 {
-	FILE * fpr = fopen("input.real.dat","r");
-	FILE * fpi = fopen("input.imag.dat","r");
-	FILE * fpo = fopen("output.dat","r");
+
 	DTYPE gold_out;
 	DTYPE index;
 	data_pkt t;
 	cdata_pkt ct;
+#if 0
+	FILE * fpr = fopen("input.real.dat","r");
+	FILE * fpi = fopen("input.imag.dat","r");
+	FILE * fpo = fopen("output.dat","r");
 
 	//Calculate and set input data
 	for(int i=0; i<TEST_SIZE_IN; i++)
@@ -132,17 +135,17 @@ int main()
         return 0;
     }
 
-
+#endif
 ////////////////////////////////////////////////////////////////////////////////////////
-
-   	//FILE * fpr = fopen("input.real.dat","r");
-   	//FILE * fpi = fopen("input.imag.dat","r");
-   	FILE * fpo_rslts_0_r = fopen("pss_rslts_0_r.dat","r");
-   	FILE * fpo_rslts_0_i = fopen("pss_rslts_0_i.dat","r");
-   	FILE * fpo_rslts_1_r = fopen("pss_rslts_1_r.dat","r");
-   	FILE * fpo_rslts_1_i = fopen("pss_rslts_1_i.dat","r");
-   	FILE * fpo_rslts_2_r = fopen("pss_rslts_2_r.dat","r");
-   	FILE * fpo_rslts_2_i = fopen("pss_rslts_2_i.dat","r");
+#if 0
+   	FILE * fpr = fopen("downsampled_r.dat","r");
+   	FILE * fpi = fopen("downsampled_i.dat","r");
+   	FILE * fpo_rslts_0 = fopen("pss_rslts_0.dat","r");
+   	//FILE * fpo_rslts_0_i = fopen("pss_rslts_0_i.dat","r");
+   	FILE * fpo_rslts_1 = fopen("pss_rslts_1.dat","r");
+   	//FILE * fpo_rslts_1_i = fopen("pss_rslts_1_i.dat","r");
+   	FILE * fpo_rslts_2 = fopen("pss_rslts_2.dat","r");
+   	//FILE * fpo_rslts_2_i = fopen("pss_rslts_2_i.dat","r");
 
    	PSS_RESULTS pss_t;
 
@@ -156,11 +159,12 @@ int main()
    		fscanf(fpr, "%f",&(temp_r.data));
    		fscanf(fpi, "%f",&(temp_i.data));
    #ifdef FEATURE_STREAM
-   		if(i == TEST_SIZE_IN-1)
+   		if(i == PSS_SIZE_IN-1)
    		{
    		  temp_r.last=1;
    		  temp_i.last=1;
    		}
+
    		In_R.write(temp_r);
    		In_I.write(temp_i);
    #else
@@ -170,7 +174,8 @@ int main()
    	}
 
    	//Perform PSS Sync Calculations
-   	pss_sync(In_R,In_I,Out_pss);
+   	//pss_sync(In_R,In_I,Out_pss);
+   	cp_corr_pss_sss(In_R,In_I,Out_pss);
 
    	//Print output
    //	printf("Printing Output\n");
@@ -182,37 +187,37 @@ int main()
        for(int i=0; i<PSS_SIZE_OUT; i++)
        {
     	   pss_t = Out_pss.read();
-           fscanf(fpo_rslts_0_r, "%f", &gold_out);
-           printf("%0.15f %0.15f\n", pss_t.pss_rslts_0_r, gold_out);
-           rmse.add_value(pss_t.pss_rslts_0_r - gold_out);
+           fscanf(fpo_rslts_0, "%f", &gold_out);
+           printf("%0.15f %0.15f\n", pss_t.pss_rslts_0, gold_out);
+           rmse.add_value(pss_t.pss_rslts_0 - gold_out);
 
-           fscanf(fpo_rslts_0_i, "%f", &gold_out);
-           printf("%0.15f %0.15f\n", pss_t.pss_rslts_0_i, gold_out);
-           rmse.add_value(pss_t.pss_rslts_0_i - gold_out);
+           //fscanf(fpo_rslts_0_i, "%f", &gold_out);
+           //printf("%0.15f %0.15f\n", pss_t.pss_rslts_0_i, gold_out);
+           //rmse.add_value(pss_t.pss_rslts_0_i - gold_out);
 
-           fscanf(fpo_rslts_1_r, "%f", &gold_out);
-           printf("%0.15f %0.15f\n", pss_t.pss_rslts_1_r, gold_out);
-           rmse.add_value(pss_t.pss_rslts_1_r - gold_out);
+           fscanf(fpo_rslts_1, "%f", &gold_out);
+           printf("%0.15f %0.15f\n", pss_t.pss_rslts_1, gold_out);
+           rmse.add_value(pss_t.pss_rslts_1 - gold_out);
 
-           fscanf(fpo_rslts_1_i, "%f", &gold_out);
- 		   printf("%0.15f %0.15f\n", pss_t.pss_rslts_1_i, gold_out);
-		   rmse.add_value(pss_t.pss_rslts_1_i - gold_out);
+           //fscanf(fpo_rslts_1_i, "%f", &gold_out);
+ 		   //printf("%0.15f %0.15f\n", pss_t.pss_rslts_1_i, gold_out);
+		   //rmse.add_value(pss_t.pss_rslts_1_i - gold_out);
 
-		   fscanf(fpo_rslts_2_r, "%f", &gold_out);
-           printf("%0.15f %0.15f\n", pss_t.pss_rslts_2_r, gold_out);
-           rmse.add_value(pss_t.pss_rslts_2_r - gold_out);
+		   fscanf(fpo_rslts_2, "%f", &gold_out);
+           printf("%0.15f %0.15f\n", pss_t.pss_rslts_2, gold_out);
+           rmse.add_value(pss_t.pss_rslts_2 - gold_out);
 
-           fscanf(fpo_rslts_2_i, "%f", &gold_out);
-           printf("%0.15f %0.15f\n", pss_t.pss_rslts_2_i, gold_out);
-           rmse.add_value(pss_t.pss_rslts_2_i - gold_out);
+           //fscanf(fpo_rslts_2_i, "%f", &gold_out);
+           //printf("%0.15f %0.15f\n", pss_t.pss_rslts_2_i, gold_out);
+           //rmse.add_value(pss_t.pss_rslts_2_i - gold_out);
 
        }
-       fclose(fpo_rslts_0_r);
-       fclose(fpo_rslts_0_i);
-       fclose(fpo_rslts_1_r);
-       fclose(fpo_rslts_1_i);
-       fclose(fpo_rslts_2_r);
-       fclose(fpo_rslts_2_i);
+       fclose(fpo_rslts_0);
+       //fclose(fpo_rslts_0_i);
+       fclose(fpo_rslts_1);
+       //fclose(fpo_rslts_1_i);
+       fclose(fpo_rslts_2);
+       //fclose(fpo_rslts_2_i);
        //fclose(fpi);
        //fclose(fpr);
 
@@ -235,10 +240,11 @@ int main()
            return 0;
        }
 
-
+#endif
 /////////////////////////////////////////////////////////////////////////////////////////////
-	//FILE * fpr = fopen("input.real.dat","r");
-	//FILE * fpi = fopen("input.imag.dat","r");
+#if 1
+    FILE * fpr = fopen("downsampled_r.dat","r");
+    FILE * fpi = fopen("downsampled_i.dat","r");
 	FILE * fpo_11r = fopen("out_sss_1_PSS_1_r.dat","r");
 	FILE * fpo_11i = fopen("out_sss_1_PSS_1_i.dat","r");
 	FILE * fpo_12r = fopen("out_sss_1_PSS_2_r.dat","r");
@@ -251,8 +257,9 @@ int main()
 	//DTYPE index;
 	//data_pkt t;
 
+	printf("Start Read\n");
 	//Calculate and set input data
-	for(int i=0; i<TEST_SIZE_IN; i++)
+	for(int i=0; i<SSS_SIZE_IN; i++)
 	{
 		data_pkt temp_r;
 		data_pkt temp_i;
@@ -261,7 +268,7 @@ int main()
 		fscanf(fpr, "%f",&(temp_r.data));
 		fscanf(fpi, "%f",&(temp_i.data));
 #ifdef FEATURE_STREAM
-		if(i == TEST_SIZE_IN-1)
+		if(i == SSS_SIZE_IN-1)
 		{
 		  temp_r.last=1;
 		  temp_i.last=1;
@@ -272,10 +279,17 @@ int main()
 		In_R[i] = temp_r;
 		In_I[i] = temp_i;
 #endif
+
+		if(0 == (i % 1000))
+		{
+			printf("R Check %d\n", i);
+		}
 	}
+	printf("Calling sss_sync\n");
 
 	//Calculate PSS and SSS
-	sss_sync(In_R, In_I, Out_11, Out_12, Out_21, Out_22);
+	//sss_sync(In_R, In_I, Out_11, Out_12, Out_21, Out_22);
+	cp_corr_pss_sss(In_R, In_I, Out_11, Out_12, Out_21, Out_22);
 
 	//Print output
 //	printf("Printing Output\n");
@@ -355,5 +369,5 @@ int main()
         fprintf(stdout, "*******************************************\n");
         return 0;
     }
-
+#endif
 }
