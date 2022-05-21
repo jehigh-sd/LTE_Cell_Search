@@ -96,15 +96,15 @@ The BCH is transmitted in the middle six resource blocks (RBs) of an LTE transmi
 
 To get start with your RF Soc visit below page for instructions:
 
-[Getting started on RF SoC ](https://www.rfsoc-pynq.io/getting_started.html)
+	[Getting started on RF SoC ](https://www.rfsoc-pynq.io/getting_started.html)
+
+
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Matlab 2022a or above is recommened.
+
+
   
 <!-- RFSOC-DETAILS -->
 ### RF SoC Details
@@ -118,21 +118,27 @@ This section shows RF SoC Image, schematic and details.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+For this project, you need to install Xilinx Vitis, Vivado and Matlab
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    https://github.com/jehigh-sd/LTE_Cell_Search.git
    ```
-3. Install NPM packages
+2. Install vivado and vitis from below link. For this project, vivado 2020.1 is used
    ```sh
-   npm install
+   (https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html)
    ```
-
+2. Install Matlab from below link. For this project, Matlab 2022a is used
+   ```sh
+   (https://www.mathworks.com/support/dws.html)
+   ```
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 <!-- DOCUMENTATION -->
 ## Documentation
@@ -141,6 +147,7 @@ _Below is an example of how you can instruct your audience on installing and set
 * [MIB_Decode_Steps](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 
 <!-- Synchronization Signals -->
 <a id="Synchronization_Signals"></a>
@@ -362,7 +369,19 @@ Image of nooelec LNA:
 <a id="LTE_Cell_Search"></a>
 ### LTE Cell Search:
 
+**RF Soc - RF Data converter ADC/DAC configurations:**
 
+![image](https://user-images.githubusercontent.com/77175120/169672219-7d1195a7-bbf9-4df7-8e79-43937b8f3cd5.png)
+
+![image](https://user-images.githubusercontent.com/77175120/169672295-8d388c78-5e48-4a05-ad83-c06c76d9ddb1.png)
+
+Figure showing the Vivado block digram for Matlab Simulink implementation:
+
+![image](https://user-images.githubusercontent.com/77175120/169672056-fafc5c0c-d299-4e83-94ea-e27fe08aa65e.png)
+
+Figure showing the Vivado block digram for Vitis Custom implementation:
+
+![image](https://user-images.githubusercontent.com/77175120/169672091-6ba31490-34c8-485f-9dde-dd79a48a1845.png)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -395,11 +414,15 @@ Image of nooelec LNA:
 **"Wireless waveform Generator" application in Matlab**
 ![image](https://user-images.githubusercontent.com/77175120/168521307-bde56b3c-8cd0-4a36-a6ca-82908db87317.png)
 
-**Block diagram of Test Bench**
+**Block diagram of Test Bench with Pluto SDR**
 ![image](https://user-images.githubusercontent.com/77175120/168525137-b0576fe0-edb7-48d5-be1a-041e3c41d492.png)
 
 **LTE Cell Search Result from PYNQ Board**
 ![image](https://user-images.githubusercontent.com/77175120/168525256-2f4d184c-fb22-4da8-9ad1-91684b45fcd7.png)
+
+**Block diagram of Test Bench with External Spectrum Analyzer and Modulated Signal Generator (for accurate testing)**
+![image](https://user-images.githubusercontent.com/77175120/169672119-b5f330b6-6a6d-44b9-899f-981caf7f155d.png)
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
