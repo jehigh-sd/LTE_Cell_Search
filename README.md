@@ -264,7 +264,7 @@ There are 14 symbols in each subframe, numbered from 0 to 13. Therefore, in FDD 
 <a id="RF_SoC"></a>
 ### RF SoC:
 
-Xilinx’s Radio Frequency System-on-Chip (RFSoC) device combine high-accuracy ADCs and DACs operating at Giga samples per second (Gsps), with programmable heterogeneous compute engines. RFSoC 2x2 board with 2 RF DAC and 2 RF ADC channels. The RFSoC 2x2 has a Zynq Ultrascale+ XCZU28DR-FFVG1517AAZ with an Quad-core ARM Cortex A53 Processing System (PS) and Xilinx Ultrascale+ Programmable Logic (PL). There are BALUNs between the SMA connectors and the Zynq RFSoC on the board, which means that antenna and external signal sources can be connected directly to the board.
+Xilinx’s Radio Frequency System-on-Chip (RFSoC) device combine high-accuracy ADCs and DACs operating at Giga samples per second (Gsps), with programmable heterogeneous compute engines. RFSoC 2x2 board with 2 RF DAC and 2 RF ADC channels. The RFSoC 2x2 has a Zynq Ultrascale+ XCZU28DR-FFVG1517-2-E with an Quad-core ARM Cortex A53 Processing System (PS) and Xilinx Ultrascale+ Programmable Logic (PL). There are BALUNs between the SMA connectors and the Zynq RFSoC on the board, which means that antenna and external signal sources can be connected directly to the board.
 
 **RFSoC Board:**
 
