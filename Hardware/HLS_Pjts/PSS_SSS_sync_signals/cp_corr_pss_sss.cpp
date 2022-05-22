@@ -1,7 +1,7 @@
 #include "math.h"
 #include "cp_corr_pss_sss.h"
 
-void copy_input(hls::stream<data_pkt> &IN_R, DTYPE& IN_R_temp, hls::stream<data_pkt> &IN_I,DTYPE& IN_I_temp, int& run)
+void copy_input(hls::stream<data_pkt> &IN_R, DTYPE& IN_R_temp, hls::stream<data_pkt> &IN_I,DTYPE& IN_I_temp, int &run)
 {
   data_pkt t_r,t_i;
 
@@ -140,7 +140,11 @@ void avg_within_frame(DTYPE IN_R,DTYPE IN_I,DTYPE& freq, int& valid)
 
 void amplitudescale(int input[31], int output[31], int constant)
 {
-	int a = sizeof(input[31])/sizeof(int);
+	//int temp = sizeof(input);
+    //int t1 = sizeof(&input[31]);
+	//int t2 = sizeof(int);
+	//int a = sizeof(&input[31])/sizeof(int);
+	int a = &input[31] - input;
 	for (int i=0; i<a; i++)
 	{
 		output[i] = input[i] * constant;
@@ -149,7 +153,8 @@ void amplitudescale(int input[31], int output[31], int constant)
 
 void amplitudeshift(int input[31], int output[31])
 {
-	int a = sizeof(input[31])/sizeof(int);
+	//int a = sizeof(input)/sizeof(int);
+	int a = &input[31] - input;
 	for (int i=0; i<a; i++)
 	{
 		output[i] = 1-input[i];
@@ -188,9 +193,10 @@ void multiplyMatrices(int first[31][1],
 void swapArrayElements(int input[31], int output[31], int swapNumber)
 {
 	int temparray[swapNumber];
-	int array_size = sizeof(input[31])/sizeof(int);
+	//int array_size = sizeof(input[31])/sizeof(int);
+	int array_size = &input[31] - input;
 
-	//Storing frist number elements defined by "swapNumber" of the input array
+	//Storing first number elements defined by "swapNumber" of the input array
 	for(int i = 0; i < swapNumber; i++)
 	{
 		temparray[i] = input[i];
@@ -216,7 +222,7 @@ void swapArrayElements(int input[31], int output[31], int swapNumber)
 }
 
 
-void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[64])
+void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[62])
 {
 
 	DTYPE qp, q, mp, m0, m1;
@@ -464,7 +470,7 @@ void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[64])
 
 void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const DTYPE RX2_REAL[128], const DTYPE RX2_IMAG[128], hls::stream<cdata_pkt> results_sss_1_PSS_1[168], hls::stream<cdata_pkt> results_sss_1_PSS_2[168], hls::stream<cdata_pkt> results_sss_2_PSS_1[168], hls::stream<cdata_pkt> results_sss_2_PSS_2[168])
 {
-	DTYPE temp_sss_1[64],temp_sss_2[64];
+	DTYPE temp_sss_1[62],temp_sss_2[62];
 	DTYPE sec_sync_sig_1_try[128] = {0};
 	DTYPE sec_sync_sig_2_try[128] = {0};
 	cdata_pkt out_11[168], out_12[168], out_21[168], out_22[168];
@@ -556,10 +562,10 @@ void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const
 		out_22[i].data.i = acc_temp_22_i;
 		out_22[i].data.r = acc_temp_22_r;
 
-		results_sss_1_PSS_1->write(out_11[i]);
-		results_sss_1_PSS_2->write(out_12[i]);
-		results_sss_2_PSS_1->write(out_21[i]);
-		results_sss_2_PSS_2->write(out_22[i]);
+		results_sss_1_PSS_1[i].write(out_11[i]);
+		results_sss_1_PSS_2[i].write(out_12[i]);
+		results_sss_2_PSS_1[i].write(out_21[i]);
+		results_sss_2_PSS_2[i].write(out_22[i]);
 
 //		  sss_1_try=sss(t,n_id_2_est,0);
 //		  sss_2_try=sss(t,n_id_2_est,10);
@@ -683,7 +689,7 @@ void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::strea
 
 
 //void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
-void cp_corr_pss_sss(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
+void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[128],hls::stream<cdata_pkt> sss_1_PSS_1[168],hls::stream<cdata_pkt> sss_1_PSS_2[168],hls::stream<cdata_pkt> sss_2_PSS_1[168],hls::stream<cdata_pkt> sss_2_PSS_2[168])
 {
 #pragma HLS INTERFACE axis port=IN_R
 #pragma HLS INTERFACE axis port=IN_I
@@ -696,27 +702,45 @@ void cp_corr_pss_sss(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls
   DTYPE IN_real[128],IN_imag[128],output;
   DTYPE avg_r,avg_i, avg_slot_r,avg_slot_i, freq;
   int run = 1, valid = 0, k = 0;
+  const int N = 128;
   printf("IN sss_sync\n");
   while(run)
   {
 #pragma HLS DATAFLOW
+	//enter into shift reg
 	for (int i = 0; i < 128; i++)
 	{
-		copy_input(IN_R,IN_real[i],IN_I,IN_imag[i],run);
+		copy_input(IN_R[i],IN_real[i],IN_I[i],IN_imag[i],run);
 	}
+  }
+  printf("Got Frame\n");
 
-	// For simulation
-	k += 1;
-	if(78 == k)
-	{
-		run = 0;
-	}
-	printf("count %d\n", k);
 	//do fft on 128 values, fftshift: IN_real, IN_imag,
+	//Perform FFT
+	//fft(In_R, In_I, Out_R, Out_I);
 	//becomes complex received data: sss_recv_1, sss_recv_2
 
-	sss_correlation(sss_recv_1_real, sss_recv_1_imag, sss_recv_2_real, sss_recv_2_imag, &sss_1_PSS_1, &sss_1_PSS_2, &sss_2_PSS_1, &sss_2_PSS_2);
-  }
+  //fftshift
+  //const int iSHIFT = (N/2);
+  //for(int i = 0; i < iSHIFT; i++)
+  //{
+  //  sss_recv_1_real[i+iSHIFT] = IN_real[i];
+  //  sss_recv_1_imag[i+iSHIFT] = IN_imag[i];
+  //}
+  //for(int n = 0; n < iSHIFT; n++)
+  //{
+  //  sss_recv_1_real[n] = IN_real[n+iSHIFT];
+  //  sss_recv_1_imag[n] = IN_imag[n+iSHIFT];
+  //}
+
+  sss_correlation(sss_recv_1_real, sss_recv_1_imag, sss_recv_2_real, sss_recv_2_imag, &sss_1_PSS_1[168], &sss_1_PSS_2[168], &sss_2_PSS_1[168], &sss_2_PSS_2[168]);
+
+	// For simulation
+	//k += 1;
+	//if(78 == k)
+	//{
+	//	run = 0;
+	//}
 }
 
 #if 0
@@ -726,4 +750,9 @@ void cp_corr_pss_sss()
 	//void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
 
 }
+
+for(i = N-1; i > 0; --i){
+
+}
+shift_reg[0] = x;
 #endif
