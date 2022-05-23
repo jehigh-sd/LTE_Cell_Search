@@ -293,10 +293,13 @@ Xilinx’s Radio Frequency System-on-Chip (RFSoC) device combine high-accuracy A
 * Need of IP Block: Decimate 245.76 MHz to 30.72 MHz
 
 
-**LMX Configuration to configure to 245.76MHz**
+**RF SoC PLL configuration path using LMX:**
+![image](https://user-images.githubusercontent.com/77175120/169735159-47492021-819d-4613-988b-c1a3b37e5604.png)
+
+**LMX Configuration to configure to 245.76MHz:**
 ![image](https://user-images.githubusercontent.com/77175120/168522940-0c458bac-967c-44a3-8043-116fa8b4533c.png)
 
-**245.76MHz Tone measured in the Spectrum Analyzer after configuring LMX 2596**
+**245.76MHz Tone measured in the Spectrum Analyzer after configuring LMX 2596:**
 ![image](https://user-images.githubusercontent.com/77175120/168523024-419aa3f3-1ba4-4538-be6c-b5d92e9d7672.png)
 
 
