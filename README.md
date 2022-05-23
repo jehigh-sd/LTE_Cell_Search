@@ -132,10 +132,12 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
    ```sh
    (https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html)
    ```
-2. Install Matlab from below link. For this project, Matlab 2022a is used
+3. Install Matlab from below link. For this project, Matlab 2022a is used
    ```sh
    (https://www.mathworks.com/support/dws.html)
    ```
+4. Copy LMX2594 from this location of this git repo (Hardware/LMX_Settings/LMX2594_491.52.txt) to /usr/local/share/pynq-venv/lib/python3.8/site-packages/xrfclk of RF SoC and restart the RFSoC
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
