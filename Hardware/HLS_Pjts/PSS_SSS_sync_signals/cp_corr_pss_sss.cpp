@@ -18,6 +18,23 @@ void copy_input(hls::stream<data_pkt> &IN_R, DTYPE& IN_R_temp, hls::stream<data_
   }
 }
 
+void copy_out(cdata_pkt &OUT_11, hls::stream<cdata_pkt> &sss_1_PSS_1, cdata_pkt &OUT_12, hls::stream<cdata_pkt> &sss_1_PSS_2, cdata_pkt &OUT_21, hls::stream<cdata_pkt> &sss_2_PSS_1, cdata_pkt &OUT_22, hls::stream<cdata_pkt> &sss_2_PSS_2, int &run)
+{
+  //cdata_pkt t11,t12,t21,t22;
+
+  sss_1_PSS_1.write(OUT_11);
+  sss_1_PSS_2.write(OUT_12);
+  sss_2_PSS_1.write(OUT_21);
+  sss_2_PSS_2.write(OUT_22);
+
+  /* This will break the loop*/
+  if(OUT_11.last == 1)
+  {
+	run = 0;
+  }
+}
+
+
 void compute_conjugate(DTYPE IN_R, DTYPE IN_I, DTYPE& OUT_R, DTYPE& OUT_I)
 {
   static DTYPE samp_buff_r[SIZE_FFT] = {0}, samp_buff_i[SIZE_FFT] = {0};
@@ -190,48 +207,78 @@ void multiplyMatrices(int first[31][1],
 }
 
 
-void swapArrayElements(int input[31], int output[31], int swapNumber)
+void swapArrayElements(const int input[31], int output[31], int swapNumber)
 {
 	int temparray[swapNumber];
 	//int array_size = sizeof(input[31])/sizeof(int);
 	int array_size = &input[31] - input;
+	int temp_in[array_size];
 
-	//Storing first number elements defined by "swapNumber" of the input array
-	for(int i = 0; i < swapNumber; i++)
+	if((0 != swapNumber) && (array_size != swapNumber))
 	{
-		temparray[i] = input[i];
+		for(int i = 0; i < array_size; i++)
+		{
+			temp_in[i] = input[i];
+		}
+
+		//Storing first number elements defined by "swapNumber" of the input array
+		for(int i = 0; i < swapNumber; i++)
+		{
+			temparray[i] = temp_in[i];
+		}
+
+		//Moving array elements defined by "swapNumber" to starting of the array
+		for(int i = 0; i < (array_size-swapNumber); i++)
+		{
+			temp_in[i] = temp_in[i+swapNumber];
+		}
+
+		//Finally coping the temp array which has the first few elements defined by "swapNumber" to last of the array.
+		for(int i = 0; i < swapNumber; i++)
+		{
+			temp_in[array_size -swapNumber + i] = temparray[i];
+		}
+
+		for(int i = 0; i < array_size; i++)
+		{
+			output[i] = temp_in[i];
+		}
 	}
-
-	//Moving array elements defined by "swapNumber" to starting of the array
-	for(int i = 0; i < array_size; i++)
-	{
-		input[i] = input[i+swapNumber];
-	}
-
-	//Finally coping the temp array which has the first few elements defined by "swapNumber" to last of the array.
-	for(int i = 0; i < swapNumber; i++)
-	{
-		input[array_size - i] = temparray[i];
-	}
-
-	for(int i = 0; i < array_size; i++)
-	{
-		output[i] = input[i];
+	else{
+		for(int i = 0; i < array_size; i++)
+		{
+			output[i] = input[i];
+		}
 	}
 
 }
 
+int s_td[31] = {0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1};
+int c_td[31] = {0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1};
+int z_td[31] = {0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1};
+int s0_m0[31], s1_m1[31], c0[31], c1[31], z1_m0[31], z1_m1[31];
+void sss_adj(void)
+{
+	int s_td_out[31], c_td_out[31], z_td_out[31];
+	amplitudescale(s_td, s_td_out, 2);
+	amplitudeshift(s_td_out, s_td);
+
+	amplitudescale(c_td, c_td_out, 2);
+	amplitudeshift(c_td_out, c_td);
+
+	amplitudescale(z_td, z_td_out, 2);
+	amplitudeshift(z_td_out, z_td);
+}
 
 void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[62])
 {
 
 	DTYPE qp, q, mp, m0, m1;
-	int s_td_out[31], c_td_out[31], z_td_out[31], s0_m0[31], s1_m1[31], c0[31], c1[31], z1_m0[31], z1_m1[31];
-	int s_td[31] = {0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1};
-	int c_td[31] = {0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1};
-	int z_td[31] = {0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1};
+	//int s_td_out[31], c_td_out[31], z_td_out[31], s0_m0[31], s1_m1[31], c0[31], c1[31], z1_m0[31], z1_m1[31];
+	//int s_td_out[31], c_td_out[31], z_td_out[31];
 
-	if ((slot_num!=0)&&(slot_num==10))
+
+	if ((slot_num!=0)&&(slot_num!=10))
 	{
 		return;
 	}
@@ -241,16 +288,6 @@ void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[62])
 	mp = n_id_1+q*(q+1)/2;
 	m0 = fmod(mp,31);
 	m1 = fmod(m0+floor(mp/31)+1,31);
-
-
-	amplitudescale(s_td, s_td_out, 2);
-	amplitudeshift(s_td_out, s_td);
-
-	amplitudescale(c_td, c_td_out, 2);
-	amplitudeshift(c_td_out, c_td);
-
-	amplitudescale(z_td, z_td_out, 2);
-	amplitudeshift(z_td_out, z_td);
 
 
 	//s0_m0=s_td[mod(m0:30+m0,31)+1];
@@ -467,13 +504,17 @@ void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[62])
 //	  OUT_I = 0.125*corr_sum_i;
 
 //}
-
-void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const DTYPE RX2_REAL[128], const DTYPE RX2_IMAG[128], hls::stream<cdata_pkt> results_sss_1_PSS_1[168], hls::stream<cdata_pkt> results_sss_1_PSS_2[168], hls::stream<cdata_pkt> results_sss_2_PSS_1[168], hls::stream<cdata_pkt> results_sss_2_PSS_2[168])
+//hls::stream<cdata_pkt> temp11[168];
+//hls::stream<cdata_pkt> temp12[168];
+//hls::stream<cdata_pkt> temp21[168];
+//hls::stream<cdata_pkt> temp22[168];
+//void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const DTYPE RX2_REAL[128], const DTYPE RX2_IMAG[128], hls::stream<cdata_pkt> results_sss_1_PSS_1[168], hls::stream<cdata_pkt> results_sss_1_PSS_2[168], hls::stream<cdata_pkt> results_sss_2_PSS_1[168], hls::stream<cdata_pkt> results_sss_2_PSS_2[168])
+void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const DTYPE RX2_REAL[128], const DTYPE RX2_IMAG[128], cdata_pkt results_sss_1_PSS_1[168], cdata_pkt results_sss_1_PSS_2[168], cdata_pkt results_sss_2_PSS_1[168], cdata_pkt results_sss_2_PSS_2[168])
 {
 	DTYPE temp_sss_1[62],temp_sss_2[62];
 	DTYPE sec_sync_sig_1_try[128] = {0};
 	DTYPE sec_sync_sig_2_try[128] = {0};
-	cdata_pkt out_11[168], out_12[168], out_21[168], out_22[168];
+	//cdata_pkt out_11[168], out_12[168], out_21[168], out_22[168];
 	DTYPE acc_temp_11_i,acc_temp_11_r,acc_temp_21_i,acc_temp_21_r,acc_temp_12_i,acc_temp_12_r,acc_temp_22_i,acc_temp_22_r;
 
 	//Input data
@@ -484,8 +525,9 @@ void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const
 	//sss_recv_2_imag
 	//sss_recv_2_real
 
+	sss_adj();
 
-	for(int i = 0; i < 167; i++)
+	for(int i = 0; i < 168; i++)
 	{
 		//parameter n_id_2_est=2;
 		sss(i,2,0,temp_sss_1);
@@ -537,35 +579,42 @@ void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const
 		}
 
 
-//		results_sss_1_PSS_1[i].i = acc_temp_11_i;
-//		results_sss_1_PSS_1[i].r = acc_temp_11_r;
-//
-//		results_sss_2_PSS_1[i].i = acc_temp_21_i;
-//		results_sss_2_PSS_1[i].r = acc_temp_21_r;
-//
-//		results_sss_1_PSS_2[i].i = acc_temp_12_i;
-//		results_sss_1_PSS_2[i].r = acc_temp_12_r;
-//
-//		results_sss_2_PSS_2[i].i = acc_temp_22_i;
-//		results_sss_2_PSS_2[i].r = acc_temp_22_r;
+		results_sss_1_PSS_1[i].data.i = acc_temp_11_i;
+		results_sss_1_PSS_1[i].data.r = acc_temp_11_r;
+
+		results_sss_2_PSS_1[i].data.i = acc_temp_21_i;
+		results_sss_2_PSS_1[i].data.r = acc_temp_21_r;
+
+		results_sss_1_PSS_2[i].data.i = acc_temp_12_i;
+		results_sss_1_PSS_2[i].data.r = acc_temp_12_r;
+
+		results_sss_2_PSS_2[i].data.i = acc_temp_22_i;
+		results_sss_2_PSS_2[i].data.r = acc_temp_22_r;
 
 
-		out_11[i].data.i = acc_temp_11_i;
-		out_11[i].data.r = acc_temp_11_r;
+		//out_11[i].data.i = acc_temp_11_i;
+		//out_11[i].data.r = acc_temp_11_r;
 
-		out_21[i].data.i = acc_temp_21_i;
-		out_21[i].data.r = acc_temp_21_r;
+		//out_21[i].data.i = acc_temp_21_i;
+		//out_21[i].data.r = acc_temp_21_r;
 
-		out_12[i].data.i = acc_temp_12_i;
-		out_12[i].data.r = acc_temp_12_r;
+		//out_12[i].data.i = acc_temp_12_i;
+		//out_12[i].data.r = acc_temp_12_r;
 
-		out_22[i].data.i = acc_temp_22_i;
-		out_22[i].data.r = acc_temp_22_r;
+		//out_22[i].data.i = acc_temp_22_i;
+		//out_22[i].data.r = acc_temp_22_r;
 
-		results_sss_1_PSS_1[i].write(out_11[i]);
-		results_sss_1_PSS_2[i].write(out_12[i]);
-		results_sss_2_PSS_1[i].write(out_21[i]);
-		results_sss_2_PSS_2[i].write(out_22[i]);
+
+		//results_sss_1_PSS_1[i].write(out_11[i]);
+		//results_sss_1_PSS_2[i].write(out_12[i]);
+		//results_sss_2_PSS_1[i].write(out_21[i]);
+		//results_sss_2_PSS_2[i].write(out_22[i]);
+
+		//temp11[i].operator <<(out_11[i]);
+		//temp11[i].write(out_11[i]);
+		//temp12[i].operator <<(out_12[i]);
+		//temp21[i].operator <<(out_21[i]);
+		//temp22[i].operator <<(out_22[i]);
 
 //		  sss_1_try=sss(t,n_id_2_est,0);
 //		  sss_2_try=sss(t,n_id_2_est,10);
@@ -700,8 +749,9 @@ void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
   DTYPE IN_real[128],IN_imag[128],output;
+  cdata_pkt OUT_11[168], OUT_12[168], OUT_21[168], OUT_22[168];
   DTYPE avg_r,avg_i, avg_slot_r,avg_slot_i, freq;
-  int run = 1, valid = 0, k = 0;
+  int run = 1, valid = 0, k = 0, run_out = 1;
   const int N = 128;
   printf("IN sss_sync\n");
   while(run)
@@ -733,7 +783,16 @@ void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[
   //  sss_recv_1_imag[n] = IN_imag[n+iSHIFT];
   //}
 
-  sss_correlation(sss_recv_1_real, sss_recv_1_imag, sss_recv_2_real, sss_recv_2_imag, &sss_1_PSS_1[168], &sss_1_PSS_2[168], &sss_2_PSS_1[168], &sss_2_PSS_2[168]);
+  sss_correlation(sss_recv_1_real, sss_recv_1_imag, sss_recv_2_real, sss_recv_2_imag, OUT_11, OUT_12, OUT_21, OUT_22);
+
+  while(run_out)
+  {
+	for (int i = 0; i < 168; i++)
+	{
+		copy_out(OUT_11[i], sss_1_PSS_1[i], OUT_12[i], sss_1_PSS_2[i], OUT_21[i], sss_2_PSS_1[i], OUT_22[i], sss_2_PSS_2[i],run_out);
+	}
+  }
+  printf("Pushed out\n");
 
 	// For simulation
 	//k += 1;
@@ -741,6 +800,9 @@ void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[
 	//{
 	//	run = 0;
 	//}
+
+  run = 1;
+  run_out = 1;
 }
 
 #if 0
