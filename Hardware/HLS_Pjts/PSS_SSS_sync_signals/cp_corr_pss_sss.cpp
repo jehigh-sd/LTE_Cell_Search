@@ -209,9 +209,9 @@ void multiplyMatrices(int first[31][1],
 
 void swapArrayElements(const int input[31], int output[31], int swapNumber)
 {
-	int temparray[swapNumber];
 	//int array_size = sizeof(input[31])/sizeof(int);
 	int array_size = &input[31] - input;
+	int temparray[array_size]; //swapNumber
 	int temp_in[array_size];
 
 	if((0 != swapNumber) && (array_size != swapNumber))
