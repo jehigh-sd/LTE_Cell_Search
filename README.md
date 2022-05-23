@@ -132,10 +132,12 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
    ```sh
    (https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html)
    ```
-2. Install Matlab from below link. For this project, Matlab 2022a is used
+3. Install Matlab from below link. For this project, Matlab 2022a is used
    ```sh
    (https://www.mathworks.com/support/dws.html)
    ```
+4. Copy LMX2594 from this location of this git repo (Hardware/LMX_Settings/LMX2594_491.52.txt) to /usr/local/share/pynq-venv/lib/python3.8/site-packages/xrfclk of RF SoC and restart the RFSoC
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -291,10 +293,13 @@ Xilinx’s Radio Frequency System-on-Chip (RFSoC) device combine high-accuracy A
 * Need of IP Block: Decimate 245.76 MHz to 30.72 MHz
 
 
-**LMX Configuration to configure to 245.76MHz**
+**RF SoC PLL configuration path using LMX:**
+![image](https://user-images.githubusercontent.com/77175120/169735159-47492021-819d-4613-988b-c1a3b37e5604.png)
+
+**LMX Configuration to configure to 245.76MHz:**
 ![image](https://user-images.githubusercontent.com/77175120/168522940-0c458bac-967c-44a3-8043-116fa8b4533c.png)
 
-**245.76MHz Tone measured in the Spectrum Analyzer after configuring LMX 2596**
+**245.76MHz Tone measured in the Spectrum Analyzer after configuring LMX 2596:**
 ![image](https://user-images.githubusercontent.com/77175120/168523024-419aa3f3-1ba4-4538-be6c-b5d92e9d7672.png)
 
 
