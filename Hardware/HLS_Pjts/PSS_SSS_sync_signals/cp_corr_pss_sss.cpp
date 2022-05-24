@@ -1,6 +1,7 @@
 #include "math.h"
 #include "cp_corr_pss_sss.h"
 
+
 void copy_input(hls::stream<data_pkt> &IN_R, DTYPE& IN_R_temp, hls::stream<data_pkt> &IN_I,DTYPE& IN_I_temp, int &run)
 {
   data_pkt t_r,t_i;
@@ -209,7 +210,7 @@ void multiplyMatrices(int first[31][1],
 
 void swapArrayElements(const int input[31], int output[31], int swapNumber)
 {
-	//int array_size = sizeof(input[31])/sizeof(int);
+	//int array_size = sizeof(input)/sizeof(int);
 	int array_size = &input[31] - input;
 	int temparray[array_size]; //swapNumber
 	int temp_in[array_size];
@@ -253,11 +254,9 @@ void swapArrayElements(const int input[31], int output[31], int swapNumber)
 
 }
 
-int s_td[31] = {0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1};
-int c_td[31] = {0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1};
-int z_td[31] = {0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1};
-int s0_m0[31], s1_m1[31], c0[31], c1[31], z1_m0[31], z1_m1[31];
-void sss_adj(void)
+
+
+void sss_adj(int s_td[31], int c_td[31], int z_td[31])
 {
 	int s_td_out[31], c_td_out[31], z_td_out[31];
 	amplitudescale(s_td, s_td_out, 2);
@@ -270,13 +269,10 @@ void sss_adj(void)
 	amplitudeshift(z_td_out, z_td);
 }
 
-void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[62])
+void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, int s_td[31], int c_td[31], int z_td[31], DTYPE s[62])
 {
-
+	int s0_m0[31], s1_m1[31], c0[31], c1[31], z1_m0[31], z1_m1[31];
 	DTYPE qp, q, mp, m0, m1;
-	//int s_td_out[31], c_td_out[31], z_td_out[31], s0_m0[31], s1_m1[31], c0[31], c1[31], z1_m0[31], z1_m1[31];
-	//int s_td_out[31], c_td_out[31], z_td_out[31];
-
 
 	if ((slot_num!=0)&&(slot_num!=10))
 	{
@@ -312,107 +308,43 @@ void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[62])
 	a = (fmod((30)+fmod(m1,8),31)+1);
 	swapArrayElements(z_td, z1_m1, a);
 
-	//int tempMatrix_A[31][1];
-	//int tempMatrix_B[31][1];
-	//int tempMatrix_A[31];
-	//int tempMatrix_B[31];
-
 	if (slot_num==0)
 	{
-		// even indices of s
+		// odd indices of s
 		for ( int i = 0, j = 1; i < 31; i++)
 		{
-			//tempMatrix_A[i] = s1_m1[i] * c1[i];
-			//s[i][1] = tempMatrix_A[i] * z1_m0[i];
-
+			//s(2:2:62) = s1_m1.*c1.*z1_m0;
 			s[j] = (s1_m1[i] * c1[i]) * z1_m0[i];
 			j += 2;
-			//tempMatrix_B[i][1] = tempMatrix_A[i] * z1_m0[i];
-			//s[i][1] = tempMatrix_B[i][1];
 		}
 
-//		//s(2:2:62) = s1_m1.*c1.*z1_m0;
-//		multiplyMatrices(s1_m1, c1, tempMatrix_A, 31, 1);
-//		multiplyMatrices(tempMatrix_A, z1_m0, tempMatrix_B, 31, 1);
-//		// accessing and updating the elements
-//		for ( int i = 0; i < 31; i++)
-//		{
-//		  // variable i traverses the rows
-//		  for ( int j = 0; j < 1; j++)
-//		  {
-//			  s[i][j] = tempMatrix_B[i][j];
-//		  }
-//		}
-
-		// odd indices of s
+		// even indices of s
 		for ( int i = 0, j = 0; i < 31; i++)
 		{
+			//s(1:2:62) = s0_m0.*c0;
 			s[j] = s0_m0[i] * c0[i];
 			j += 2;
-			//tempMatrix_A[i] = s0_m0[i] * c0[i];
-			//s[i][1] = tempMatrix_A[i];
 		}
-
-//		//s(1:2:62) = s0_m0.*c0;
-//		multiplyMatrices(s0_m0, c0, tempMatrix_A, 31, 1);
-//		// accessing and updating the elements
-//		for ( int i = 0; i < 31; i++)
-//		{
-//		  // variable i traverses the rows
-//		  for ( int j = 0; j < 1; j++)
-//		  {
-//			  s[i][j] = tempMatrix_A[i][j];
-//		  }
-//		}
-
 	}
 
 	else if (slot_num==10)
 	{
-		// even indices of s
+		// odd indices of s
 		for ( int i = 0, j = 1; i < 31; i++)
 		{
+			//s(2:2:62) = s0_m0.*c1.*z1_m1;
 			s[j] = (s0_m0[i] * c1[i]) * z1_m1[i];
 			j += 2;
 		}
 
-//		//s(2:2:62) = s0_m0.*c1.*z1_m1;
-//		//TODO: void matmul_partition(int* in1, int* in2, int* out_r, int size, int rep_count);
-//		multiplyMatrices(s0_m0, c1, tempMatrix_A, 31, 1);
-//		multiplyMatrices(tempMatrix_A, z1_m1, tempMatrix_B, 31, 1);
-//		// accessing and updating the elements
-//		for ( int i = 0; i < 31; i++)
-//		{
-//		  // variable i traverses the rows
-//		  for ( int j = 0; j < 1; j++)
-//		  {
-//			  s[i][j] = tempMatrix_B[i][j];
-//		  }
-//		}
-
-
-		// odd indices of s
+		// even indices of s
 		for ( int i = 0, j = 0; i < 31; i++)
 		{
+			//s(1:2:62) = s1_m1.*c0;
 			s[j] = s1_m1[i] * c0[i];
 			j += 2;
-			//tempMatrix_A[i] = s0_m0[i] * c0[i];
-			//s[i][1] = tempMatrix_A[i];
 		}
-
-//		//s(1:2:62) = s1_m1.*c0;
-//		multiplyMatrices(s1_m1, c0, tempMatrix_A, 31, 1);
-//		// accessing and updating the elements
-//		for (int i = 0; i < 31; i++)
-//		{
-//		  // variable i traverses the rows
-//		  for (int j = 0; j < 1; j++)
-//		  {
-//			  s[i][j] = tempMatrix_A[i][j];
-//		  }
-//		}
 	}
-
 	else
 	{
 		return;
@@ -504,34 +436,26 @@ void sss(DTYPE n_id_1,DTYPE n_id_2,DTYPE slot_num, DTYPE s[62])
 //	  OUT_I = 0.125*corr_sum_i;
 
 //}
-//hls::stream<cdata_pkt> temp11[168];
-//hls::stream<cdata_pkt> temp12[168];
-//hls::stream<cdata_pkt> temp21[168];
-//hls::stream<cdata_pkt> temp22[168];
-//void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const DTYPE RX2_REAL[128], const DTYPE RX2_IMAG[128], hls::stream<cdata_pkt> results_sss_1_PSS_1[168], hls::stream<cdata_pkt> results_sss_1_PSS_2[168], hls::stream<cdata_pkt> results_sss_2_PSS_1[168], hls::stream<cdata_pkt> results_sss_2_PSS_2[168])
+
 void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const DTYPE RX2_REAL[128], const DTYPE RX2_IMAG[128], cdata_pkt results_sss_1_PSS_1[168], cdata_pkt results_sss_1_PSS_2[168], cdata_pkt results_sss_2_PSS_1[168], cdata_pkt results_sss_2_PSS_2[168])
 {
 	DTYPE temp_sss_1[62],temp_sss_2[62];
 	DTYPE sec_sync_sig_1_try[128] = {0};
 	DTYPE sec_sync_sig_2_try[128] = {0};
-	//cdata_pkt out_11[168], out_12[168], out_21[168], out_22[168];
 	DTYPE acc_temp_11_i,acc_temp_11_r,acc_temp_21_i,acc_temp_21_r,acc_temp_12_i,acc_temp_12_r,acc_temp_22_i,acc_temp_22_r;
 
-	//Input data
-	//sss_recv_1 = fftshift(fft(downsampled));
-	//sss_recv_2 = fftshift(fft(downsampled));
-	//sss_recv_1_imag
-	//sss_recv_1_real
-	//sss_recv_2_imag
-	//sss_recv_2_real
+	//TODO: Need to initialize these values each time call this function (or each time call sss_adj()
+	int s_td[31] = {0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1};
+	int c_td[31] = {0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1};
+	int z_td[31] = {0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1};
 
-	sss_adj();
+	sss_adj(s_td,c_td,z_td);
 
 	for(int i = 0; i < 168; i++)
 	{
 		//parameter n_id_2_est=2;
-		sss(i,2,0,temp_sss_1);
-		sss(i,2,10,temp_sss_2);
+		sss(i,2,0,s_td,c_td,z_td,temp_sss_1);
+		sss(i,2,10,s_td,c_td,z_td,temp_sss_2);
 
 		for (int n = 0; n < 128; n++)
 		{
@@ -590,50 +514,6 @@ void sss_correlation(const DTYPE RX1_REAL[128], const DTYPE RX1_IMAG[128], const
 
 		results_sss_2_PSS_2[i].data.i = acc_temp_22_i;
 		results_sss_2_PSS_2[i].data.r = acc_temp_22_r;
-
-
-		//out_11[i].data.i = acc_temp_11_i;
-		//out_11[i].data.r = acc_temp_11_r;
-
-		//out_21[i].data.i = acc_temp_21_i;
-		//out_21[i].data.r = acc_temp_21_r;
-
-		//out_12[i].data.i = acc_temp_12_i;
-		//out_12[i].data.r = acc_temp_12_r;
-
-		//out_22[i].data.i = acc_temp_22_i;
-		//out_22[i].data.r = acc_temp_22_r;
-
-
-		//results_sss_1_PSS_1[i].write(out_11[i]);
-		//results_sss_1_PSS_2[i].write(out_12[i]);
-		//results_sss_2_PSS_1[i].write(out_21[i]);
-		//results_sss_2_PSS_2[i].write(out_22[i]);
-
-		//temp11[i].operator <<(out_11[i]);
-		//temp11[i].write(out_11[i]);
-		//temp12[i].operator <<(out_12[i]);
-		//temp21[i].operator <<(out_21[i]);
-		//temp22[i].operator <<(out_22[i]);
-
-//		  sss_1_try=sss(t,n_id_2_est,0);
-//		  sss_2_try=sss(t,n_id_2_est,10);
-//
-//		  sss_1_try = [zeros(1,33) sss_1_try(1:31) 0 sss_1_try(32:62) zeros(1,32)];
-//		  sss_2_try = [zeros(1,33) sss_2_try(1:31) 0 sss_2_try(32:62) zeros(1,32)];
-//
-//		  temp_sss = sss_1_try*conj(sss_recv_1);
-//		  results_sss_1_PSS_1 = [results_sss_1_PSS_1 temp_sss];
-//
-//		  temp_sss = sss_2_try*conj(sss_recv_1);
-//		  results_sss_2_PSS_1 = [results_sss_2_PSS_1 temp_sss];
-//
-//		  temp_sss = sss_1_try*conj(sss_recv_2);
-//		  results_sss_1_PSS_2 = [results_sss_1_PSS_2 temp_sss];
-//
-//		  temp_sss = sss_2_try*conj(sss_recv_2);
-//		  results_sss_2_PSS_2 = [results_sss_2_PSS_2 temp_sss];
-
 	}
 }
 
@@ -657,10 +537,6 @@ void write_output(DTYPE IN,hls::stream<data_pkt> &OUT, int run, int valid)
   }
 }
 
-//void cp_corr_dataflow(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<data_pkt> &OUT)
-//{
-//
-//}
 
 void cp_corr(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<data_pkt> &OUT)
 {
@@ -737,6 +613,57 @@ void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::strea
 }
 
 
+void proc_fe(bool dir, config_t* config, DTYPE IN_r[NFFT], DTYPE IN_i[NFFT], cmpxDataIn out[NFFT])
+{
+	config->setDir(dir);
+
+	//Scaling schedule: TODO: What is this doing?
+	config->setSch(0x2AB);
+
+	for (int i = 0; i < NFFT; i++)
+	{
+		out[i].real(IN_r[i]);
+		out[i].imag(IN_i[i]);
+	}
+}
+
+void proc_be(status_t *status_in, bool *ovflo, cmpxDataOut out[NFFT], DTYPE OUT_r[NFFT], DTYPE OUT_i[NFFT])
+{
+	for (int i = 0; i < NFFT; i++)
+	{
+		OUT_r[i] = out[i].real();
+		OUT_i[i] = out[i].imag();
+	}
+
+	*ovflo = status_in->getOvflo() & 0x1;
+}
+
+void fft_top(bool dir, DTYPE IN_r[NFFT], DTYPE IN_i[NFFT], DTYPE OUT_r[NFFT], DTYPE OUT_i[NFFT], bool &ovflo)
+{
+#pragma HLS interface ap_hs port=dir
+#pragma HLS interface ap_fifo depth=1 port=ovflo
+#pragma HLS interface ap_fifo depth=NFFT port=IN_r,IN_i,OUT_r,OUT_i
+#pragma HLS data_pack variable=IN_r
+#pragma HLS data_pack variable=IN_i
+#pragma HLS data_pack variable=OUT_r
+#pragma HLS data_pack variable=OUT_i
+#pragma HLS dataflow
+	//https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/Using-the-FFT-Function-with-Array-Interface
+	//https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/FFT-IP-Library
+	cmpxDataIn xn1[NFFT];
+	cmpxDataOut xk1[NFFT];
+	config_t fft_config1;
+	status_t fft_status1;
+
+	proc_fe(dir, &fft_config1, IN_r, IN_i, xn1);
+
+	//fft arguments: input data, output data, output status and input configuration.
+    hls::fft<param1> (xn1, xk1, &fft_status1, &fft_config1);
+
+    proc_be(&fft_status1, &ovflo, xk1, OUT_r, OUT_i);
+}
+
+
 //void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
 void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[128],hls::stream<cdata_pkt> sss_1_PSS_1[168],hls::stream<cdata_pkt> sss_1_PSS_2[168],hls::stream<cdata_pkt> sss_2_PSS_1[168],hls::stream<cdata_pkt> sss_2_PSS_2[168])
 {
@@ -748,12 +675,14 @@ void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[
 #pragma HLS INTERFACE axis port=sss_2_PSS_2
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
-  DTYPE IN_real[128],IN_imag[128],output;
+  DTYPE IN_real[128],IN_imag[128];
+  DTYPE SSS_RX1_REAL[128], SSS_RX1_IMAG[128], SSS_RX2_REAL[128], SSS_RX2_IMAG[128];
   cdata_pkt OUT_11[168], OUT_12[168], OUT_21[168], OUT_22[168];
-  DTYPE avg_r,avg_i, avg_slot_r,avg_slot_i, freq;
+  bool overflow;
+  //DTYPE avg_r,avg_i, avg_slot_r,avg_slot_i, freq;
   int run = 1, valid = 0, k = 0, run_out = 1;
   const int N = 128;
-  printf("IN sss_sync\n");
+
   while(run)
   {
 #pragma HLS DATAFLOW
@@ -763,12 +692,20 @@ void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[
 		copy_input(IN_R[i],IN_real[i],IN_I[i],IN_imag[i],run);
 	}
   }
-  printf("Got Frame\n");
 
-	//do fft on 128 values, fftshift: IN_real, IN_imag,
-	//Perform FFT
-	//fft(In_R, In_I, Out_R, Out_I);
-	//becomes complex received data: sss_recv_1, sss_recv_2
+  // TODO: List of Steps
+  // 1. Find peaks of the input: IN_real, IN_imag
+  // 2. Choose method: streaming or samples method
+  // 3. Process/Review 10 slots, need to find 2 PSS locations (t0,t1)
+  // 4. Keep calculating the PSS, and keep track of the maximum values
+  // 5. Identify 2 PSS peak locations: sss_recv_1, sss_recv_2
+  // 6. Valid peaks or not, need threshold check
+  // 7. Calculate 128 point fft on receive peak locations: sss_recv_1, sss_recv_2
+  // 8. Perform fftshift TBD
+
+  // https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/HLS-IP-Libraries
+  fft_top(FFT_FORWARD,IN_real, IN_imag, SSS_RX1_REAL, SSS_RX1_IMAG,overflow);
+  fft_top(FFT_FORWARD,IN_real, IN_imag, SSS_RX2_REAL, SSS_RX2_IMAG,overflow);
 
   //fftshift
   //const int iSHIFT = (N/2);
@@ -792,14 +729,6 @@ void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[
 		copy_out(OUT_11[i], sss_1_PSS_1[i], OUT_12[i], sss_1_PSS_2[i], OUT_21[i], sss_2_PSS_1[i], OUT_22[i], sss_2_PSS_2[i],run_out);
 	}
   }
-  printf("Pushed out\n");
-
-	// For simulation
-	//k += 1;
-	//if(78 == k)
-	//{
-	//	run = 0;
-	//}
 
   run = 1;
   run_out = 1;

@@ -284,12 +284,6 @@ int main()
 			In_I[i] = temp_i;
 	#endif
 
-			//cp_corr_pss_sss(In_R, In_I, Out_11, Out_12, Out_21, Out_22);
-
-			//if(0 == (i % 1000))
-			//{
-			//	printf("R Check %d\n", i);
-			//}
 		}
 		printf("Calling sss_sync\n");
 
@@ -297,56 +291,49 @@ int main()
 		//sss_sync(In_R, In_I, Out_11, Out_12, Out_21, Out_22);
 		cp_corr_pss_sss(In_R, In_I, Out_11, Out_12, Out_21, Out_22);
 
-	//Print output
-//	printf("Printing Output\n");
-	//for(int i=0; i<1*SIZE_O; i++){
-		//printf("%4d\t%f\n",i,Out.read().data);
-		//printf("%4d\t%f\n",i,Out[i]);
-	//}
-
 		printf("\n n=%d \n\n",n);
-		printf("Index  Calculated            Gold\n");
+		printf("Index  Description  Calculated            Gold\n");
 		// comparing with golden output
 		for(int i=0; i<SSS_SIZE_OUT; i++)
 		{
 			fscanf(fpo_11r, "%f", &gold_out);
 			ct = Out_11[i].read();
-			printf("%d      %0.15f    %0.15f\n", i, ct.data.r, gold_out);
+			printf("%d      Out_11r      %0.15f    %0.15f\n", i, ct.data.r, gold_out);
 			rmse.add_value(ct.data.r - gold_out);
 
 			fscanf(fpo_11i, "%f", &gold_out);
 			//ct = Out_11[i].read();
-			printf("%d      %0.15f    %0.15f\n", i, ct.data.i, gold_out);
+			printf("%d      Out_11i      %0.15f    %0.15f\n", i, ct.data.i, gold_out);
 			rmse.add_value(ct.data.i - gold_out);
 
 			fscanf(fpo_12r, "%f", &gold_out);
 			ct = Out_12[i].read();
-			printf("%d      %0.15f    %0.15f\n", i, ct.data.r, gold_out);
+			printf("%d      Out_12r      %0.15f    %0.15f\n", i, ct.data.r, gold_out);
 			rmse.add_value(ct.data.r - gold_out);
 
 			fscanf(fpo_12i, "%f", &gold_out);
 			//ct = Out_12[i].read();
-			printf("%d      %0.15f    %0.15f\n", i, ct.data.i, gold_out);
+			printf("%d      Out_12i      %0.15f    %0.15f\n", i, ct.data.i, gold_out);
 			rmse.add_value(ct.data.i - gold_out);
 
 			fscanf(fpo_21r, "%f", &gold_out);
 			ct = Out_21[i].read();
-			printf("%d      %0.15f    %0.15f\n", i, ct.data.r, gold_out);
+			printf("%d      Out_21r      %0.15f    %0.15f\n", i, ct.data.r, gold_out);
 			rmse.add_value(ct.data.r - gold_out);
 
 			fscanf(fpo_21i, "%f", &gold_out);
 			//ct = Out_21[i].read();
-			printf("%d      %0.15f    %0.15f\n", i, ct.data.i, gold_out);
+			printf("%d      Out_21i      %0.15f    %0.15f\n", i, ct.data.i, gold_out);
 			rmse.add_value(ct.data.i - gold_out);
 
 			fscanf(fpo_22r, "%f", &gold_out);
 			ct = Out_22[i].read();
-			printf("%d      %0.15f    %0.15f\n", i, ct.data.r, gold_out);
+			printf("%d      Out_22r      %0.15f    %0.15f\n", i, ct.data.r, gold_out);
 			rmse.add_value(ct.data.r - gold_out);
 
 			fscanf(fpo_22i, "%f", &gold_out);
 			//ct = Out_22[i].read();
-			printf("%d      %0.15f    %0.15f\n", i, ct.data.i, gold_out);
+			printf("%d      Out_22i      %0.15f    %0.15f\n", i, ct.data.i, gold_out);
 			rmse.add_value(ct.data.i - gold_out);
 			printf("\n");
 		}

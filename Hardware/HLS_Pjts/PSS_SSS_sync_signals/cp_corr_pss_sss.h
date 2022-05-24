@@ -5,6 +5,9 @@
 #include "ap_axi_sdata.h"
 #include <stdio.h>
 
+#include "hls_fft.h"
+#include <complex>
+
 #define FEATURE_STREAM
 
 #define pi 3.14159265358979323846
@@ -39,6 +42,24 @@ typedef struct {
 typedef hls::axis<DTYPE,0,0,0> data_pkt;
 typedef hls::axis<C_DATA,0,0,0> cdata_pkt;
 
+#define NFFT 128
+#define NFFT_PWR2 7
+#define FFT_PHASE_FACTOR_WIDTH 25 // 24 or 25 Required for Floating Point
+#define FFT_FORWARD 1
+#define FFT_REVERSE 0
+
+struct param1 : hls::ip_fft::params_t {
+    static const unsigned ordering_opt = hls::ip_fft::natural_order;
+    //static const unsigned config_width = FFT_CONFIG_WIDTH;
+    //static const unsigned status_width = FFT_STATUS_WIDTH;
+    static const unsigned max_nfft = NFFT_PWR2;
+    static const unsigned phase_factor_width = FFT_PHASE_FACTOR_WIDTH;
+};
+
+typedef hls::ip_fft::config_t<param1> config_t;
+typedef hls::ip_fft::status_t<param1> status_t;
+typedef hls::x_complex<DTYPE> cmpxDataIn;
+typedef hls::x_complex<DTYPE> cmpxDataOut;
 
 void cp_corr(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<data_pkt> &OUT);
 //void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<PSS_RESULTS> &out);
