@@ -2,7 +2,7 @@
 #include "cp_corr_pss_sss.h"
 
 
-void copy_input(hls::stream<data_pkt> &IN_R, DTYPE& IN_R_temp, hls::stream<data_pkt> &IN_I,DTYPE& IN_I_temp, int &run)
+void copy_input_stream(hls::stream<data_pkt> &IN_R, DTYPE& IN_R_temp, hls::stream<data_pkt> &IN_I,DTYPE& IN_I_temp, int &run)
 {
   data_pkt t_r,t_i;
 
@@ -19,7 +19,24 @@ void copy_input(hls::stream<data_pkt> &IN_R, DTYPE& IN_R_temp, hls::stream<data_
   }
 }
 
-void copy_out(cdata_pkt &OUT_11, hls::stream<cdata_pkt> &sss_1_PSS_1, cdata_pkt &OUT_12, hls::stream<cdata_pkt> &sss_1_PSS_2, cdata_pkt &OUT_21, hls::stream<cdata_pkt> &sss_2_PSS_1, cdata_pkt &OUT_22, hls::stream<cdata_pkt> &sss_2_PSS_2, int &run)
+void copy_input(hls::stream<data_pkt> &IN_R, DTYPE& IN_R_temp, hls::stream<data_pkt> &IN_I,DTYPE& IN_I_temp) //, int &run
+{
+  data_pkt t_r,t_i;
+
+  t_r = IN_R.read();
+  t_i = IN_I.read();
+
+  IN_R_temp = t_r.data;
+  IN_I_temp = t_i.data;
+
+  /* This will break the loop*/
+  //if(t_r.last == 1)
+  //{
+  //  run = 0;
+  //}
+}
+
+void copy_out(cdata_pkt &OUT_11, hls::stream<cdata_pkt> &sss_1_PSS_1, cdata_pkt &OUT_12, hls::stream<cdata_pkt> &sss_1_PSS_2, cdata_pkt &OUT_21, hls::stream<cdata_pkt> &sss_2_PSS_1, cdata_pkt &OUT_22, hls::stream<cdata_pkt> &sss_2_PSS_2) //, int &run
 {
   //cdata_pkt t11,t12,t21,t22;
 
@@ -29,10 +46,10 @@ void copy_out(cdata_pkt &OUT_11, hls::stream<cdata_pkt> &sss_1_PSS_1, cdata_pkt 
   sss_2_PSS_2.write(OUT_22);
 
   /* This will break the loop*/
-  if(OUT_11.last == 1)
-  {
-	run = 0;
-  }
+  //if(OUT_11.last == 1)
+  //{
+//	run = 0;
+  //}
 }
 
 
@@ -553,7 +570,7 @@ void cp_corr(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream
   while(run)
   {
 #pragma HLS DATAFLOW
-    copy_input(IN_R,IN_real,IN_I,IN_imag,run);
+    copy_input_stream(IN_R,IN_real,IN_I,IN_imag,run);
     compute_conjugate(IN_real,IN_imag,conj_rslt_r,conj_rslt_i);
     avg_within_cp(conj_rslt_r,conj_rslt_i,avg_r,avg_i);
     avg_within_slot(avg_r,avg_i,avg_slot_r,avg_slot_i,valid);
@@ -563,21 +580,29 @@ void cp_corr(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream
 }
 
 
-void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<PSS_RESULTS> &out)
-//void cp_corr_pss_sss(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<PSS_RESULTS> &out)
+
+#if(PSS_ENABLED && !SSS_ENABLED)
+void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[128],hls::stream<PSS_RESULTS> &out)
+#else
+void pss_sync(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[128],hls::stream<PSS_RESULTS> &out)
+#endif
 {
 #pragma HLS INTERFACE axis port=IN_R
 #pragma HLS INTERFACE axis port=IN_I
 #pragma HLS INTERFACE axis port=out
 #pragma HLS INTERFACE s_axilite port=return bundle=control
 
-  DTYPE IN_real[128],IN_imag[128],output;
+  DTYPE IN_real[128],IN_imag[128];
   DTYPE acc_0_r,acc_1_r,acc_2_r,acc_0_i,acc_1_i,acc_2_i;
+  DTYPE ac0, bd0, ac1, bd1, ac2, bd2;
+  DTYPE temp0, temp1, temp2;
   PSS_RESULTS write_out;
-  int run = 1, valid = 0, k = 0;
 
-  while(run)
-  {
+//#pragma HLS DATAFLOW
+	for (int i = 0; i < 128; i++)
+	{
+		copy_input(IN_R[i],IN_real[i],IN_I[i],IN_imag[i]);
+	}
 	acc_0_r = 0;
 	acc_1_r = 0;
 	acc_2_r = 0;
@@ -585,31 +610,33 @@ void pss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::strea
 	acc_1_i = 0;
 	acc_2_i = 0;
 
-#pragma HLS DATAFLOW
-	for (int i = 0; i < 128; i++)
-	{
-		copy_input(IN_R,IN_real[i],IN_I,IN_imag[i],run);
-	}
 	//do pss calculation with stored sequences
 	for (int j = 0; j < 128; j++)
 	{
-		acc_0_r += IN_real[j] * td_pss_0_real[j];
-		acc_1_r += IN_real[j] * td_pss_1_real[j];
-		acc_2_r += IN_real[j] * td_pss_2_real[j];
+		// Complex Multiply
+		ac0 = IN_real[j] * td_pss_0_real[j];
+		bd0 = IN_imag[j] * -1 * td_pss_0_imag[j];
+		acc_0_r += (ac0 - bd0);
+		temp0 = (IN_real[j] + IN_imag[j]) * (td_pss_0_real[j]+ (-1 * td_pss_0_imag[j]));
+		acc_0_i += ((temp0)- ac0 - bd0);
 
-		acc_0_i += IN_imag[j] * td_pss_0_imag[j];
-		acc_1_i += IN_imag[j] * td_pss_1_imag[j];
-		acc_2_i += IN_imag[j] * td_pss_2_imag[j];
+		ac1 = IN_real[j] * td_pss_1_real[j];
+		bd1 = IN_imag[j] * -1 * td_pss_1_imag[j];
+		acc_1_r += (ac1 - bd1);
+		temp1 = (IN_real[j] + IN_imag[j]) * (td_pss_1_real[j]+ (-1 * td_pss_1_imag[j]));
+		acc_1_i += ((temp1)- ac1 - bd1);
+
+		ac2 = IN_real[j] * td_pss_2_real[j];
+		bd2 = IN_imag[j] * -1 * td_pss_2_imag[j];
+		acc_2_r += (ac2 - bd2);
+		temp2 = (IN_real[j] + IN_imag[j]) * (td_pss_2_real[j]+ (-1 * td_pss_2_imag[j]));
+		acc_2_i += ((temp2)- ac2 - bd2);
 	}
 
-	write_out.pss_rslts_0 = sqrt((acc_0_r*acc_0_r) + (acc_0_i*acc_0_i));
-	//write_out.pss_rslts_0_i = acc_0_i;
-	write_out.pss_rslts_1 = sqrt((acc_1_r*acc_1_r) + (acc_1_i*acc_1_i));
-	//write_out.pss_rslts_1_i = acc_1_i;
-	write_out.pss_rslts_2 = sqrt((acc_2_r*acc_2_r) + (acc_2_i*acc_2_i));
-	//write_out.pss_rslts_2_i = acc_2_i;
+	write_out.pss_rslts_0 = sqrtf((acc_0_r*acc_0_r) + (acc_0_i*acc_0_i));
+	write_out.pss_rslts_1 = sqrtf((acc_1_r*acc_1_r) + (acc_1_i*acc_1_i));
+	write_out.pss_rslts_2 = sqrtf((acc_2_r*acc_2_r) + (acc_2_i*acc_2_i));
 	out.write(write_out);
-  }
 }
 
 
@@ -663,9 +690,11 @@ void fft_top(bool dir, DTYPE IN_r[NFFT], DTYPE IN_i[NFFT], DTYPE OUT_r[NFFT], DT
     proc_be(&fft_status1, &ovflo, xk1, OUT_r, OUT_i);
 }
 
-
-//void sss_sync(hls::stream<data_pkt> &IN_R,hls::stream<data_pkt> &IN_I,hls::stream<cdata_pkt> &sss_1_PSS_1,hls::stream<cdata_pkt> &sss_1_PSS_2,hls::stream<cdata_pkt> &sss_2_PSS_1,hls::stream<cdata_pkt> &sss_2_PSS_2)
+#if(SSS_ENABLED && !PSS_ENABLED)
 void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[128],hls::stream<cdata_pkt> sss_1_PSS_1[168],hls::stream<cdata_pkt> sss_1_PSS_2[168],hls::stream<cdata_pkt> sss_2_PSS_1[168],hls::stream<cdata_pkt> sss_2_PSS_2[168])
+#else
+void sss_sync(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[128],hls::stream<cdata_pkt> sss_1_PSS_1[168],hls::stream<cdata_pkt> sss_1_PSS_2[168],hls::stream<cdata_pkt> sss_2_PSS_1[168],hls::stream<cdata_pkt> sss_2_PSS_2[168])
+#endif
 {
 #pragma HLS INTERFACE axis port=IN_R
 #pragma HLS INTERFACE axis port=IN_I
@@ -680,18 +709,18 @@ void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[
   cdata_pkt OUT_11[168], OUT_12[168], OUT_21[168], OUT_22[168];
   bool overflow;
   //DTYPE avg_r,avg_i, avg_slot_r,avg_slot_i, freq;
-  int run = 1, valid = 0, k = 0, run_out = 1;
+  //int run = 1, valid = 0, k = 0, run_out = 1;
   const int N = 128;
 
-  while(run)
-  {
+  //while(run)
+  //{
 #pragma HLS DATAFLOW
 	//enter into shift reg
 	for (int i = 0; i < 128; i++)
 	{
-		copy_input(IN_R[i],IN_real[i],IN_I[i],IN_imag[i],run);
+		copy_input(IN_R[i],IN_real[i],IN_I[i],IN_imag[i]);  //,run);
 	}
-  }
+  //}
 
   // TODO: List of Steps
   // 1. Find peaks of the input: IN_real, IN_imag
@@ -722,16 +751,16 @@ void cp_corr_pss_sss(hls::stream<data_pkt> IN_R[128],hls::stream<data_pkt> IN_I[
 
   sss_correlation(sss_recv_1_real, sss_recv_1_imag, sss_recv_2_real, sss_recv_2_imag, OUT_11, OUT_12, OUT_21, OUT_22);
 
-  while(run_out)
-  {
+  //while(run_out)
+  //{
 	for (int i = 0; i < 168; i++)
 	{
-		copy_out(OUT_11[i], sss_1_PSS_1[i], OUT_12[i], sss_1_PSS_2[i], OUT_21[i], sss_2_PSS_1[i], OUT_22[i], sss_2_PSS_2[i],run_out);
+		copy_out(OUT_11[i], sss_1_PSS_1[i], OUT_12[i], sss_1_PSS_2[i], OUT_21[i], sss_2_PSS_1[i], OUT_22[i], sss_2_PSS_2[i]); //,run_out);
 	}
-  }
+  //}
 
-  run = 1;
-  run_out = 1;
+  //run = 1;
+  //run_out = 1;
 }
 
 #if 0
