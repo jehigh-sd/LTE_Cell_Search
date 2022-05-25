@@ -38,7 +38,7 @@ This system will perform cell search, establishes timing, frequency synchronizat
 
 # Table of Contents
 <details open>
-<summary><b>(click to expand or hide)</b></summary>
+<summary><b>Details (click to expand or hide)</b></summary>
 <!-- MarkdownTOC -->
 
 1. [About The Project](#about-the-project)
