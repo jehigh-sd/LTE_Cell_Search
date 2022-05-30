@@ -30,25 +30,21 @@ Rmse rmse_f;
 
 hls::stream<sample_pkt> In_R;
 hls::stream<sample_pkt> In_I;
-#ifdef SIMULATION
-hls::stream<freq_pkt> Out_F;
-#else
-int freqOut = 0;
-int *Out_F = &freqOut;
-#endif
 
-FILE *fpr;
+int OUT_EST = 0;
+int OUT_DBG[NUM_DEBUG_DATA_PTS] = {0};
+
 FILE *fpi;
+FILE *fpq;
 FILE *fpo;
 
 int main()
 {
-	int FREQ_Est = 0;
-	fpr = fopen("input.real_x8.dat","r");
-    fpi = fopen("input.imag_x8.dat","r");
+	fpi = fopen("input.real.dat","r");
+	fpq = fopen("input.imag.dat","r");
 
     //Calculate and set input data
-    for(int i=0; i<NUM_INPUT_SAMPLES; i+=SAMPLES_PER_CYCLE)
+    for(int i=0; i<NUM_INPUT_SAMPLES; i++)
     {
         int16_t *temp_rf;
         int16_t *temp_if;
@@ -56,21 +52,18 @@ int main()
         sample_pkt temp_r;
         sample_pkt temp_i;
 
+        float tmp_r, tmp_i;
+
         temp_rf = (int16_t*)&temp_r.data;
         temp_if = (int16_t*)&temp_i.data;
 
-        for(uint8_t j = 0; j < SAMPLES_PER_CYCLE; j++)
-        {
-            float tmp_r, tmp_i;
+		fscanf(fpi, "%f",&(tmp_r));
+		fscanf(fpq, "%f",&(tmp_i));
 
-            fscanf(fpr, "%f",&(tmp_r));
-            fscanf(fpi, "%f",&(tmp_i));
+		*temp_rf = tmp_r*ADC_SCALE_M_FACTOR*2.0;
+		*temp_if = tmp_i*ADC_SCALE_M_FACTOR*2.0;
 
-            temp_rf[j] = tmp_r*(SCALE_FACTOR*32);
-            temp_if[j] = tmp_i*(SCALE_FACTOR*32);
-        }
-
-        if(i == NUM_INPUT_SAMPLES - SAMPLES_PER_CYCLE)
+        if(i == NUM_INPUT_SAMPLES - 1)
         {
             temp_r.last=1;
             temp_i.last=1;
@@ -86,28 +79,22 @@ int main()
     }
 
     fclose(fpi);
-    fclose(fpr);
+    fclose(fpq);
 
     //Perform CP Correlation
-    lteCellSearch(In_R, In_I, Out_F);
+    lteCellSearch(In_R, In_I, &OUT_EST, OUT_DBG);
 
     fpo = fopen("output.dat","r");
 
     for(int i=0; i<NUM_OUTPUT_SAMPLES; i++)
     {
-    	freq_pkt f;
-
         float gold_out;
         float freq_f;
-        freq_t *freq_i;
 
         fscanf(fpo, "%f", &gold_out);
+        freq_f = float(OUT_DBG[i])*FREQ_SCALE_D_FACTOR;
 
-        f = Out_F.read();
-        freq_i = (freq_t*)&f.data;
-        freq_f = float(*freq_i)/SCALE_FACTOR;
-
-        //printf("%0.15f %0.15f\n", freq_f, gold_out);
+        printf("%0.15f %0.15f\n", freq_f, gold_out);
         rmse_f.add_value(freq_f - gold_out);
     }
 
@@ -119,7 +106,7 @@ int main()
     printf("F: %0.15f\n", rmse_f.error);
     printf("----------------------------------------------\n");
 
-    if (rmse_f.error > 2e-1)
+    if (rmse_f.error > 5e-1)
     {
         fprintf(stdout, "*******************************************\n");
         fprintf(stdout, "FAIL: Output DOES NOT match golden output! \n");
