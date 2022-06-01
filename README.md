@@ -142,212 +142,9 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
 
 
 
-<!-- DOCUMENTATION -->
-## Documentation
-
-* [Synchronization Signals (PSS and SSS)](http://www.pynq.io/board.html)
-* [MIB_Decode_Steps](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- Synchronization Signals -->
-<a id="Synchronization_Signals"></a>
-# Synchronization Signals (PSS and SSS)
-
-
-In LTE, there are two downlink synchronization signals which are used by the UE to obtain the cell identity and frame timing.
-
-  * Primary synchronization signal (PSS)
-
-  * Secondary synchronization signal (SSS)
-
-The division into two signals is aimed to reduce the complexity of the cell search process.
-
-**Cell Identity Arrangement:**
-
- The physical cell identity, NcellID, is defined by the equation:
-
- NCELLID=3N(1)ID+N(2)ID
-
-  * N(1)ID is the physical layer cell identity group (0 to 167).
-  * N(2)ID is the identity within the group (0 to 2).
-
-  This arrangement creates 504 unique physical cell identities
-
-**Synchronization Signals and Determining Cell Identity:**
-
- The primary synchronization signal (PSS) is linked to the cell identity within the group (N(2)ID). The secondary synchronization signal (SSS) is linked to the cell identity group (N(1)ID) and the cell identity within the group (N(2)ID).
-
- You can obtain N(2)ID by successfully demodulating the PSS. The SSS can then be demodulated and combined with knowledge of N(2)ID to obtain N(1)ID. Once you establish the values of N(1)ID and N(2)ID, you can determine the cell identity (NcellID).
-
-**Primary Synchronization Signal (PSS):**
-
-  The primary synchronization signal (PSS) is based on a frequency-domain Zadoff-Chu sequence.
-
- * Zadoff-Chu Sequences
-
-  Zadoff-Chu sequences are a construction of Frank-Zadoff sequences defined by D. C. Chu. These codes have the useful property of having zero cyclic autocorrelation at all nonzero lags. When used as a synchronization code, the correlation between the ideal sequence and a received sequence is greatest when the lag is zero. When there is any lag between the two sequences, the correlation is zero. This property is illustrated in this figure.
-  
-  ![image](https://user-images.githubusercontent.com/77175120/168496835-99a35c7a-5d69-4238-94dc-a2d6246cbbfb.png)
-  ![image](https://user-images.githubusercontent.com/77175120/168496949-d12a2782-7ba4-4c5f-95c6-ce3f87ba5c62.png)
-  
- **PSS Generation:**
-
- The PSS is a sequence of complex symbols, 62 symbols long. The sequence du(n) used for the PSS is generated according to these equations: (Note that following is in frequency domain)
-
- du(n)=e−jπun(n+1)/63, for n=0,1,…,30
-
- du(n)=e−jπu(n+1)(n+2)/63, for n=31,32,…,61
-
- In the preceding equation, u is the Zadoff-Chu root sequence index and depends on the cell identity within the group N(2)ID.
-
-![image](https://user-images.githubusercontent.com/77175120/168730944-70032ba6-1b55-4952-99d3-ae5ed59673d6.png)
-
-**Mapping of the PSS:**
-
-The PSS is mapped into the first 31 subcarriers either side of the DC subcarrier. Therefore, the PSS uses six resource blocks with five reserved subcarriers each side, as shown in this figure.
-
-![image](https://user-images.githubusercontent.com/77175120/168731411-282a49b0-490c-4d8c-ab35-8fa81ce9f302.png)
-
-As the DC subcarrier contains no information in LTE this corresponds to mapping onto the middle 62 subcarriers within an OFDM symbol in a resource grid. d(n) is mapped from lowest subcarrier to highest subcarrier. The PSS is mapped to different OFDM symbols depending on which frame type is used. Frame type 1 is frequency division duplex (FDD), and frame type 2 is time division duplex (TDD).
-
-FDD — The PSS is mapped to the last OFDM symbol in slots 0 and 10, as shown in this figure.
-
-![image](https://user-images.githubusercontent.com/77175120/168731596-a179ce00-7841-4a0b-bc4a-f21f278088a7.png)
-
-**SSS sequences:**
-
-The SSS is organized into an interleaved concatenation of two length-31 binary sequences. To randomize the interference from the neighboring cells, the concatenated sequence is scrambled with a scrambling sequence given by the PSS. The combination of two length-31 sequences defining the SSS differs between subframe0 and subframe 5 according to 
-
-![image](https://user-images.githubusercontent.com/77175120/168732135-592f8441-ca4f-4092-8bbf-369474a6cfdb.png)
-
-where s(n) is SSS sequence, and c(n) and z(n) are scrambling sequence. The indices m_0 and m_1 are derived from Cell ID group N_ID.
-
-**LTE Downlink Synchronization Signals:**
-
- LTE provides two physical signals to aid the cell search and synchronization process. These are the Primary Synchronization Signal (PSS) and the Secondary Synchronization Signal (SSS).
-
-The cell ID of the eNodeB is encoded in the PSS and SSS. The duplex mode, cyclic prefix length, and frame timing can be determined from their positions within the received signal. The PSS and SSS are transmitted twice every frame. There are 3 possible PSS sequences, and the eNodeB transmits the same PSS every half frame. For each PSS, there are 168 possible SSS sequences in the first half of the frame and 168 different possible SSS sequences in the second half of the frame. This means that once a SSS has been detected, the receiver knows if it is in the first or second half of a frame. The PSS and SSS sequences depend on the cell ID, therefore, there are 3 * 168 = 504 possible cell IDs. The cell ID is
-
- NCellID = 3*NCellID1 + NCellID2
-
- where NCellID2 is the PSS sequence number from 0 to 2, and NCellID1 is the SSS sequence number from 0 to 167. Each instance of the PSS occupies the central 62 subcarriers of one OFDM symbol, as does each instance of the SSS. For normal cyclic prefix mode the locations of the PSS and SSS signals are follows:
-
-* FDD Mode: PSS is in symbol 6 of subframe 0, SSS is in symbol 5 of subframe 0
-* TDD Mode: PSS is in symbol 2 of subframe 1, SSS is in symbol 13 of subframe 0
-
-There are 14 symbols in each subframe, numbered from 0 to 13. Therefore, in FDD mode, the PSS is transmitted one OFDM symbol after the SSS, whereas in TDD mode the PSS is transmitted three OFDM symbols after the SSS. This difference in relative timing allows the receiver to discriminate between the two duplex modes. The positions of PSS and SSS within radio frames in FDD and TDD mode are illustrated below.
-	
-![image](https://user-images.githubusercontent.com/77175120/168732900-8f5bd697-78b3-4f9c-9643-ebdca11395ac.png)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- MIB Decode Steps -->
-<a id="MIB_Decode_Steps"></a>
-## MIB Decode Steps:
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- SIMULATION -->
 <a id="Simulation"></a>
 ## Simulation:
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- HARDWARE -->
-<a id="Hardware"></a>
-## Hardware:
-
-<!-- RF SoC -->
-<a id="RF_SoC"></a>
-### RF SoC:
-
-Xilinx’s Radio Frequency System-on-Chip (RFSoC) device combine high-accuracy ADCs and DACs operating at Giga samples per second (Gsps), with programmable heterogeneous compute engines. RFSoC 2x2 board with 2 RF DAC and 2 RF ADC channels. The RFSoC 2x2 has a Zynq Ultrascale+ XCZU28DR-FFVG1517-2-E with an Quad-core ARM Cortex A53 Processing System (PS) and Xilinx Ultrascale+ Programmable Logic (PL). There are BALUNs between the SMA connectors and the Zynq RFSoC on the board, which means that antenna and external signal sources can be connected directly to the board.
-
-**RFSoC Board:**
-
-![image](https://user-images.githubusercontent.com/77175120/168524070-e34712db-e864-4dd9-b182-6a35b00d5852.png)
-
-**RFSoC Block Diagram:**
-
-![image](https://user-images.githubusercontent.com/77175120/168524116-8beba6e0-f300-4990-b298-17b5d1e52188.png)
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- RF SoC LMX Configuration -->
-<a id="lmx"></a>
-### RF SoC LMX Configuration:
-
-* [LMX2596 Configuration files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/Hardware/LMX_Settings)
-
-* Configured ADC Clock for LTE OTA RF input
-* RFSoC Range = 1024 MHz to 4096 MHz
-    * Max decimation supported RF data converter (x8)
-* Live Signal Target = 30.72 MHz
-* ADC Sample Rate = 1.96608 GHz
-* Need of IP Block: Decimate 245.76 MHz to 30.72 MHz
-
-
-**RF SoC PLL configuration path using LMX:**
-![image](https://user-images.githubusercontent.com/77175120/169735159-47492021-819d-4613-988b-c1a3b37e5604.png)
-
-**LMX Configuration to configure to 245.76MHz:**
-![image](https://user-images.githubusercontent.com/77175120/168522940-0c458bac-967c-44a3-8043-116fa8b4533c.png)
-
-**245.76MHz Tone measured in the Spectrum Analyzer after configuring LMX 2596:**
-![image](https://user-images.githubusercontent.com/77175120/168523024-419aa3f3-1ba4-4538-be6c-b5d92e9d7672.png)
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- LNA -->
-<a id="LNA"></a>
-### Low Noise Amplifier:
-
-* Used Vega Barebones - Ultra Low-Noise Variable Gain Amplifier (VGA) Module for RF & Software Defined Radio (SDR) from Nooelec.
-* Highly Linear & Wideband 30MHz-4000MHz Frequency Capability w/Bias Tee & USB Power Options.
-* Characterized Nooelec LNA for its Gain modes and return loss performance using KeySight E5071C vector network Analyzer
-* Measured Gain (S21) for different Analog gain modes.
-* Conclusion: ~40 dB of gain around ~1GHz and ~34 dB of gain around ~2GHz
-* Return loss (S11) performance is reasonable in the entire bandwidth
-
-Gain across frequency with 5 Gain modes
-![image](https://user-images.githubusercontent.com/77175120/168521348-b243b478-aff8-4194-b9dc-a5173fda35cb.png)
-
-Gain (S21) and Return Loss (S11) performing at Max Gain mode
-
-![image](https://user-images.githubusercontent.com/77175120/168521435-544ce17e-8b10-4732-b39c-dec93d782e19.png)
-
-Image of nooelec LNA:
-
-![image](https://user-images.githubusercontent.com/77175120/168521577-a6aacffe-198c-483e-a1d5-c59fa8132f9a.png)
-
-![image](https://user-images.githubusercontent.com/77175120/168521692-72d2b6f1-8484-420d-ad5d-51efcae6ebc0.png)
-
-![image](https://user-images.githubusercontent.com/77175120/168521749-ad4f0d0c-f598-40bd-b067-a1a6232aa335.png)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- BPF -->
-<a id="BPF"></a>
-### Band Pass Filter:
-
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- ANTENNA -->
-<a id="Antenna"></a>
-### Antenna:
-
-
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -357,15 +154,11 @@ Image of nooelec LNA:
 ## IP Blocks:
 
 
-
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- HARDWARE DESCRIPTION -->
 <a id="Hardware_Description"></a>
 ### Hardware Description:
-
-
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -401,41 +194,9 @@ Figure showing the Vivado block digram for Vitis Custom implementation:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- TEST BENCH -->
-<a id="Test_Bench"></a>
-## Test Bench:
-
-* Need PYNQ board,Pluto SDR and RTL digitizer to build this test bench.
-* Install Matlab Pluto SDR driver from below link:
-	[Pluto SDR driver](https://www.mathworks.com/help/supportpkg/plutoradio/ug/install-support-package-for-pluto-radio.html)
-* To create test bench for this project, used LTE Cell scanner open-source software from GitHub and compiled on the PYNQ board.
-	[LTE Cell Scanner](https://github.com/Evrytania/LTE-Cell-Scanner)
-* Verified test bench with NAR bands – 900MHz, able to detect different MIB’s from different Cells
-* Picked non-NAR region band – 860MHz to generate LTE Test signal
-* Used Matlab "Wireless waveform Generator" application and Generated LTE Test signal using Matlab– 5MHz, 25 RB, 64QAM, Cell ID: 11 with PSS, SSS, PBCH.
-* Exported this signal to MatLab to play from Pluto SDR
-* Play LTE test signal continuously from Pluto SDR and run cell search algorithm in PYNQ to capture the transmitted LTE test signal.
-
-**"Wireless waveform Generator" application in Matlab**
-![image](https://user-images.githubusercontent.com/77175120/168521307-bde56b3c-8cd0-4a36-a6ca-82908db87317.png)
-
-**Block diagram of Test Bench with Pluto SDR**
-![image](https://user-images.githubusercontent.com/77175120/168525137-b0576fe0-edb7-48d5-be1a-041e3c41d492.png)
-
-**LTE Cell Search Result from PYNQ Board**
-![image](https://user-images.githubusercontent.com/77175120/168525256-2f4d184c-fb22-4da8-9ad1-91684b45fcd7.png)
-
-**Block diagram of Test Bench with External Spectrum Analyzer and Modulated Signal Generator (for accurate testing)**
-![image](https://user-images.githubusercontent.com/77175120/169672119-b5f330b6-6a6d-44b9-899f-981caf7f155d.png)
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- HOST SOFTWARE -->
 <a id="Host_Software"></a>
 ## Host software:
-
 
 
 
