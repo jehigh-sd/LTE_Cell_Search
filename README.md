@@ -19,7 +19,7 @@ This system will perform cell search, establishes timing, frequency synchronizat
 <br />
 <div align="center">
   <a href="https://github.com/jehigh-sd/LTE_Cell_Search">
-    <img src="Images/BD.png" alt="Logo" width="660" height="360">
+    <img src="IMAGES/BD.png" alt="Logo" width="660" height="360">
   </a>
 
   <p align="center">
