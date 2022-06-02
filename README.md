@@ -91,15 +91,11 @@ The BCH is transmitted in the middle six resource blocks (RBs) of an LTE transmi
 
 To get start with your RF Soc visit below page for instructions:
 
-	[Getting started on RF SoC ](https://www.rfsoc-pynq.io/getting_started.html)
-
-
+	(https://www.rfsoc-pynq.io/getting_started.html)
 
 ### Prerequisites
 
 Matlab 2022a or above is recommened.
-
-
   
 <!-- RFSOC-DETAILS -->
 ### RF SoC Details
@@ -113,8 +109,6 @@ This section shows RF SoC Image, schematic and details.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Installation
 
 For this project, you need to install Xilinx Vitis, Vivado and Matlab
@@ -123,7 +117,7 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
    ```sh
    https://github.com/jehigh-sd/LTE_Cell_Search.git
    ```
-2. Install vivado and vitis from below link. For this project, vivado 2020.1 is used
+2. Install vivado and vitis from below link. For this project, vivado 2020.2 is used
    ```sh
    (https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html)
    ```
@@ -135,13 +129,47 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- Synchronization_Signals -->
+<a id="Synchronization_Signals"></a>
+## Synchronization_Signals:
+
+Click on below link to see the documentation on the Synchronization_Signals
+* [LTE_Cell_Search_Thoery](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Thoery.docx)
+* [LTE_Cell_Search_3_Main_Components](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_3_Main_Components.pptx)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- DEMO -->
 <a id="demo"></a>
 ## Demo:
-
 Click on below link to see the demo presentation on the LTE Cell search
 
-* [Link](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/DOCUMENTATION/presentation)
+* [LTE_Cell_Search_Project_Presentation](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/DOCUMENTATION/presentation)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- Hardware -->
+<a id="Hardware"></a>
+## Hardware:
+
+Click on below link to see the documentation on the Hardware used in this project
+* [LTE_Cell_Hardware_Information](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Hardware_Info.docx)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## IP_Blocks:
+
+Click on below link to see the documentation on the Hardware configurations
+* [LTE_Cell_Search_Hardware_Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Hardware_Description.pptx)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Test_Bench:
+
+Click on below link to see the documentation on the Test bench
+* [Test_Bench_Files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/TEST_BENCH)
+* [How_To_Enable_TestBench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Test_Bench_Procedure.docx)
+* [TestBench_ReadMe](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Readme.txt)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
