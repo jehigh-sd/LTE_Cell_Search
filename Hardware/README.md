@@ -19,5 +19,9 @@ Create Project and Block Diagram:
 --> RUN script [source lteCellSearch.tcl]
 
 Step 5:
+Close Project
+--> RUN Command [close_project]
+
+Step 6:
 Build Bitstream:
 --> RUN script [source build_lteCellSearch.tcl]
