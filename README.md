@@ -139,69 +139,6 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- SIMULATION -->
-<a id="Simulation"></a>
-## Simulation:
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- IP BLOCKS -->
-<a id="IP_Blocks"></a>
-## IP Blocks:
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- HARDWARE DESCRIPTION -->
-<a id="Hardware_Description"></a>
-### Hardware Description:
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- LTE CELL SEARCH -->
-<a id="LTE_Cell_Search"></a>
-### LTE Cell Search:
-
-**RF Soc - RF Data converter ADC/DAC configurations:**
-
-![image](https://user-images.githubusercontent.com/77175120/169672219-7d1195a7-bbf9-4df7-8e79-43937b8f3cd5.png)
-
-![image](https://user-images.githubusercontent.com/77175120/169672295-8d388c78-5e48-4a05-ad83-c06c76d9ddb1.png)
-
-Figure showing the Vivado block digram for Matlab Simulink implementation:
-
-![image](https://user-images.githubusercontent.com/77175120/169672056-fafc5c0c-d299-4e83-94ea-e27fe08aa65e.png)
-
-Figure showing the Vivado block digram for Vitis Custom implementation:
-
-![image](https://user-images.githubusercontent.com/77175120/169672091-6ba31490-34c8-485f-9dde-dd79a48a1845.png)
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- SIMULINK MODEL -->
-<a id="Simulink_model"></a>
-### Simulink Model:
-
-
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- HOST SOFTWARE -->
-<a id="Host_Software"></a>
-## Host software:
-
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- DEMO -->
 <a id="demo"></a>
 ## Demo:
