@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="cp_corr.cpp" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/freq_est/cp_corr/cp_corr.cpp"/>
+    <originFiles name="cp_corr.h" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/freq_est/cp_corr/cp_corr.h"/>
+  </source>
+  <testbench>
+    <originFiles name="cp_corr_test.cpp" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/freq_est/cp_corr/cp_corr_test.cpp"/>
+    <originFiles name="input.imag.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/freq_est/cp_corr/input.imag.dat"/>
+    <originFiles name="input.real.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/freq_est/cp_corr/input.real.dat"/>
+    <originFiles name="output.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/freq_est/cp_corr/output.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

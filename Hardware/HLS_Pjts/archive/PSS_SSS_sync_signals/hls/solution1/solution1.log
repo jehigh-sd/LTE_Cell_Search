@@ -1,0 +1,1221 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.715 seconds; current allocated memory: 192.335 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 14.139 seconds; current allocated memory: 192.278 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.128 seconds; current allocated memory: 192.321 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.696 seconds; current allocated memory: 192.321 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.163 seconds; current allocated memory: 192.321 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.104 seconds; current allocated memory: 192.321 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.914 seconds; current allocated memory: 192.321 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 4.053 seconds; current allocated memory: 192.321 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.915 seconds; current allocated memory: 192.321 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 6.459 seconds; current allocated memory: 192.321 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.664 seconds; current allocated memory: 192.320 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.29 seconds; current allocated memory: 192.321 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.05 seconds; current allocated memory: 192.321 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name cp_corr_pss_sss cp_corr_pss_sss 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 192.286 MB.
+INFO: [HLS 200-10] Analyzing design file 'matmul_partition.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'cp_corr_pss_sss.cpp' ... 
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:624:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:657:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:702:9
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file cp_corr_pss_sss.cpp
+WARNING: [HLS 207-5301] unused parameter 'r2': cp_corr_pss_sss.cpp:166:43
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:612:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:613:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:614:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:614:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:613:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:612:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:615:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:624:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:657:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:688:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:689:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:690:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:691:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:692:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:693:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:693:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:692:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:691:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:690:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:689:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:688:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:694:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:702:9
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.75 seconds. CPU system time: 0.38 seconds. Elapsed time: 4.67 seconds; current allocated memory: 194.186 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:293:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:296:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:23)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' (cp_corr_pss_sss.cpp:8:14)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' (cp_corr_pss_sss.cpp:9:14)
+INFO: [HLS 214-131] Inlining function 'hls::stream<PSS_RESULTS, 0>::write(PSS_RESULTS const&)' into 'cp_corr_pss_sss(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<PSS_RESULTS, 0>&)' (cp_corr_pss_sss.cpp:680:6)
+INFO: [HLS 214-178] Inlining function 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' into 'cp_corr_pss_sss(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<PSS_RESULTS, 0>&)' (cp_corr_pss_sss.cpp:637:0)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'cp_corr_pss_sss(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<PSS_RESULTS, 0>&)' (cp_corr_pss_sss.cpp:637:0)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i96.s_struct.PSS_RESULTSs' into 'cp_corr_pss_sss(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<PSS_RESULTS, 0>&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.91 seconds. CPU system time: 0.29 seconds. Elapsed time: 4.57 seconds; current allocated memory: 196.008 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 196.013 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 202.968 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 211.414 MB.
+INFO: [XFORM 203-510]==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name cp_corr_pss_sss cp_corr_pss_sss 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 192.343 MB.
+INFO: [HLS 200-10] Analyzing design file 'matmul_partition.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fft.cpp' ... 
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:27:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:27:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:28:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:28:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:25:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:25:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:26:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:26:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:24:9
+INFO: [HLS 200-10] Analyzing design file 'cp_corr_pss_sss.cpp' ... 
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:624:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:657:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:702:9
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file cp_corr_pss_sss.cpp
+WARNING: [HLS 207-5301] unused parameter 'r2': cp_corr_pss_sss.cpp:166:43
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:612:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:613:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:614:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:614:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:613:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:612:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:615:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:624:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:638:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:639:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:640:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:640:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:639:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:638:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:641:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:657:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:702:9
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.31 seconds. CPU system time: 0.62 seconds. Elapsed time: 5.81 seconds; current allocated memory: 194.520 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:293:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:296:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:23)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' (cp_corr_pss_sss.cpp:8:14)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' (cp_corr_pss_sss.cpp:9:14)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'sss_correlation(float const*, float const*, float const*, float const*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*)' (cp_corr_pss_sss.cpp:559:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'sss_correlation(float const*, float const*, float const*, float const*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*)' (cp_corr_pss_sss.cpp:562:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'sss_correlation(float const*, float const*, float const*, float const*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*)' (cp_corr_pss_sss.cpp:561:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'sss_correlation(float const*, float const*, float const*, float const*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>*)' (cp_corr_pss_sss.cpp:560:24)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.3.48.58.67.78.87.98.107.118.127.138)' into 'fp_struct<float>::to_float() const (.45.55.64.75.84.95.104.115.124.135)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:346:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const (.45.55.64.75.84.95.104.115.124.135)' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:370:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'float generic_copysign<float>(float, float)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.3.48.58.67.78.87.98.107.118.127.138)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(ap_uint<32>)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'floorf' into 'std::floor(float)' (/tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:284:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.224.234.244.254.264.274.284.294.353.363)' into 'fp_struct<double>::to_double() const (.221.231.241.251.261.271.281.291.350.360)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:518:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.221.231.241.251.261.271.281.291.350.360)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:533:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double fmdrmd::generic_fmod<double>(double, double)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:255:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'double fmdrmd::generic_fmod<double>(double, double)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:255:0)
+INFO: [HLS 214-178] Inlining function 'fmod' into '__gnu_cxx::__promote_2<float, int, __gnu_cxx::__promote<float, std::__is_integer<float>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::fmod<float, int>(float, int)' (/tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:314:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' into 'int generic_cast_IEEE754<int, float>(float, bool)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name cp_corr_pss_sss cp_corr_pss_sss 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 193.140 MB.
+INFO: [HLS 200-10] Analyzing design file 'matmul_partition.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fft.cpp' ... 
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:27:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:27:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:28:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:28:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:25:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:25:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:26:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:26:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:24:9
+INFO: [HLS 200-10] Analyzing design file 'cp_corr_pss_sss.cpp' ... 
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:679:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:712:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:759:9
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file cp_corr_pss_sss.cpp
+WARNING: [HLS 207-5301] unused parameter 'r2': cp_corr_pss_sss.cpp:188:43
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:667:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:668:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:669:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:669:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:668:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:667:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:670:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:679:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:693:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:694:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:695:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:695:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:694:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:693:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:696:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:712:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:759:9
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.35 seconds. CPU system time: 0.71 seconds. Elapsed time: 5.72 seconds; current allocated memory: 195.124 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:293:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:296:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:23)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' (cp_corr_pss_sss.cpp:8:14)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' (cp_corr_pss_sss.cpp:9:14)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:25:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:28:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:27:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:26:15)
+INFO: [HLS 214-178] Inlining function 'amplitudescale(int*, int*, int)' into 'sss_adj()' (cp_corr_pss_sss.cpp:261:0)
+INFO: [HLS 214-178] Inlining function 'amplitudeshift(int*, int*)' into 'sss_adj()' (cp_corr_pss_sss.cpp:261:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.3.48.58.67.78.87.98.107.118.127.138)' into 'fp_struct<float>::to_float() const (.45.55.64.75.84.95.104.115.124.135)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:346:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const (.45.55.64.75.84.95.104.115.124.135)' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:370:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'float generic_copysign<float>(float, float)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.3.48.58.67.78.87.98.107.118.127.138)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(ap_uint<32>)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'floorf' into 'std::floor(float)' (/tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:284:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.224.234.244.254.264.274.284.294.353.363)' into 'fp_struct<double>::to_double() const (.221.231.241.251.261.271.281.291.350.360)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:518:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.221.231.241.251.261.271.281.291.350.360)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:533:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double fmdrmd::generic_fmod<double>(double, double)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:255:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'double fmdrmd::generic_fmod<double>(double, double)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:255:0)
+INFO: [HLS 214-178] Inlining function 'fmod' into '__gnu_cxx::__promote_2<float, int, __gnu_cxx::__promote<float, std::__is_integer<float>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::fmod<float, int>(float, int)' (/tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:314:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' into 'int generic_cast_IEEE754<int, float>(float, bool)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-178]==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name cp_corr_pss_sss cp_corr_pss_sss 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 209.132 MB.
+INFO: [HLS 200-10] Analyzing design file 'matmul_partition.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fft.cpp' ... 
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:27:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:27:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:28:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:28:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:25:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:25:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:26:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:26:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:24:9
+INFO: [HLS 200-10] Analyzing design file 'cp_corr_pss_sss.cpp' ... 
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:679:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:712:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:759:9
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file cp_corr_pss_sss.cpp
+WARNING: [HLS 207-5301] unused parameter 'r2': cp_corr_pss_sss.cpp:188:43
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:667:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:668:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:669:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:669:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:668:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:667:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:670:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:679:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:693:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:694:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:695:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:695:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:694:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:693:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:696:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:712:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:759:9
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.3 seconds. CPU system time: 0.57 seconds. Elapsed time: 5.08 seconds; current allocated memory: 211.128 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:293:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:296:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:23)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' (cp_corr_pss_sss.cpp:8:14)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' (cp_corr_pss_sss.cpp:9:14)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:25:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:28:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:27:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:26:15)
+INFO: [HLS 214-178] Inlining function 'amplitudescale(int*, int*, int)' into 'sss_adj()' (cp_corr_pss_sss.cpp:261:0)
+INFO: [HLS 214-178] Inlining function 'amplitudeshift(int*, int*)' into 'sss_adj()' (cp_corr_pss_sss.cpp:261:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.3.48.58.67.78.87.98.107.118.127.138)' into 'fp_struct<float>::to_float() const (.45.55.64.75.84.95.104.115.124.135)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:346:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const (.45.55.64.75.84.95.104.115.124.135)' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:370:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'float generic_copysign<float>(float, float)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.3.48.58.67.78.87.98.107.118.127.138)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(ap_uint<32>)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'floorf' into 'std::floor(float)' (/tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:284:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.224.234.244.254.264.274.284.294.353.363)' into 'fp_struct<double>::to_double() const (.221.231.241.251.261.271.281.291.350.360)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:518:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.221.231.241.251.261.271.281.291.350.360)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:533:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double fmdrmd::generic_fmod<double>(double, double)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:255:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'double fmdrmd::generic_fmod<double>(double, double)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:255:0)
+INFO: [HLS 214-178] Inlining function 'fmod' into '__gnu_cxx::__promote_2<float, int, __gnu_cxx::__promote<float, std::__is_integer<float>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::fmod<float, int>(float, int)' (/tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:314:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' into 'int generic_cast_IEEE754<int, float>(float, bool)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-178]==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name cp_corr_pss_sss cp_corr_pss_sss 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 193.144 MB.
+INFO: [HLS 200-10] Analyzing design file 'matmul_partition.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fft.cpp' ... 
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:27:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:27:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:28:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:28:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:25:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:25:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:26:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:26:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: fft.cpp:24:9
+INFO: [HLS 200-10] Analyzing design file 'cp_corr_pss_sss.cpp' ... 
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:679:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:712:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:759:9
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file cp_corr_pss_sss.cpp
+WARNING: [HLS 207-5301] unused parameter 'r2': cp_corr_pss_sss.cpp:188:43
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:667:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:668:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:669:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:669:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:668:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:667:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:670:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:679:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:693:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:694:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:695:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:695:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:694:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:693:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:696:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:712:9
+WARNING: [HLS 207-5334] Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:759:9
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.33 seconds. CPU system time: 0.67 seconds. Elapsed time: 5.27 seconds; current allocated memory: 195.128 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:293:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:296:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:23)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' (cp_corr_pss_sss.cpp:8:14)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float&, int&)' (cp_corr_pss_sss.cpp:9:14)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<C_DATA, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:25:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:28:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:27:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>::write(hls::axis<C_DATA, 0ul, 0ul, 0ul> const&)' into 'copy_out(hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, hls::axis<C_DATA, 0ul, 0ul, 0ul>&, hls::stream<hls::axis<C_DATA, 0ul, 0ul, 0ul>, 0>&, int&)' (cp_corr_pss_sss.cpp:26:15)
+INFO: [HLS 214-178] Inlining function 'amplitudescale(int*, int*, int)' into 'sss_adj()' (cp_corr_pss_sss.cpp:261:0)
+INFO: [HLS 214-178] Inlining function 'amplitudeshift(int*, int*)' into 'sss_adj()' (cp_corr_pss_sss.cpp:261:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.3.48.58.67.78.87.98.107.118.127.138)' into 'fp_struct<float>::to_float() const (.45.55.64.75.84.95.104.115.124.135)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:346:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const (.45.55.64.75.84.95.104.115.124.135)' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:370:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'float generic_copysign<float>(float, float)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.3.48.58.67.78.87.98.107.118.127.138)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(ap_uint<32>)' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_floor<float>(float)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_floor.h:14:0)
+INFO: [HLS 214-178] Inlining function 'floorf' into 'std::floor(float)' (/tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:284:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.224.234.244.254.264.274.284.294.353.363)' into 'fp_struct<double>::to_double() const (.221.231.241.251.261.271.281.291.350.360)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:518:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.221.231.241.251.261.271.281.291.350.360)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:533:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double fmdrmd::generic_fmod<double>(double, double)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:255:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'double fmdrmd::generic_fmod<double>(double, double)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:255:0)
+INFO: [HLS 214-178] Inlining function 'fmod' into '__gnu_cxx::__promote_2<float, int, __gnu_cxx::__promote<float, std::__is_integer<float>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::fmod<float, int>(float, int)' (/tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:314:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' into 'int generic_cast_IEEE754<int, float>(float, bool)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-178]==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================

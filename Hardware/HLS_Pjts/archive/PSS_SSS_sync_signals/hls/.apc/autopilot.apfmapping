@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="cp_corr_pss_sss.cpp" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/cp_corr_pss_sss.cpp"/>
+    <originFiles name="cp_corr_pss_sss.h" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/cp_corr_pss_sss.h"/>
+    <originFiles name="hls_fft.h" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/hls_fft.h"/>
+    <originFiles name="matmul_partition.cpp" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/matmul_partition.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="cp_corr_pss_sss_test.cpp" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/cp_corr_pss_sss_test.cpp"/>
+    <originFiles name="downsampled_i.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/downsampled_i.dat"/>
+    <originFiles name="downsampled_r.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/downsampled_r.dat"/>
+    <originFiles name="input.imag.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/input.imag.dat"/>
+    <originFiles name="input.real.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/input.real.dat"/>
+    <originFiles name="out_sss_1_PSS_1_i.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/out_sss_1_PSS_1_i.dat"/>
+    <originFiles name="out_sss_1_PSS_1_r.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/out_sss_1_PSS_1_r.dat"/>
+    <originFiles name="out_sss_1_PSS_2_i.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/out_sss_1_PSS_2_i.dat"/>
+    <originFiles name="out_sss_1_PSS_2_r.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/out_sss_1_PSS_2_r.dat"/>
+    <originFiles name="out_sss_2_PSS_1_i.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/out_sss_2_PSS_1_i.dat"/>
+    <originFiles name="out_sss_2_PSS_1_r.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/out_sss_2_PSS_1_r.dat"/>
+    <originFiles name="out_sss_2_PSS_2_i.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/out_sss_2_PSS_2_i.dat"/>
+    <originFiles name="out_sss_2_PSS_2_r.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/out_sss_2_PSS_2_r.dat"/>
+    <originFiles name="output.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/output.dat"/>
+    <originFiles name="pss_rslts_0.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/pss_rslts_0.dat"/>
+    <originFiles name="pss_rslts_1.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/pss_rslts_1.dat"/>
+    <originFiles name="pss_rslts_2.dat" path="/home/jhigh/Capstone_Project/main/Hardware/HLS_Pjts/PSS_SSS_sync_signals/pss_rslts_2.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

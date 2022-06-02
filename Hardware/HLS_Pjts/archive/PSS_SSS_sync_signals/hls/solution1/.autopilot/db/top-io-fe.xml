@@ -1,0 +1,39 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="cp_corr_pss_sss" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="r" src_name="IN_R" src_type="stream&lt;hls::axis&lt;float, 0, 0, 0&gt;, 0&gt;*" src_isptr="1" src_bitwidth="96" src_size_or_depth="128">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="IN_R" hw_bitwidth="32" hw_size_or_depth="1">
+          <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="r" src_name="IN_I" src_type="stream&lt;hls::axis&lt;float, 0, 0, 0&gt;, 0&gt;*" src_isptr="1" src_bitwidth="96" src_size_or_depth="128">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="IN_I" hw_bitwidth="32" hw_size_or_depth="1">
+          <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="w" src_name="sss_1_PSS_1" src_type="stream&lt;hls::axis&lt;C_DATA, 0, 0, 0&gt;, 0&gt;*" src_isptr="1" src_bitwidth="128" src_size_or_depth="168">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="sss_1_PSS_1" hw_bitwidth="64" hw_size_or_depth="1">
+          <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both"/>
+        </hw>
+      </arg>
+      <arg id="3" access_type="w" src_name="sss_1_PSS_2" src_type="stream&lt;hls::axis&lt;C_DATA, 0, 0, 0&gt;, 0&gt;*" src_isptr="1" src_bitwidth="128" src_size_or_depth="168">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="sss_1_PSS_2" hw_bitwidth="64" hw_size_or_depth="1">
+          <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both"/>
+        </hw>
+      </arg>
+      <arg id="4" access_type="w" src_name="sss_2_PSS_1" src_type="stream&lt;hls::axis&lt;C_DATA, 0, 0, 0&gt;, 0&gt;*" src_isptr="1" src_bitwidth="128" src_size_or_depth="168">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="sss_2_PSS_1" hw_bitwidth="64" hw_size_or_depth="1">
+          <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both"/>
+        </hw>
+      </arg>
+      <arg id="5" access_type="w" src_name="sss_2_PSS_2" src_type="stream&lt;hls::axis&lt;C_DATA, 0, 0, 0&gt;, 0&gt;*" src_isptr="1" src_bitwidth="128" src_size_or_depth="168">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="sss_2_PSS_2" hw_bitwidth="64" hw_size_or_depth="1">
+          <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0"/>
+    </return>
+  </kernel>
+</root>

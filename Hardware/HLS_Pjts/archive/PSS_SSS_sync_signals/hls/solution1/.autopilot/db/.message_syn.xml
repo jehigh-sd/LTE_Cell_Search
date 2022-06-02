@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 193.158 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;cp_corr_pss_sss.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 214-104]" key="HLS 214-104" tag="DATAFLOW,VITIS_THROUGHPUT" content="Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:679:9" resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-104.html"/>
+	<Message severity="WARNING" prefix="[HLS 214-104]" key="HLS 214-104" tag="DATAFLOW,VITIS_THROUGHPUT" content="Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:712:9" resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-104.html"/>
+	<Message severity="WARNING" prefix="[HLS 214-104]" key="HLS 214-104" tag="DATAFLOW,VITIS_THROUGHPUT" content="Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:759:9" resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-104.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-471]" key="HLS 200-471" tag="DATAFLOW,VITIS_THROUGHPUT" content="Dataflow form checks found 3 issue(s) in file cp_corr_pss_sss.cpp" resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-471.html"/>
+	<Message severity="WARNING" prefix="[HLS 207-5301]" key="HLS 207-5301" tag="" content="unused parameter &apos;r2&apos;: cp_corr_pss_sss.cpp:188:43" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:667:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:668:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:669:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:669:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:668:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:667:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:670:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5334]" key="HLS 207-5334" tag="" content="Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:679:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:693:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:694:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:695:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:695:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:694:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:693:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: cp_corr_pss_sss.cpp:696:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5334]" key="HLS 207-5334" tag="" content="Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:712:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5334]" key="HLS 207-5334" tag="" content="Only for-loops and functions support the dataflow: cp_corr_pss_sss.cpp:759:9" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;fft.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: fft.cpp:27:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: fft.cpp:27:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: fft.cpp:28:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: fft.cpp:28:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: fft.cpp:25:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: fft.cpp:25:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: fft.cpp:26:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: fft.cpp:26:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5524]" key="HLS 207-5524" tag="" content="Ignore interface attribute or pragma which is not used in top function: fft.cpp:24:9" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;matmul_partition.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 6.84 seconds. CPU system time: 0.98 seconds. Elapsed time: 7.98 seconds; current allocated memory: 194.933 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vivado&apos; flow target." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 17.49 seconds. CPU system time: 1.69 seconds. Elapsed time: 19.62 seconds; current allocated memory: 195.964 MB." resolution=""/>
+</Messages>
