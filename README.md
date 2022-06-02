@@ -139,7 +139,9 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
 <a id="demo"></a>
 ## Demo:
 
+Click on below link to see the demo presentation on the LTE Cell search
 
+* [Link](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/DOCUMENTATION/presentation)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
