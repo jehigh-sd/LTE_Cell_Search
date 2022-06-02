@@ -24,13 +24,6 @@ This system will perform cell search, establishes timing, frequency synchronizat
 
   <p align="center">
     LTE Cell Search algorithm implementation on Xilinx RF SoC.
-    <br />
-    <a href="https://github.com/jehigh-sd/LTE_Cell_Search"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/jehigh-sd/LTE_Cell_Search">View Demo</a>
-    ·
-    <a href="https://github.com/jehigh-sd/LTE_Cell_Search/issues">Report Bug</a>
   </p>
 </div>
 
@@ -47,19 +40,10 @@ This system will perform cell search, establishes timing, frequency synchronizat
 	1. [Prerequisites](#prerequisites)
 	1. [Installation](#installation)
 1. [Synchronization Signals (PSS and SSS)](#Synchronization_Signals)
-1. [Simulation](#Simulation)
 1. [Hardware](#Hardware)
-	1. [RF SoC](#RF_SoC)
-	1. [RF SoC LMX Configuration](#lmx)
-	1. [Low Noise Amplifier](#LNA)
 1. [IP Blocks](#IP_Blocks)
-	1. [Hardware Description](#Hardware_Description)
-	1. [LTE Cell Search](#LTE_Cell_Search)
-	1. [Simulink Model](#Simulink_model)	
 1. [Test Bench](#Test_Bench)
-1. [Host software](#Host_Software)
 1. [Demo](#demo)
-1. [Contributing](#contributing)
 1. [Contact](#contact)
 1. [Acknowledgments](#acknowledgments)
 1. [References](#references)
@@ -157,6 +141,8 @@ Click on below link to see the documentation on the Hardware used in this projec
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- IP_Blocks -->
+<a id="IP_Blocks"></a>
 ## IP_Blocks:
 
 Click on below link to see the documentation on the Hardware configurations
@@ -164,6 +150,8 @@ Click on below link to see the documentation on the Hardware configurations
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- Test_Bench -->
+<a id="Test_Bench"></a>
 ## Test_Bench:
 
 Click on below link to see the documentation on the Test bench
