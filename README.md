@@ -54,8 +54,6 @@ This system will perform cell search, establishes timing, frequency synchronizat
 	1. [RF SoC](#RF_SoC)
 	1. [RF SoC LMX Configuration](#lmx)
 	1. [Low Noise Amplifier](#LNA)
-	1. [Band Pass Filter](#BPF)
-	1. [Antenna](#Antenna)
 1. [IP Blocks](#IP_Blocks)
 	1. [Hardware Description](#Hardware_Description)
 	1. [LTE Cell Search](#LTE_Cell_Search)
