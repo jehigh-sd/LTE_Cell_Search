@@ -150,6 +150,12 @@ td_pss_0 = ifft(td_pss_0,ofdmInfo.Nfft)*sqrt(128/62);
 td_pss_1 = ifft(td_pss_1,ofdmInfo.Nfft)*sqrt(128/62);
 td_pss_2 = ifft(td_pss_2,ofdmInfo.Nfft)*sqrt(128/62);
 
+% td_pss_0_r = real(td_pss_0);
+% td_pss_0_i = imag(td_pss_0);
+% td_pss_1_r = real(td_pss_1);
+% td_pss_1_i = imag(td_pss_1);
+% td_pss_2_r = real(td_pss_2);
+% td_pss_2_i = imag(td_pss_2);
 %Append 9 samples at the front. Consider only Normal CP for now.
 % td_pss_0 = [td_pss_0(end-8:end) td_pss_0];
 % td_pss_1 = [td_pss_1(end-8:end) td_pss_1];
@@ -202,6 +208,10 @@ sss_loc = [696 10296];
 
 sss_recv_1 = fftshift(fft(downsampled(696:823)));
 sss_recv_2 = fftshift(fft(downsampled(10296:10423)));
+sss_recv_1_r = single(real(sss_recv_1));
+sss_recv_1_i = single(imag(sss_recv_1));
+sss_recv_2_r = single(real(sss_recv_2));
+sss_recv_2_i = single(imag(sss_recv_2));
 
 n_id_2_est = 2;
 results_sss_1_PSS_1 = [];
