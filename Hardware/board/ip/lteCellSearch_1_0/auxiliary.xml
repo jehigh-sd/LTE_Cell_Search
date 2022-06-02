@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="lteCellSearch" xd:componentRef="lteCellSearch" xd:initiationInterval="38688018" xd:clockPeriod="16.300" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(OUT_RSLT)" xd:originalName="OUT_RSLT" xd:direction="inout" xd:interfaceRef="m_axi_gmem0" xd:busTypeRef="aximm" xd:dataWidth="1" xd:bufferDirection="out"/>
+  <xd:arg xd:name="IN_R.data" xd:originalName="IN_R" xd:direction="in" xd:interfaceRef="IN_R" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_R.keep" xd:originalName="IN_R" xd:direction="in" xd:interfaceRef="IN_R" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_R.strb" xd:originalName="IN_R" xd:direction="in" xd:interfaceRef="IN_R" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_R.last" xd:originalName="IN_R" xd:direction="in" xd:interfaceRef="IN_R" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_I.data" xd:originalName="IN_I" xd:direction="in" xd:interfaceRef="IN_I" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_I.keep" xd:originalName="IN_I" xd:direction="in" xd:interfaceRef="IN_I" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_I.strb" xd:originalName="IN_I" xd:direction="in" xd:interfaceRef="IN_I" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_I.last" xd:originalName="IN_I" xd:direction="in" xd:interfaceRef="IN_I" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(OUT_PSS_ID)" xd:originalName="OUT_PSS_ID" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_vld" xd:statusOffset="0x14" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(OUT_PEAK_INDEX)" xd:originalName="OUT_PEAK_INDEX" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_vld" xd:statusOffset="0x24" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_RSLT" xd:originalName="OUT_RSLT" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_gmem0" xd:dataWidth="64" xd:offset="0x30" xd:handshakeRef="ap_none"/>
+  <xd:latencyEstimates xd:best-case="26304017" xd:worst-case="38688017" xd:average-case="32544017"/>
+  <xd:resourceEstimates xd:LUT="24375" xd:FF="4873" xd:BRAM="461" xd:DSP="25"/>
+</xd:acceleratorMap>

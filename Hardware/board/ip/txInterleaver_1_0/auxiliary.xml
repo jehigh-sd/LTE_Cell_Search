@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="txInterleaver" xd:componentRef="txInterleaver" xd:initiationInterval="x" xd:clockPeriod="16.300" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="IN_AC.data" xd:originalName="IN_AC" xd:direction="in" xd:interfaceRef="IN_AC" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_AC.keep" xd:originalName="IN_AC" xd:direction="in" xd:interfaceRef="IN_AC" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_AC.strb" xd:originalName="IN_AC" xd:direction="in" xd:interfaceRef="IN_AC" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_AC.last" xd:originalName="IN_AC" xd:direction="in" xd:interfaceRef="IN_AC" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_GEN.data" xd:originalName="IN_GEN" xd:direction="in" xd:interfaceRef="IN_GEN" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_GEN.keep" xd:originalName="IN_GEN" xd:direction="in" xd:interfaceRef="IN_GEN" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_GEN.strb" xd:originalName="IN_GEN" xd:direction="in" xd:interfaceRef="IN_GEN" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_GEN.last" xd:originalName="IN_GEN" xd:direction="in" xd:interfaceRef="IN_GEN" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_DAC.data" xd:originalName="OUT_DAC" xd:direction="out" xd:interfaceRef="OUT_DAC" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_DAC.keep" xd:originalName="OUT_DAC" xd:direction="out" xd:interfaceRef="OUT_DAC" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_DAC.strb" xd:originalName="OUT_DAC" xd:direction="out" xd:interfaceRef="OUT_DAC" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_DAC.last" xd:originalName="OUT_DAC" xd:direction="out" xd:interfaceRef="OUT_DAC" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="120" xd:FF="8" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

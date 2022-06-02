@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="adcPassThrough" xd:componentRef="adcPassThrough" xd:initiationInterval="x" xd:clockPeriod="16.300" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="IN_R.data" xd:originalName="IN_R" xd:direction="in" xd:interfaceRef="IN_R" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_R.keep" xd:originalName="IN_R" xd:direction="in" xd:interfaceRef="IN_R" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_R.strb" xd:originalName="IN_R" xd:direction="in" xd:interfaceRef="IN_R" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_R.last" xd:originalName="IN_R" xd:direction="in" xd:interfaceRef="IN_R" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_I.data" xd:originalName="IN_I" xd:direction="in" xd:interfaceRef="IN_I" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_I.keep" xd:originalName="IN_I" xd:direction="in" xd:interfaceRef="IN_I" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_I.strb" xd:originalName="IN_I" xd:direction="in" xd:interfaceRef="IN_I" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="IN_I.last" xd:originalName="IN_I" xd:direction="in" xd:interfaceRef="IN_I" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_R1.data" xd:originalName="OUT_R1" xd:direction="out" xd:interfaceRef="OUT_R1" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_R1.keep" xd:originalName="OUT_R1" xd:direction="out" xd:interfaceRef="OUT_R1" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_R1.strb" xd:originalName="OUT_R1" xd:direction="out" xd:interfaceRef="OUT_R1" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_R1.last" xd:originalName="OUT_R1" xd:direction="out" xd:interfaceRef="OUT_R1" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_I1.data" xd:originalName="OUT_I1" xd:direction="out" xd:interfaceRef="OUT_I1" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_I1.keep" xd:originalName="OUT_I1" xd:direction="out" xd:interfaceRef="OUT_I1" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_I1.strb" xd:originalName="OUT_I1" xd:direction="out" xd:interfaceRef="OUT_I1" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_I1.last" xd:originalName="OUT_I1" xd:direction="out" xd:interfaceRef="OUT_I1" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_R2.data" xd:originalName="OUT_R2" xd:direction="out" xd:interfaceRef="OUT_R2" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_R2.keep" xd:originalName="OUT_R2" xd:direction="out" xd:interfaceRef="OUT_R2" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_R2.strb" xd:originalName="OUT_R2" xd:direction="out" xd:interfaceRef="OUT_R2" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_R2.last" xd:originalName="OUT_R2" xd:direction="out" xd:interfaceRef="OUT_R2" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_I2.data" xd:originalName="OUT_I2" xd:direction="out" xd:interfaceRef="OUT_I2" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_I2.keep" xd:originalName="OUT_I2" xd:direction="out" xd:interfaceRef="OUT_I2" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_I2.strb" xd:originalName="OUT_I2" xd:direction="out" xd:interfaceRef="OUT_I2" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUT_I2.last" xd:originalName="OUT_I2" xd:direction="out" xd:interfaceRef="OUT_I2" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="184" xd:FF="8" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

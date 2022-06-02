@@ -1,0 +1,1340 @@
+<html>
+<head>
+<title>IP Core Generation Report for zynqRadioHWSWLTEMIBDetectorRFSoC2x2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+table {
+	width: 100%;
+	border: 1px solid black;
+}
+
+div {
+	line-heigh: 90%;
+}
+
+h2.title {
+	color: #000066;
+	font-weight: bold;
+}
+
+h3.sectionHeading {
+	color: #000066;
+	font-weight: bold;
+}
+
+td.distinctCellColor {
+	background-color: #eeeeff;
+}
+
+td.summaryTableSndColOddRow {
+	background-color: #eeeeff;
+	text-align: right;
+}
+
+td.summaryTableSndColEvenRow {
+	text-align: right;
+}
+
+thead.reportTableHeader {
+	background-color: #eeeeee;
+	font-weight: bold;
+}
+
+</style>
+
+</head>
+<body>
+<h2 class="title">IP Core Generation Report for zynqRadioHWSWLTEMIBDetectorRFSoC2x2</h2>
+<div>
+<h3 class="sectionHeading">Summary</h3>
+<table>
+<tbody>
+<tr>
+<td class="distinctCellColor">IP core name
+</td>
+<td class="summaryTableSndColOddRow">LTE_MIB_H_ip
+</td>
+</tr>
+<tr>
+<td>IP core version
+</td>
+<td class="summaryTableSndColEvenRow">1.0
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">IP core folder
+</td>
+<td class="summaryTableSndColOddRow"><a href="matlab:uiopen('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\*.*')">hdl_prj\ipcore\LTE_MIB_H_ip_v1_0</a>
+</td>
+</tr>
+<tr>
+<td>IP core zip file name
+</td>
+<td class="summaryTableSndColEvenRow">LTE_MIB_H_ip_v1_0.zip
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">Target platform
+</td>
+<td class="summaryTableSndColOddRow">Generic Xilinx Platform
+</td>
+</tr>
+<tr>
+<td>Target tool
+</td>
+<td class="summaryTableSndColEvenRow">Xilinx Vivado
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">Target language
+</td>
+<td class="summaryTableSndColOddRow">VHDL
+</td>
+</tr>
+<tr>
+<td>Model
+</td>
+<td class="summaryTableSndColEvenRow"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2')">zynqRadioHWSWLTEMIBDetectorRFSoC2x2</a>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">Model version
+</td>
+<td class="summaryTableSndColOddRow">5.308
+</td>
+</tr>
+<tr>
+<td>HDL Coder version
+</td>
+<td class="summaryTableSndColEvenRow">3.20
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">IP core generated on
+</td>
+<td class="summaryTableSndColOddRow">23-May-2022 17:28:59
+</td>
+</tr>
+<tr>
+<td>IP core generated for
+</td>
+<td class="summaryTableSndColEvenRow"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69208')">LTE_MIB_HDL</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<h3 class="sectionHeading">Target Interface Configuration</h3>
+You chose the following target interface configuration for 
+<a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2')">zynqRadioHWSWLTEMIBDetectorRFSoC2x2</a>
+:
+<br/><br/>
+Processor/FPGA synchronization mode: 
+<b>Free running</b>
+<br/><br/>
+Target platform interface table:
+<br/>
+<table>
+<thead class="reportTableHeader">
+<tr>
+<td>Port Name
+</td>
+<td>Port Type
+</td>
+<td>Data Type
+</td>
+<td>Target Platform Interfaces
+</td>
+<td>Interface Mapping
+</td>
+<td>Interface Options
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69209')">rxdatai_in</a>
+</td>
+<td>Inport
+</td>
+<td>ufix128
+</td>
+<td>AXI4-Stream I Slave
+</td>
+<td>Data
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69210')">rxdataq_in</a>
+</td>
+<td class="distinctCellColor">Inport
+</td>
+<td class="distinctCellColor">ufix128
+</td>
+<td class="distinctCellColor">AXI4-Stream Q Slave
+</td>
+<td class="distinctCellColor">Data
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69584')">rxdatai_valid</a>
+</td>
+<td>Inport
+</td>
+<td>boolean
+</td>
+<td>AXI4-Stream I Slave
+</td>
+<td>Valid
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69618')">rxdataq_valid</a>
+</td>
+<td class="distinctCellColor">Inport
+</td>
+<td class="distinctCellColor">boolean
+</td>
+<td class="distinctCellColor">AXI4-Stream Q Slave
+</td>
+<td class="distinctCellColor">Valid
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69663')">start_in</a>
+</td>
+<td>Inport
+</td>
+<td>int32
+</td>
+<td>AXI4-Lite
+</td>
+<td>x"108"
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69213')">extdatasel_in</a>
+</td>
+<td class="distinctCellColor">Inport
+</td>
+<td class="distinctCellColor">int32
+</td>
+<td class="distinctCellColor">AXI4-Lite
+</td>
+<td class="distinctCellColor">x"100"
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69354')">ncellid</a>
+</td>
+<td>Outport
+</td>
+<td>int32
+</td>
+<td>AXI4-Lite
+</td>
+<td>x"110"
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69355')">tddmode</a>
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">int32
+</td>
+<td class="distinctCellColor">AXI4-Lite
+</td>
+<td class="distinctCellColor">x"114"
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69356')">freqest</a>
+</td>
+<td>Outport
+</td>
+<td>int32
+</td>
+<td>AXI4-Lite
+</td>
+<td>x"118"
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69357')">celldetected</a>
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">int32
+</td>
+<td class="distinctCellColor">AXI4-Lite
+</td>
+<td class="distinctCellColor">x"11C"
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69358')">cellsearchdone</a>
+</td>
+<td>Outport
+</td>
+<td>int32
+</td>
+<td>AXI4-Lite
+</td>
+<td>x"120"
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69359')">NDLRB</a>
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">int32
+</td>
+<td class="distinctCellColor">AXI4-Lite
+</td>
+<td class="distinctCellColor">x"124"
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69360')">PHICH</a>
+</td>
+<td>Outport
+</td>
+<td>int32
+</td>
+<td>AXI4-Lite
+</td>
+<td>x"128"
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69361')">ng</a>
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">int32
+</td>
+<td class="distinctCellColor">AXI4-Lite
+</td>
+<td class="distinctCellColor">x"12C"
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69362')">nframe</a>
+</td>
+<td>Outport
+</td>
+<td>int32
+</td>
+<td>AXI4-Lite
+</td>
+<td>x"130"
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69363')">cellrefip</a>
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">int32
+</td>
+<td class="distinctCellColor">AXI4-Lite
+</td>
+<td class="distinctCellColor">x"134"
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69364')">mibdetected</a>
+</td>
+<td>Outport
+</td>
+<td>int32
+</td>
+<td>AXI4-Lite
+</td>
+<td>x"138"
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69365')">miberror</a>
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">int32
+</td>
+<td class="distinctCellColor">AXI4-Lite
+</td>
+<td class="distinctCellColor">x"13C"
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69852')">rxdatai_ready</a>
+</td>
+<td>Outport
+</td>
+<td>boolean
+</td>
+<td>AXI4-Stream I Slave
+</td>
+<td>Ready (optional)
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor"><a class="code2model" id="code2model" href="matlab:Simulink.ID.hilite('zynqRadioHWSWLTEMIBDetectorRFSoC2x2:69853')">rxdataq_ready</a>
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">boolean
+</td>
+<td class="distinctCellColor">AXI4-Stream Q Slave
+</td>
+<td class="distinctCellColor">Ready (optional)
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<h3 class="sectionHeading">Register Address Mapping</h3>
+The following AXI4-Lite bus accessible registers were generated for this IP core:
+<br/><br/>
+<table>
+<thead class="reportTableHeader">
+<tr>
+<td>Register Name
+</td>
+<td>Address Offset
+</td>
+<td>Description
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPCore_Reset
+</td>
+<td>0x0
+</td>
+<td>write 0x1 to bit 0 to reset IP core
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">IPCore_Enable
+</td>
+<td class="distinctCellColor">0x4
+</td>
+<td class="distinctCellColor">enabled (by default) when bit 0 is 0x1
+</td>
+</tr>
+<tr>
+<td>IPCore_Timestamp
+</td>
+<td>0x8
+</td>
+<td>contains unique IP timestamp (yymmddHHMM): 2205231728
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">extdatasel_in_Data
+</td>
+<td class="distinctCellColor">0x100
+</td>
+<td class="distinctCellColor">data register for Inport extdatasel_in
+</td>
+</tr>
+<tr>
+<td>start_in_Data
+</td>
+<td>0x108
+</td>
+<td>data register for Inport start_in
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">ncellid_Data
+</td>
+<td class="distinctCellColor">0x110
+</td>
+<td class="distinctCellColor">data register for Outport ncellid
+</td>
+</tr>
+<tr>
+<td>tddmode_Data
+</td>
+<td>0x114
+</td>
+<td>data register for Outport tddmode
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">freqest_Data
+</td>
+<td class="distinctCellColor">0x118
+</td>
+<td class="distinctCellColor">data register for Outport freqest
+</td>
+</tr>
+<tr>
+<td>celldetected_Data
+</td>
+<td>0x11C
+</td>
+<td>data register for Outport celldetected
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">cellsearchdone_Data
+</td>
+<td class="distinctCellColor">0x120
+</td>
+<td class="distinctCellColor">data register for Outport cellsearchdone
+</td>
+</tr>
+<tr>
+<td>NDLRB_Data
+</td>
+<td>0x124
+</td>
+<td>data register for Outport NDLRB
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">PHICH_Data
+</td>
+<td class="distinctCellColor">0x128
+</td>
+<td class="distinctCellColor">data register for Outport PHICH
+</td>
+</tr>
+<tr>
+<td>ng_Data
+</td>
+<td>0x12C
+</td>
+<td>data register for Outport ng
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">nframe_Data
+</td>
+<td class="distinctCellColor">0x130
+</td>
+<td class="distinctCellColor">data register for Outport nframe
+</td>
+</tr>
+<tr>
+<td>cellrefip_Data
+</td>
+<td>0x134
+</td>
+<td>data register for Outport cellrefip
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">mibdetected_Data
+</td>
+<td class="distinctCellColor">0x138
+</td>
+<td class="distinctCellColor">data register for Outport mibdetected
+</td>
+</tr>
+<tr>
+<td>miberror_Data
+</td>
+<td>0x13C
+</td>
+<td>data register for Outport miberror
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+The AXI4 slave write register readback is ON for the IP core.
+<br/>
+The register address mapping is also in the following C header file for you to use when programming the processor:
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\include\LTE_MIB_H_ip_addr.h')">include\LTE_MIB_H_ip_addr.h</a>
+<br/>
+The IP core name is appended to the register names to avoid name conflicts.
+</div>
+<div>
+<h3 class="sectionHeading">IP Core User Guide</h3>
+<b>Theory of Operation</b>
+<br/><br/>
+This IP core is designed to be connected to an embedded processor with an 
+<b>AXI4-Lite interface. </b>
+The processor acts as master, and the IP core acts as slave. By accessing the generated registers via the AXI4-Lite interface, the processor can control the IP core, and read and write data from and to the IP core. 
+<br/><br/>
+For example, to reset the IP core, write 0x1 to the bit 0 of IPCore_Reset register. To enable or disable the IP core, write 0x1 or 0x0 to the IPCore_Enable register. To access the data ports of the MATLAB/Simulink algorithm, read or write to the associated data registers.
+<br/><br/>
+<img src="doc_arch_axi4_lite_stream.jpg"/>
+<br/><br/>
+This IP core also includes the AXI4-Stream interfaces 
+<b>AXI4-Stream I Slave,  and AXI4-Stream Q Slave. </b>
+The AXI4-Stream interfaces can be connected to the processor via a DMA controller, or they can be connected to other IP cores with AXI4-Stream interfaces. For example, the diagram above shows a design using AXI4-Stream interfaces as the data path, and using AXI4-Lite interface as the control path. 
+<br/><br/>
+The AXI4 Slave port to pipeline register ratio selected as 35 in task 3.2 for this model. The default delay to read AXI4 register is one clock cycle.
+Depending on the selected ratio and IO connected to AXI4 interface, register pipelining is introduced in the read logic of AXI4 registers.
+For your model AXI4 pipeline register ratio setting 35 is larger than all the readable AXI4 slave registers. Total readable AXI4 slave registers are 16, so no pipelining is added to the AXI4 register read back logic.
+<br/><br/>
+<b>Processor/FPGA Synchronization</b>
+<br/><br/>
+The 
+<b>Free running </b>
+mode means there is no explicit synchronization between embedded processor software execution (SW) and the IP core (HW). SW and HW runs independently. The data written from the processor to IP core takes effect immediately, and the data read from the IP core is the latest data available on the IP core output ports. 
+<br/><br/>
+<img src="free_running.jpg"/>
+<br/><br/>
+<b>Xilinx Vivado Environment Integration</b>
+<br/><br/>
+This IP Core is generated for the Xilinx Vivado environment. The following steps are an example showing how to integrate the generated IP core into Xilinx Vivado environment:
+<br/><br/>
+1. The generated IP core is a zip package file under the IP core folder. Please check the Summary section of this report for the IP zip file name and folder.
+<br/>
+2. In the Vivado project, go to Project Settings -> IP -> Repository Manager, add the folder containing the IP zip file as IP Repository.
+<br/>
+3. In Repository Manger, click the "Add IP" button to add IP zip file to the IP repository. This step adds the generated IP into the Vivado IP Catalog.
+<br/>
+4. In the Vivado project, find the generated IP core in the IP Catalog under category "HDL Coder Generated IP". In you have a Vivado block design open, you can add the generated IP into your block design.
+<br/>
+5. Connect the AXI4-Lite port of the IP core to the embedded processor's AXI master port.
+<br/>
+6. Connect the clock and reset ports of the IP core to the global clock and reset signals.
+<br/>
+7. Assign an Offset Address for the IP core in the Address Editor.
+<br/>
+8. Connect external ports and add FPGA pin assignment constraints to constraint file.
+<br/>
+9. Generate FPGA bitstream and download the bitstream to target device.
+<br/><br/>
+If you are targeting Xilinx Zynq hardwares supported by HDL Coder Support Package for Xilinx Zynq Platform, you can select the board you are using in the Target platform option in the Set Target > Set Target Device and Synthesis Tool task. You can then use Embedded System Integration tasks in HDL Workflow Advisor to help you integrate the generated IP core into Xilinx Vivado environment.
+</div>
+<div>
+<h3 class="sectionHeading">IP Core File List</h3>
+The IP core folder is located at:
+<br/>
+<a href="matlab:uiopen('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\*.*')">hdl_prj\ipcore\LTE_MIB_H_ip_v1_0</a>
+<br/>
+Following files are generated under this folder:
+<br/><br/>
+<b>IP core zip file</b>
+<br/>
+<a href="matlab:uiopen('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\*.*')">LTE_MIB_H_ip_v1_0.zip</a>
+<br/><br/>
+<b>IP core report</b>
+<br/>
+<a href="matlab:web('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\doc\zynqRadioHWSWLTEMIBDetectorRFSoC2x2_ip_core_report.html')">doc\zynqRadioHWSWLTEMIBDetectorRFSoC2x2_ip_core_report.html</a>
+<br/><br/>
+<b>IP core HDL source files</b>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_ltehdlChannelEqualizer_pac.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_ltehdlChannelEqualizer_pac.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_MATLAB_Function.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_MATLAB_Function.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_LFSR1.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_LFSR1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_LFSR2.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_LFSR2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_SetFF.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_SetFF.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_Gold_Sequence_Generator.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_Gold_Sequence_Generator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_LTE_Gold_Seq_upsampling.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_LTE_Gold_Seq_upsampling.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_c_initGen.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_c_initGen.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_downsampling_seq2complex.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_downsampling_seq2complex.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_trigger_cinit_load.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_trigger_cinit_load.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_cellRefGen.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_cellRefGen.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_TxDivDecode.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_TxDivDecode.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_mod3HDL1.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_mod3HDL1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_addr_mapper.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_addr_mapper.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_Complex_shift.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_Complex_shift.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_InterpCalculation.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_InterpCalculation.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_SimpleDualPortRAM_generic.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_SimpleDualPortRAM_generic.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_hEstInterpAndStore.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_hEstInterpAndStore.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_Subsystem1.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_Subsystem1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_SinglePortRAM_generic.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_SinglePortRAM_generic.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_Subsystem2.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_Subsystem2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_hEstInterpAndStore_block.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_hEstInterpAndStore_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_mod3HDL.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_mod3HDL.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_mod6HDL.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_mod6HDL.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_hEstControl.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_hEstControl.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_chEst.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_chEst.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_Detect_Rise_Positive.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_Detect_Rise_Positive.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_rsBankSymbolCount.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_rsBankSymbolCount.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_ltehdlChannelEqualizer.vhd')">hdl\vhdl\ltehdlChannelEqualizer\LTE_MIB_H_ip_src_ltehdlChannelEqualizer_ltehdlChannelEqualizer.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_ltehdlDownlinkSyncDemod_pac.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_ltehdlDownlinkSyncDemod_pac.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Decimator.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Decimator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SimpleDualPortRAM_generic.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SimpleDualPortRAM_generic.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolicPreAdd.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolicPreAdd.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block2.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolicPreAdd_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolicPreAdd_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Discrete_FIR_Filter.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Discrete_FIR_Filter.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CIC_Compensation_Decimator.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CIC_Compensation_Decimator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Decimator_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Decimator_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CIC_Filter.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CIC_Filter.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CIC_Gain_Comp.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CIC_Gain_Comp.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Transient_Removal.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Transient_Removal.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Decimation_Filters.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Decimation_Filters.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Edge_Detector.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Edge_Detector.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_DitherGen.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_DitherGen.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SinLookUpTableGen.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SinLookUpTableGen.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CosLookUpTableGen.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CosLookUpTableGen.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_WaveformGen.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_WaveformGen.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_NCO_HDL_Optimized1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_NCO_HDL_Optimized1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Frequency_Correction_16x.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Frequency_Correction_16x.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_DitherGen_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_DitherGen_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SinLookUpTableGen_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SinLookUpTableGen_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CosLookUpTableGen_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CosLookUpTableGen_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_WaveformGen_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_WaveformGen_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_NCO_HDL_Optimized1_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_NCO_HDL_Optimized1_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Frequency_Correction_1x.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Frequency_Correction_1x.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_AngleAtMaximum.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_AngleAtMaximum.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_AngleFilter.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_AngleFilter.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MovingAverage.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MovingAverage.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SlotAverage.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SlotAverage.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CyclicPrefixCorrelator.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CyclicPrefixCorrelator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Quadrant_Mapper.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Quadrant_Mapper.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CordicKernelMag.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_CordicKernelMag.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Quadrant_Correction.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Quadrant_Correction.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_HDL_CMA_core.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_HDL_CMA_core.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Rect2Polar.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Rect2Polar.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FrequencyEstimation.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FrequencyEstimation.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FFT_Shift.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FFT_Shift.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_OFDM_Demod_Mask_Generator.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_OFDM_Demod_Mask_Generator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SimpleDualPortRAM_generic_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SimpleDualPortRAM_generic_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator2.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF2_2.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF2_2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_2.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM_3_1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM_3_1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex3Multiply.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex3Multiply.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator3.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_3.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_3.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator4.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator4.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF2_4.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF2_4.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_4.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_4.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM_5_1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM_5_1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex3Multiply_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex3Multiply_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator5.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator5.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_5.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_5.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_5.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_5.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator6.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator6.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF2_6.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF2_6.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_6.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_6.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM_7_1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM_7_1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex3Multiply_block1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex3Multiply_block1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator7.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator7.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_7.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_7.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_7.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_7.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator8.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator8.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF2_8.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF2_8.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_8.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_8.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM_9_1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM_9_1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex3Multiply_block2.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex3Multiply_block2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator9.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator9.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_9.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_9.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_9.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_9.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator10.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator10.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF2_10.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF2_10.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_10.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_10.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM_11_1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM_11_1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex3Multiply_block3.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex3Multiply_block3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator11.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SDFCommutator11.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_11.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_SDF1_11.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_1_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX22FFT_CTRL1_1_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX2FFT_bitNatural.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_RADIX2FFT_bitNatural.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FFT_HDL_Optimized.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FFT_HDL_Optimized.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_OFDM_Demodulation.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_OFDM_Demodulation.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Detection_Status.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Detection_Status.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Output_Interfacing.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Output_Interfacing.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MagnitudeSquared.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MagnitudeSquared.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MagnitudeSquared0.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MagnitudeSquared0.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MagnitudeSquared1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MagnitudeSquared1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MagnitudeSquared2.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MagnitudeSquared2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Synchronous_Enabled_128_Sample_Delay.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Synchronous_Enabled_128_Sample_Delay.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MovingAverage_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MovingAverage_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block3.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block4.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block4.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block2.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block5.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block5.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_PSSXCorr0.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_PSSXCorr0.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block3.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block6.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block6.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block2.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block4.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block4.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block7.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block7.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block3.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D_block1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D_block1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block5.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block5.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block8.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block8.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block4.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block4.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D_block2.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D_block2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_PSSXCorr1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_PSSXCorr1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block6.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block6.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block9.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block9.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block5.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block5.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_block1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_block1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block7.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block7.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block10.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block10.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block6.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block6.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D_block3.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D_block3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block8.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FirRdyLogic_block8.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block11.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Addressable_Delay_Line_block11.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block7.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FilterTapSystolic_block7.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D_block4.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_C_D_block4.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_PSSXCorr2.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_PSSXCorr2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_ThresholdPrescaling.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_ThresholdPrescaling.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_StreamSyncronizer.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_StreamSyncronizer.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_ThresholdLimiter.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_ThresholdLimiter.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Correlators.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Correlators.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Max_Element.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Max_Element.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Peak_Search.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Peak_Search.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Max_Peak_Searcher.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Max_Peak_Searcher.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_PSS_Searcher.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_PSS_Searcher.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Determine_Frame_Timing.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Determine_Frame_Timing.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SSS_Search_Controller.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SSS_Search_Controller.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SinglePortRAM_generic.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SinglePortRAM_generic.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_TWDLROM.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2FFT_CTRL.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2FFT_CTRL.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2FFT_MEMORY.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2FFT_MEMORY.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2FFT_BTFSEL.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2FFT_BTFSEL.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex4Multiply.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Complex4Multiply.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2_BUTTERFLY.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2_BUTTERFLY.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2FFT_MEMSEL.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2FFT_MEMSEL.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2FFT_OUTMux.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_MINRESRX2FFT_OUTMux.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FFT_HDL_Optimized_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_FFT_HDL_Optimized_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Magnitude_Squared_0.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Magnitude_Squared_0.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Magnitude_Squared_1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Magnitude_Squared_1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_ThresholdLimiter_block.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_ThresholdLimiter_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SSS_Dot_Product.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SSS_Dot_Product.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Find_Max_Correlation.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Find_Max_Correlation.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Find_Max_Correlation1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Find_Max_Correlation1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SSS_Correlation_Controller.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SSS_Correlation_Controller.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Max_Likelihood_SSS.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Max_Likelihood_SSS.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SSS_Searcher.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_SSS_Searcher.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Stream_Syncronizer.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Stream_Syncronizer.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Sync_Signal_Search.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Sync_Signal_Search.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Transfer_Timing_Offset.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Transfer_Timing_Offset.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Start_Controller.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Start_Controller.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Subframe_Counter.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Subframe_Counter.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Timing_Offset_Mask_Generator1.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_Timing_Offset_Mask_Generator1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_ltehdlDownlinkSyncDemod.vhd')">hdl\vhdl\ltehdlDownlinkSyncDemod\LTE_MIB_H_ip_src_ltehdlDownlinkSyncDemod_ltehdlDownlinkSyncDemod.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_ltehdlPBCHDecoder_pac.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_ltehdlPBCHDecoder_pac.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_MIB_Interpretation.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_MIB_Interpretation.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_SimpleDualPortRAM_generic.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_SimpleDualPortRAM_generic.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_restartMIBPulseResync.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_restartMIBPulseResync.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_MIBDetectedPulseResync.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_MIBDetectedPulseResync.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_repeatQPSKPulseResync.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_repeatQPSKPulseResync.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_PBCH_Controller.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_PBCH_Controller.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_MATLAB_Function.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_MATLAB_Function.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_LFSR1.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_LFSR1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_LFSR2.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_LFSR2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_SetFF.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_SetFF.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Gold_Sequence_Generator.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Gold_Sequence_Generator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_PBCH_Descrambling.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_PBCH_Descrambling.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_rateRecovery.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_rateRecovery.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_PBCH_Rate_Recovery.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_PBCH_Rate_Recovery.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_BCHControllerCore.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_BCHControllerCore.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_MIB_Data_Buffer.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_MIB_Data_Buffer.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_BCH_Controller.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_BCH_Controller.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Sample_Control_Bus_Creator.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Sample_Control_Bus_Creator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_controlbusGen.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_controlbusGen.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Rounding_Symmetric_Saturation.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Rounding_Symmetric_Saturation.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Sign_Extend_by_2.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Sign_Extend_by_2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Apply_Scaling.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Apply_Scaling.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Determine_Scaling.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Determine_Scaling.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Maximum_Average_Absolute_Value.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Maximum_Average_Absolute_Value.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_MemoryController.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_MemoryController.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Symmetric_Saturation.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Symmetric_Saturation.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_SinglePortRAM_generic.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_SinglePortRAM_generic.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_softBitScalingUnit.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_softBitScalingUnit.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_SimpleDualPortRAM_singlebit.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_SimpleDualPortRAM_singlebit.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_ConvolutionalDecoderTracebackUnit.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_ConvolutionalDecoderTracebackUnit.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_ConvolutionalDecoderMetricComputer.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_ConvolutionalDecoderMetricComputer.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_ConvolutionalDecoderMessageExtender.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_ConvolutionalDecoderMessageExtender.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Convolutional_Decoder.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_Convolutional_Decoder.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_endInNet.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_endInNet.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_CRCGenControl.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_CRCGenControl.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_CRCGenCompute.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_CRCGenCompute.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_CRCGenerator.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_CRCGenerator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_CRCCompNet.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_CRCCompNet.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_CRC_Decoder.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_CRC_Decoder.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_BCH_Decoder.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_BCH_Decoder.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_ltehdlPBCHDecoder.vhd')">hdl\vhdl\ltehdlPBCHDecoder\LTE_MIB_H_ip_src_ltehdlPBCHDecoder_ltehdlPBCHDecoder.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_ltehdlPBCHIndexing_pac.vhd')">hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_ltehdlPBCHIndexing_pac.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_Enabled_Subsystem.vhd')">hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_Enabled_Subsystem.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_enbGen.vhd')">hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_enbGen.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_mod3HDL1.vhd')">hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_mod3HDL1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_PBCHIndGen.vhd')">hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_PBCHIndGen.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_mod_12_6.vhd')">hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_mod_12_6.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_ltehdlPBCHIndexing.vhd')">hdl\vhdl\ltehdlPBCHIndexing\LTE_MIB_H_ip_src_ltehdlPBCHIndexing_ltehdlPBCHIndexing.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_ltehdlResourceGrid_pac.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_ltehdlResourceGrid_pac.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_repeat.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_repeat.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_repeat1.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_repeat1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_repeat2.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_repeat2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_SimpleDualPortRAM_generic.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_SimpleDualPortRAM_generic.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_Memory_Bank.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_Memory_Bank.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_MATLAB_Function.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_MATLAB_Function.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_gridBankSelect.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_gridBankSelect.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_Grid_Memory_Bank.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_Grid_Memory_Bank.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_Detect_Rise_Positive.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_Detect_Rise_Positive.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_wr_en_calculator.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_wr_en_calculator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_LTE_Memory_Bank_Write_Controller.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_LTE_Memory_Bank_Write_Controller.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_MemoryBank_Write_Controller.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_MemoryBank_Write_Controller.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_lst2hw.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_lst2hw.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_mod3cellID.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_mod3cellID.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_rsOutputGen.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_rsOutputGen.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_ltehdlResourceGrid.vhd')">hdl\vhdl\ltehdlResourceGrid\LTE_MIB_H_ip_src_ltehdlResourceGrid_ltehdlResourceGrid.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_LTE_MIB_HDL_pac.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_LTE_MIB_HDL_pac.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Front_End_FIR_Decimation.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Front_End_FIR_Decimation.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_CIC_Interpolation1.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_CIC_Interpolation1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Detect_Rise_Positive.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Detect_Rise_Positive.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Detect_Rise_Positive1.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Detect_Rise_Positive1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_MIB_Decoder.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_MIB_Decoder.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_HDL_LTE_MIB_Recovery.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_HDL_LTE_MIB_Recovery.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Postprocessor.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Postprocessor.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Data_Conditioner.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Data_Conditioner.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Data_Start.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Data_Start.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Start_Pulse_Generator.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Start_Pulse_Generator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Test_Data_Generator.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Test_Data_Generator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Unpack_into_vector_v2.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Unpack_into_vector_v2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_ADC_To_Vector_I.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_ADC_To_Vector_I.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Unpack_into_vector_v2_block.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Unpack_into_vector_v2_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_ADC_To_Vector_Q.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_ADC_To_Vector_Q.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldInC0.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldInC0.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_subFilter.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_subFilter.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldInC0_block.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldInC0_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block1.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block1.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldInC0_block1.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldInC0_block1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block1.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block2.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block2.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldInC0_block2.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldInC0_block2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block2.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block2.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block3.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block3.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block3.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block3.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block4.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block4.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block4.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block4.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block4.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block4.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block5.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block5.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block5.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block5.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block5.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block5.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block6.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterCoef_block6.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block6.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterTapSystolicWvldin_block6.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block6.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_subFilter_block6.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FilterBank.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FilterBank.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_sumTree.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_sumTree.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_FIR_Decimation_HDL_Optimized1.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_FIR_Decimation_HDL_Optimized1.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Decimation.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Decimation.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Vector_Decimator.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Vector_Decimator.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_Preprocessor.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_Preprocessor.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_LTE_MIB_HDL_tc.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_LTE_MIB_HDL_tc.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_src_LTE_MIB_HDL.vhd')">hdl\vhdl\LTE_MIB_H_ip_src_LTE_MIB_HDL.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_reset_sync.vhd')">hdl\vhdl\LTE_MIB_H_ip_reset_sync.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_dut.vhd')">hdl\vhdl\LTE_MIB_H_ip_dut.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_SimpleDualPortRAM_generic.vhd')">hdl\vhdl\LTE_MIB_H_ip_SimpleDualPortRAM_generic.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_fifo_data.vhd')">hdl\vhdl\LTE_MIB_H_ip_fifo_data.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_axi4_stream_i_slave.vhd')">hdl\vhdl\LTE_MIB_H_ip_axi4_stream_i_slave.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_fifo_data_block.vhd')">hdl\vhdl\LTE_MIB_H_ip_fifo_data_block.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_axi4_stream_q_slave.vhd')">hdl\vhdl\LTE_MIB_H_ip_axi4_stream_q_slave.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_addr_decoder.vhd')">hdl\vhdl\LTE_MIB_H_ip_addr_decoder.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_axi_lite_module.vhd')">hdl\vhdl\LTE_MIB_H_ip_axi_lite_module.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip_axi_lite.vhd')">hdl\vhdl\LTE_MIB_H_ip_axi_lite.vhd</a>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\hdl\vhdl\LTE_MIB_H_ip.vhd')">hdl\vhdl\LTE_MIB_H_ip.vhd</a>
+<br/>
+<br/>
+<b>IP core C header file</b>
+<br/>
+<a href="matlab:edit('hdl_prj\ipcore\LTE_MIB_H_ip_v1_0\include\LTE_MIB_H_ip_addr.h')">include\LTE_MIB_H_ip_addr.h</a>
+</div>
+</body>
+</html>
