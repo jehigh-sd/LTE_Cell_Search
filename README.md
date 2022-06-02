@@ -188,12 +188,12 @@ We would like acknowledge
 
 * [1]https://www.rfsoc-pynq.io/overlays.html
 * [2]https://www.rfsoc-pynq.io/base_overlay.html
-* [3]git clone https://github.com/Xilinx/RFSoC2x2-PYNQ.git
+* [3]https://github.com/Xilinx/RFSoC2x2-PYNQ.git
 * [4]https://github.com/strath-sdr/rfsoc_sam
 * [5]https://github.com/strath-sdr/rfsoc_ofdm
 * [6]https://www.mathworks.com/help/wireless-hdl/ug/lte-hdl-cell-search.html 
 * [7]https://www.mathworks.com/help/lte/ug/synchronization-signals-pss-and-sss.html
-* [8]ML Estimation of Time and Frequency Offset in OFDM Systems (IEEE paper)
+* [8]https://ieeexplore.ieee.org/document/599949
 * [9]https://www.mathworks.com/help/lte/ug/cell-search-mib-and-sib1-recovery.html
 * [10]https://www.sharetechnote.com/html/FrameStructure_DL.html#Overview
 
