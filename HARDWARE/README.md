@@ -1,4 +1,4 @@
-# RFSoC 2x2 Based Lte Cell Search
+# RFSoC 2x2 Based Lte Cell Search (Windows PC)
 
 Step 1: 
 Download PYNQ Base Overlay for RFSoC2x2: See the RFSoC 2x2 base overlay page for more details.
