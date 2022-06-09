@@ -7,11 +7,11 @@ https://www.rfsoc-pynq.io/base_overlay.html
 
 Step 2:
 Copy LTE Cell Search IPs:
---> FROM: [VIVADO\board\ip] TO [RFSoC2x2-PYNQ-master\board\ip]
+--> FROM: [board\ip] TO [RFSoC2x2-PYNQ-master\board\ip]
 
 Step 3:
 Copy LTE Cell Search Scripts:
---> FROM: [VIVADO\board\RFSoC2x2\base] TO [RFSoC2x2-PYNQ-master\board\RFSoC2x2\base]
+--> FROM: [board\RFSoC2x2\base] TO [RFSoC2x2-PYNQ-master\board\RFSoC2x2\base]
 
 Step 4:
 Create Project and Block Diagram:

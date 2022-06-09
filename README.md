@@ -24,13 +24,6 @@ This system will perform cell search, establishes timing, frequency synchronizat
 
   <p align="center">
     LTE Cell Search algorithm implementation on Xilinx RF SoC.
-    <br />
-    <a href="https://github.com/jehigh-sd/LTE_Cell_Search"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/jehigh-sd/LTE_Cell_Search">View Demo</a>
-    ·
-    <a href="https://github.com/jehigh-sd/LTE_Cell_Search/issues">Report Bug</a>
   </p>
 </div>
 
@@ -47,19 +40,10 @@ This system will perform cell search, establishes timing, frequency synchronizat
 	1. [Prerequisites](#prerequisites)
 	1. [Installation](#installation)
 1. [Synchronization Signals (PSS and SSS)](#Synchronization_Signals)
-1. [Simulation](#Simulation)
 1. [Hardware](#Hardware)
-	1. [RF SoC](#RF_SoC)
-	1. [RF SoC LMX Configuration](#lmx)
-	1. [Low Noise Amplifier](#LNA)
 1. [IP Blocks](#IP_Blocks)
-	1. [Hardware Description](#Hardware_Description)
-	1. [LTE Cell Search](#LTE_Cell_Search)
-	1. [Simulink Model](#Simulink_model)	
 1. [Test Bench](#Test_Bench)
-1. [Host software](#Host_Software)
 1. [Demo](#demo)
-1. [Contributing](#contributing)
 1. [Contact](#contact)
 1. [Acknowledgments](#acknowledgments)
 1. [References](#references)
@@ -91,15 +75,11 @@ The BCH is transmitted in the middle six resource blocks (RBs) of an LTE transmi
 
 To get start with your RF Soc visit below page for instructions:
 
-	[Getting started on RF SoC ](https://www.rfsoc-pynq.io/getting_started.html)
-
-
+	(https://www.rfsoc-pynq.io/getting_started.html)
 
 ### Prerequisites
 
 Matlab 2022a or above is recommened.
-
-
   
 <!-- RFSOC-DETAILS -->
 ### RF SoC Details
@@ -113,8 +93,6 @@ This section shows RF SoC Image, schematic and details.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Installation
 
 For this project, you need to install Xilinx Vitis, Vivado and Matlab
@@ -123,7 +101,7 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
    ```sh
    https://github.com/jehigh-sd/LTE_Cell_Search.git
    ```
-2. Install vivado and vitis from below link. For this project, vivado 2020.1 is used
+2. Install vivado and vitis from below link. For this project, vivado 2020.2 is used
    ```sh
    (https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html)
    ```
@@ -135,38 +113,60 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- Synchronization_Signals -->
+<a id="Synchronization_Signals"></a>
+## Synchronization_Signals:
+
+Click on below link to see the documentation on the Synchronization_Signals
+* [LTE_Cell_Search_Thoery](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Thoery.docx)
+* [LTE_Cell_Search_3_Main_Components](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_3_Main_Components.pptx)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- DEMO -->
 <a id="demo"></a>
 ## Demo:
+Click on below link to see the demo presentation on the LTE Cell search
 
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-<a id="contributing"></a>
-## Contributing:
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+* [LTE_Cell_Search_Project_Presentation](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/DOCUMENTATION/presentation)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- Hardware -->
+<a id="Hardware"></a>
+## Hardware:
+
+Click on below link to see the documentation on the Hardware used in this project
+* [LTE_Cell_Hardware_Information](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Hardware_Info.docx)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- IP_Blocks -->
+<a id="IP_Blocks"></a>
+## IP_Blocks:
+
+Click on below link to see the documentation on the Hardware configurations
+* [LTE_Cell_Search_Hardware_Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Hardware_Description.pptx)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- Test_Bench -->
+<a id="Test_Bench"></a>
+## Test_Bench:
+
+Click on below link to see the documentation on the Test bench
+* [Test_Bench_Files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/TEST_BENCH)
+* [How_To_Enable_TestBench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Test_Bench_Procedure.docx)
+* [TestBench_ReadMe](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Readme.txt)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Jeff High - jehigh@ucsd.edu
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: https://github.com/jehigh-sd/LTE_Cell_Search
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -188,12 +188,12 @@ We would like acknowledge
 
 * [1]https://www.rfsoc-pynq.io/overlays.html
 * [2]https://www.rfsoc-pynq.io/base_overlay.html
-* [3]git clone https://github.com/Xilinx/RFSoC2x2-PYNQ.git
+* [3]https://github.com/Xilinx/RFSoC2x2-PYNQ.git
 * [4]https://github.com/strath-sdr/rfsoc_sam
 * [5]https://github.com/strath-sdr/rfsoc_ofdm
 * [6]https://www.mathworks.com/help/wireless-hdl/ug/lte-hdl-cell-search.html 
 * [7]https://www.mathworks.com/help/lte/ug/synchronization-signals-pss-and-sss.html
-* [8]ML Estimation of Time and Frequency Offset in OFDM Systems (IEEE paper)
+* [8]https://ieeexplore.ieee.org/document/599949
 * [9]https://www.mathworks.com/help/lte/ug/cell-search-mib-and-sib1-recovery.html
 * [10]https://www.sharetechnote.com/html/FrameStructure_DL.html#Overview
 
