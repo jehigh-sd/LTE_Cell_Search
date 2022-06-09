@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fft_shift.h" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/fft_shift.h"/>
+    <originFiles name="fft_shift.cpp" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/fft_shift.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="output.imag.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/output.imag.dat"/>
+    <originFiles name="output.real.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/output.real.dat"/>
+    <originFiles name="input.real.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/input.real.dat"/>
+    <originFiles name="input.imag.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/input.imag.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

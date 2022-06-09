@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_lteCellSearch'
+================================================================
+* Date:           Thu Jun  2 15:25:38 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  16.30 ns|  11.899 ns|     4.40 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |      271|      400|  4.417 us|  6.520 us|  269|  398|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.83>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%trunc_ln264_read = read i17 @_ssdm_op_Read.ap_auto.i17, i17 %trunc_ln264" [lte_cell_search.cpp:259]   --->   Operation 7 'read' 'trunc_ln264_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%trunc_ln264_c2 = alloca i64 1" [lte_cell_search.cpp:259]   --->   Operation 8 'alloca' 'trunc_ln264_c2' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 17> <Depth = 2> <FIFO>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%trunc_ln264_c1 = alloca i64 1" [lte_cell_search.cpp:259]   --->   Operation 9 'alloca' 'trunc_ln264_c1' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 17> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%trunc_ln264_c = alloca i64 1" [lte_cell_search.cpp:259]   --->   Operation 10 'alloca' 'trunc_ln264_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 17> <Depth = 2> <FIFO>
+ST_1 : Operation 11 [1/1] (1.83ns)   --->   "%call_ln259 = call void @dataflow_in_loop_lteCellSearch.entry25, i17 %trunc_ln264_read, i17 %trunc_ln264_c, i17 %trunc_ln264_c1" [lte_cell_search.cpp:259]   --->   Operation 11 'call' 'call_ln259' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 12 [2/2] (0.00ns)   --->   "%thresh_V = call i32 @compute_threshold, i23 %IN_real_V, i17 %trunc_ln264_c, i23 %IN_imag_V, i17 %trunc_ln264_c2, i32 %sum_mag_V, i32 %mag_buff_V_0, i32 %mag_buff_V_1" [lte_cell_search.cpp:262]   --->   Operation 12 'call' 'thresh_V' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 3 <SV = 2> <Delay = 6.08>
+ST_3 : Operation 13 [1/2] (6.08ns)   --->   "%thresh_V = call i32 @compute_threshold, i23 %IN_real_V, i17 %trunc_ln264_c, i23 %IN_imag_V, i17 %trunc_ln264_c2, i32 %sum_mag_V, i32 %mag_buff_V_0, i32 %mag_buff_V_1" [lte_cell_search.cpp:262]   --->   Operation 13 'call' 'thresh_V' <Predicate = true> <Delay = 6.08> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 14 [2/2] (0.00ns)   --->   "%call_ret = call i60 @compute_pss, i23 %IN_real_V, i17 %trunc_ln264_c1, i23 %IN_imag_V, i32 %IN_R_buff_V_0, i32 %IN_R_buff_V_1, i32 %IN_I_buff_V_0, i32 %IN_I_buff_V_1, i23 %td_pss_real_V_0, i22 %td_pss_imag_V_0, i22 %td_pss_real_V_1, i22 %td_pss_imag_V_1, i22 %td_pss_real_V_2, i22 %td_pss_imag_V_2" [lte_cell_search.cpp:263]   --->   Operation 14 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 8.47>
+ST_5 : Operation 15 [1/2] (3.37ns)   --->   "%call_ret = call i60 @compute_pss, i23 %IN_real_V, i17 %trunc_ln264_c1, i23 %IN_imag_V, i32 %IN_R_buff_V_0, i32 %IN_R_buff_V_1, i32 %IN_I_buff_V_0, i32 %IN_I_buff_V_1, i23 %td_pss_real_V_0, i22 %td_pss_imag_V_0, i22 %td_pss_real_V_1, i22 %td_pss_imag_V_1, i22 %td_pss_real_V_2, i22 %td_pss_imag_V_2" [lte_cell_search.cpp:263]   --->   Operation 15 'call' 'call_ret' <Predicate = true> <Delay = 3.37> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 16 [1/1] (0.00ns)   --->   "%pss_rslt_0_V = extractvalue i60 %call_ret" [lte_cell_search.cpp:263]   --->   Operation 16 'extractvalue' 'pss_rslt_0_V' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 20> <Depth = 2> <FIFO>
+ST_5 : Operation 17 [1/1] (0.00ns)   --->   "%pss_rslt_1_V = extractvalue i60 %call_ret" [lte_cell_search.cpp:263]   --->   Operation 17 'extractvalue' 'pss_rslt_1_V' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 20> <Depth = 2> <FIFO>
+ST_5 : Operation 18 [1/1] (0.00ns)   --->   "%pss_rslt_2_V = extractvalue i60 %call_ret" [lte_cell_search.cpp:263]   --->   Operation 18 'extractvalue' 'pss_rslt_2_V' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 20> <Depth = 2> <FIFO>
+ST_5 : Operation 19 [2/2] (5.09ns)   --->   "%call_ln264 = call void @track_pss_peak, i20 %pss_rslt_0_V, i20 %pss_rslt_1_V, i20 %pss_rslt_2_V, i32 %thresh_V, i2 %pss_id_temp, i17 %peak_id_temp, i17 %trunc_ln264_c2, i12 %pss_rslt_temp, i20 %curr_max_V" [lte_cell_search.cpp:264]   --->   Operation 19 'call' 'call_ln264' <Predicate = true> <Delay = 5.09> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 8.02>
+ST_6 : Operation 20 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i23 %IN_imag_V, void @p_str"   --->   Operation 20 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 21 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i23 %IN_real_V, void @p_str"   --->   Operation 21 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 22 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln259 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_12" [lte_cell_search.cpp:259]   --->   Operation 22 'specdataflowpipeline' 'specdataflowpipeline_ln259' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @trunc_OC_ln264_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i17 %trunc_ln264_c, i17 %trunc_ln264_c" [lte_cell_search.cpp:259]   --->   Operation 23 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln259 = specinterface void @_ssdm_op_SpecInterface, i17 %trunc_ln264_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [lte_cell_search.cpp:259]   --->   Operation 24 'specinterface' 'specinterface_ln259' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 25 [1/1] (0.00ns)   --->   "%empty_97 = specchannel i32 @_ssdm_op_SpecChannel, void @trunc_OC_ln264_c1_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i17 %trunc_ln264_c1, i17 %trunc_ln264_c1" [lte_cell_search.cpp:259]   --->   Operation 25 'specchannel' 'empty_97' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln259 = specinterface void @_ssdm_op_SpecInterface, i17 %trunc_ln264_c1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [lte_cell_search.cpp:259]   --->   Operation 26 'specinterface' 'specinterface_ln259' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%empty_98 = specchannel i32 @_ssdm_op_SpecChannel, void @trunc_OC_ln264_c2_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i17 %trunc_ln264_c2, i17 %trunc_ln264_c2" [lte_cell_search.cpp:259]   --->   Operation 27 'specchannel' 'empty_98' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln259 = specinterface void @_ssdm_op_SpecInterface, i17 %trunc_ln264_c2, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [lte_cell_search.cpp:259]   --->   Operation 28 'specinterface' 'specinterface_ln259' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 29 [1/2] (8.02ns)   --->   "%call_ln264 = call void @track_pss_peak, i20 %pss_rslt_0_V, i20 %pss_rslt_1_V, i20 %pss_rslt_2_V, i32 %thresh_V, i2 %pss_id_temp, i17 %peak_id_temp, i17 %trunc_ln264_c2, i12 %pss_rslt_temp, i20 %curr_max_V" [lte_cell_search.cpp:264]   --->   Operation 29 'call' 'call_ln264' <Predicate = true> <Delay = 8.02> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%ret_ln264 = ret" [lte_cell_search.cpp:264]   --->   Operation 30 'ret' 'ret_ln264' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 16.3ns, clock uncertainty: 4.4ns.
+
+ <State 1>: 1.84ns
+The critical path consists of the following:
+	wire read on port 'trunc_ln264' (lte_cell_search.cpp:259) [31]  (0 ns)
+	'call' operation ('call_ln259', lte_cell_search.cpp:259) to 'dataflow_in_loop_lteCellSearch.entry25' [40]  (1.84 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 6.08ns
+The critical path consists of the following:
+	'call' operation ('thresh.V', lte_cell_search.cpp:262) to 'compute_threshold' [43]  (6.08 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 8.47ns
+The critical path consists of the following:
+	'call' operation ('call_ret', lte_cell_search.cpp:263) to 'compute_pss' [44]  (3.37 ns)
+	'call' operation ('call_ln264', lte_cell_search.cpp:264) to 'track_pss_peak' [48]  (5.1 ns)
+
+ <State 6>: 8.03ns
+The critical path consists of the following:
+	'call' operation ('call_ln264', lte_cell_search.cpp:264) to 'track_pss_peak' [48]  (8.03 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

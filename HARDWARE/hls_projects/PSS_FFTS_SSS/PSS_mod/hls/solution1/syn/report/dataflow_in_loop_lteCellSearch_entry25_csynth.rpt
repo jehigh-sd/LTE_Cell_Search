@@ -1,0 +1,133 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_lteCellSearch_entry25'
+================================================================
+* Date:           Thu Jun  2 15:26:07 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  16.30 ns|  1.838 ns|     4.40 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|       2|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      27|    -|
+|Register         |        -|     -|       2|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|       2|      29|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2160|  4272|  850560|  425280|   80|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |ap_done                 |   9|          2|    1|          2|
+    |trunc_ln264_out1_blk_n  |   9|          2|    1|          2|
+    |trunc_ln264_out_blk_n   |   9|          2|    1|          2|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   |  27|          6|    3|          6|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  2|   0|    2|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+----------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |              Source Object             |    C Type    |
++-------------------------+-----+-----+------------+----------------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch.entry25|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch.entry25|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch.entry25|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch.entry25|  return value|
+|ap_continue              |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch.entry25|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch.entry25|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch.entry25|  return value|
+|trunc_ln264              |   in|   17|     ap_none|                             trunc_ln264|        scalar|
+|trunc_ln264_out_din      |  out|   17|     ap_fifo|                         trunc_ln264_out|       pointer|
+|trunc_ln264_out_full_n   |   in|    1|     ap_fifo|                         trunc_ln264_out|       pointer|
+|trunc_ln264_out_write    |  out|    1|     ap_fifo|                         trunc_ln264_out|       pointer|
+|trunc_ln264_out1_din     |  out|   17|     ap_fifo|                        trunc_ln264_out1|       pointer|
+|trunc_ln264_out1_full_n  |   in|    1|     ap_fifo|                        trunc_ln264_out1|       pointer|
+|trunc_ln264_out1_write   |  out|    1|     ap_fifo|                        trunc_ln264_out1|       pointer|
++-------------------------+-----+-----+------------+----------------------------------------+--------------+
+

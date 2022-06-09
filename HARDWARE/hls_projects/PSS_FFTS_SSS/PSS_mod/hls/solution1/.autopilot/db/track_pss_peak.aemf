@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1654208779120">
+  <ports id="1" name="p_read" type="PortType" coreId="68" bitwidth="20">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="p_read1" type="PortType" coreId="49" bitwidth="20">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="p_read2" type="PortType" coreId="49" bitwidth="20">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="p_read3" type="PortType" coreId="481" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="pss_id_temp" type="PortType" originalName="pss_id" coreId="1601399912" bitwidth="2" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="6" name="peak_id_temp" type="PortType" originalName="index" coreId="49" bitwidth="17" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="7" name="trunc_ln264" type="PortType" coreName="FIFO_SRL" coreId="177" bitwidth="17" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="8" name="pss_rslt_temp" type="PortType" originalName="pss_rslt_temp" coreName="RAM" coreId="49" bitwidth="12" direction="DirOut" iftype="IfTypeRegister" arraysize="288000">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="85" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="88" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="90" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="92" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="95" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="96" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="99" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="100" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="101" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="102" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="103" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="106" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="107" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="109" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="110" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="111" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="112" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="113" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="114" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="115" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="116" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="117" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="118" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="119" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="120" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="121" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="122" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="123" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="124" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="125" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="126" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="127" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="128" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="129" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="130" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="131" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="132" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="133" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="134" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="135" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="136" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="137" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="138" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="139" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="140" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="141" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="142" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="143" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="144" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="146" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="147" source_obj="//@blocks.0/@node_objs.27" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="148" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="149" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="150" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="151" source_obj="//@blocks.0/@node_objs.30" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="152" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="153" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="156" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="159" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="162" source_obj="//@blocks.0/@node_objs.33" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="163" source_obj="//@blocks.0/@node_objs.34" sink_obj="//@blocks.0/@node_objs.35"/>
+  <edges id="168" source_obj="//@blocks.0/@node_objs.35" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="173" source_obj="//@blocks.0/@node_objs.31" sink_obj="//@blocks.0/@node_objs.37"/>
+  <edges id="174" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.0/@node_objs.37"/>
+  <edges id="175" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.37"/>
+  <edges id="176" source_obj="//@blocks.0/@node_objs.29" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="177" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="178" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="179" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="180" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="181" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="184" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@ports.5"/>
+  <edges id="185" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="188" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@ports.4"/>
+  <edges id="189" source_obj="//@blocks.0/@node_objs.32" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="190" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="191" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="192" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="193" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="194" source_obj="//@blocks.4/@node_objs.3" sink_obj="//@ports.7"/>
+  <edges id="197" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="198" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="201" source_obj="//@blocks.4/@node_objs.4" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="202" source_obj="//@blocks.4/@node_objs.6" sink_obj="//@ports.7"/>
+  <edges id="204" source_obj="//@blocks.4/@node_objs.5" sink_obj="//@blocks.4/@node_objs.6"/>
+  <edges id="205" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="208" source_obj="//@blocks.4/@node_objs.7" sink_obj="//@blocks.4/@node_objs.8"/>
+  <edges id="209" source_obj="//@blocks.4/@node_objs.9" sink_obj="//@ports.7"/>
+  <edges id="211" source_obj="//@blocks.4/@node_objs.8" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="212" source_obj="//@blocks.0/@node_objs.36" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="213" source_obj="//@blocks.4/@node_objs.3" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="215" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.4/@node_objs.11"/>
+  <edges id="217" source_obj="//@blocks.4/@node_objs.11" sink_obj="//@blocks.4/@node_objs.12"/>
+  <edges id="218" source_obj="//@blocks.4/@node_objs.12" sink_obj="//@blocks.4/@node_objs.13"/>
+  <edges id="221" source_obj="//@blocks.4/@node_objs.13" sink_obj="//@blocks.4/@node_objs.14"/>
+  <edges id="224" source_obj="//@blocks.4/@node_objs.14" sink_obj="//@blocks.4/@node_objs.15"/>
+  <edges id="225" source_obj="//@blocks.4/@node_objs.6" sink_obj="//@blocks.4/@node_objs.15"/>
+  <edges id="227" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.4/@node_objs.16"/>
+  <edges id="229" source_obj="//@blocks.4/@node_objs.16" sink_obj="//@blocks.4/@node_objs.17"/>
+  <edges id="230" source_obj="//@blocks.4/@node_objs.17" sink_obj="//@blocks.4/@node_objs.18"/>
+  <edges id="233" source_obj="//@blocks.4/@node_objs.18" sink_obj="//@blocks.4/@node_objs.19"/>
+  <edges id="236" source_obj="//@blocks.4/@node_objs.19" sink_obj="//@blocks.4/@node_objs.20"/>
+  <edges id="237" source_obj="//@blocks.4/@node_objs.9" sink_obj="//@blocks.4/@node_objs.20"/>
+  <edges id="265" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="266" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.2"/>
+  <edges id="267" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="268" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="269" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.4"/>
+  <edges id="270" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="271" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.3/@node_objs.0"/>
+  <blocks id="50" name="entry" type="BlockType">
+    <controlOutputObjs>mergeST3.i.i</controlOutputObjs>
+    <controlOutputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit140.new2.i.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="p_read_1" lineNumber="173" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="13" contextFuncName="track_pss_peak" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="173" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>p_read3</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="p_read_2" lineNumber="173" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="0" contextFuncName="track_pss_peak" bitwidth="20" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="173" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>p_read2</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="p_read_3" lineNumber="173" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="113" contextFuncName="track_pss_peak" bitwidth="20" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="173" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>p_read1</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="p_read22" lineNumber="173" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="113" contextFuncName="track_pss_peak" bitwidth="20" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="173" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>p_read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="trunc_ln264_read" lineNumber="173" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="track_pss_peak" bitwidth="17" opcode="read" m_display="0" m_delay="1.83" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="173" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>trunc_ln264</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="run" lineNumber="260" originalName="run" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="run_fu_146_p2" opType="icmp" coreId="113" contextFuncName="lteCellSearch" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.09" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="260" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln142" lineNumber="142" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln142_fu_152_p1" coreId="13" contextFuncName="track_pss_peak" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="142" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="zext_ln142_1" lineNumber="142" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln142_1_fu_156_p1" coreId="132" contextFuncName="track_pss_peak" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="142" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="zext_ln142_2" lineNumber="142" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln142_2_fu_160_p1" coreId="1537" contextFuncName="track_pss_peak" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="142" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="curr_max_V_load" lineNumber="259" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="1709968824" contextFuncName="lteCellSearch" bitwidth="20" opcode="load" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="xor_ln148" lineNumber="148" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="xor_ln148_fu_168_p2" opType="xor" coreId="0" contextFuncName="track_pss_peak" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="11" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="148" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="select_ln148" lineNumber="148" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="select_ln148_fu_174_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="track_pss_peak" bitwidth="20" opcode="select" m_display="0" m_delay="0.36" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="148" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="is_valid_0" lineNumber="259" originalName="is_valid_0" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="is_valid_0_fu_182_p2" opType="icmp" coreId="0" contextFuncName="lteCellSearch" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.99" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="is_valid_1" lineNumber="259" originalName="is_valid_1" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="is_valid_1_fu_188_p2" opType="icmp" coreId="0" contextFuncName="lteCellSearch" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.99" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="is_valid_2" lineNumber="259" originalName="is_valid_2" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="is_valid_2_fu_194_p2" opType="icmp" coreId="49" contextFuncName="lteCellSearch" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.99" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="icmp_ln1494" lineNumber="259" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="icmp_ln1494_fu_200_p2" opType="icmp" coreId="2645699856" contextFuncName="lteCellSearch" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.07" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="and_ln169" lineNumber="169" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="and_ln169_fu_206_p2" opType="and" coreId="49" contextFuncName="track_pss_peak" bitwidth="1" opcode="and" m_display="0" m_delay="0.28" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="169" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="select_ln169" lineNumber="169" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="select_ln169_fu_212_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="track_pss_peak" bitwidth="20" opcode="select" m_display="0" m_delay="0.36" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="169" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="icmp_ln1494_1" lineNumber="259" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="icmp_ln1494_1_fu_220_p2" opType="icmp" coreId="49" contextFuncName="lteCellSearch" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.07" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="and_ln176" lineNumber="176" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="and_ln176_fu_226_p2" opType="and" coreId="132" contextFuncName="track_pss_peak" bitwidth="1" opcode="and" m_display="0" m_delay="0.28" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="176" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="zext_ln176" lineNumber="176" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln176_fu_232_p1" coreId="1709965552" contextFuncName="track_pss_peak" bitwidth="2" opcode="zext" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="176" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="select_ln176" lineNumber="176" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="select_ln176_fu_236_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="track_pss_peak" bitwidth="20" opcode="select" m_display="0" m_topoIndex="22" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="176" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="icmp_ln1494_2" lineNumber="259" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="icmp_ln1494_2_fu_244_p2" opType="icmp" coreId="1706854777" contextFuncName="lteCellSearch" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.07" m_topoIndex="23" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="and_ln183" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="and_ln183_fu_250_p2" opType="and" coreId="825570605" contextFuncName="track_pss_peak" bitwidth="1" opcode="and" m_display="0" m_delay="0.28" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="or_ln183_2" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="or_ln183_2_fu_256_p2" opType="or" coreId="1699835744" contextFuncName="track_pss_peak" bitwidth="1" opcode="or" m_display="0" m_topoIndex="25" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="or_ln183_3" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="or_ln183_3_fu_262_p2" opType="or" coreId="1699839417" contextFuncName="track_pss_peak" bitwidth="1" opcode="or" m_display="0" m_delay="0.28" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="or_ln183" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="or_ln183_fu_268_p2" opType="or" coreId="2433" contextFuncName="track_pss_peak" bitwidth="1" opcode="or" m_display="0" m_delay="0.28" m_topoIndex="27" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="select_ln183" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="select_ln183_fu_274_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="track_pss_peak" bitwidth="20" opcode="select" m_display="0" m_topoIndex="28" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="select_ln183_2" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="select_ln183_2_fu_282_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="track_pss_peak" bitwidth="20" opcode="select" m_display="0" m_topoIndex="29" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="select_ln183_3" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="select_ln183_3_fu_290_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="track_pss_peak" bitwidth="20" opcode="select" m_display="0" m_delay="0.36" m_topoIndex="30" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="or_ln183_4" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="or_ln183_4_fu_298_p2" opType="or" coreId="28271" contextFuncName="track_pss_peak" bitwidth="1" opcode="or" m_display="0" m_topoIndex="31" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="or_ln183_1" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="or_ln183_1_fu_304_p2" opType="or" coreId="49" contextFuncName="track_pss_peak" bitwidth="1" opcode="or" m_display="0" m_delay="0.28" m_topoIndex="32" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="select_ln183_1" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="select_ln183_1_fu_310_p3" coreName="Sel" implIndex="auto_sel" control="auto" opType="select" coreId="73" contextFuncName="track_pss_peak" bitwidth="2" opcode="select" m_display="0" m_delay="0.17" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="r_V" lineNumber="259" originalName="r.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="r_V_fu_319_p3" coreId="1970040691" contextFuncName="lteCellSearch" bitwidth="42" opcode="bitconcatenate" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="zext_ln1115" lineNumber="259" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="r_V_6_fu_331_p00" coreId="4257" contextFuncName="lteCellSearch" bitwidth="78" opcode="zext" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="r_V_6" lineNumber="259" originalName="r.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="mul_42ns_37ns_78_1_1_U53" opType="mul" coreId="2348810368" contextFuncName="lteCellSearch" bitwidth="78" opcode="mul" m_display="0" m_delay="3.56" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="ret_V" lineNumber="259" originalName="ret.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="pss_rslt_temp_d1" coreId="1710034800" contextFuncName="lteCellSearch" bitwidth="12" opcode="partselect" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="br_ln183" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="825570605" contextFuncName="track_pss_peak" opcode="br" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>or</dataInputObjs>
+      <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit140.new2.i.i</controlInputObjs>
+      <controlInputObjs>mergeST3.i.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="lte_cell_search.cpp">
+      <validLinenumbers>173</validLinenumbers>
+      <validLinenumbers>260</validLinenumbers>
+      <validLinenumbers>142</validLinenumbers>
+      <validLinenumbers>259</validLinenumbers>
+      <validLinenumbers>148</validLinenumbers>
+      <validLinenumbers>169</validLinenumbers>
+      <validLinenumbers>176</validLinenumbers>
+      <validLinenumbers>183</validLinenumbers>
+      <validLinenumbers>264</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="54" name="mergeST3.i.i" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit140.new2.i.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="peak_id_temp_write_ln173" lineNumber="173" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="0" contextFuncName="track_pss_peak" opcode="write" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="173" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>peak_id_temp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="pss_id_temp_write_ln172" lineNumber="172" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="3618612" contextFuncName="track_pss_peak" opcode="write" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="172" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>pss_id_temp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln0" coreId="1704312032" opcode="br" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit140.new2.i.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="lte_cell_search.cpp">
+      <validLinenumbers>173</validLinenumbers>
+      <validLinenumbers>172</validLinenumbers>
+      <validLinenumbers>264</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="56" name="_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit140.new2.i.i" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlInputObjs>mergeST3.i.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>mergeST.i.i</controlOutputObjs>
+    <controlOutputObjs>.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln183" lineNumber="183" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="4" contextFuncName="track_pss_peak" opcode="br" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="183" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>or</dataInputObjs>
+      <controlInputObjs>.exit</controlInputObjs>
+      <controlInputObjs>mergeST.i.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="lte_cell_search.cpp">
+      <validLinenumbers>183</validLinenumbers>
+      <validLinenumbers>264</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="59" name="mergeST.i.i" type="BlockType">
+    <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit140.new2.i.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="curr_max_V_write_ln150" lineNumber="150" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="2348810368" contextFuncName="track_pss_peak" opcode="store" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="150" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>select</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln0" coreId="1704312792" opcode="br" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <controlInputObjs>.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="lte_cell_search.cpp">
+      <validLinenumbers>150</validLinenumbers>
+      <validLinenumbers>264</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="82" name=".exit" type="BlockType">
+    <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit140.new2.i.i</controlInputObjs>
+    <controlInputObjs>mergeST.i.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="zext_ln534" lineNumber="259" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln534_fu_354_p1" coreId="0" contextFuncName="lteCellSearch" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="zext_ln190" lineNumber="190" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln190_fu_431_p1" coreId="49" contextFuncName="track_pss_peak" bitwidth="19" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="190" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="zext_ln190_1" lineNumber="190" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln190_1_fu_359_p1" coreId="0" contextFuncName="track_pss_peak" bitwidth="18" opcode="zext" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="190" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="pss_rslt_temp_addr" lineNumber="190" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="1706576288" contextFuncName="track_pss_peak" bitwidth="19" opcode="getelementptr" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="190" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>pss_rslt_temp</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="add_ln191" lineNumber="191" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="add_ln191_fu_363_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="track_pss_peak" bitwidth="18" opcode="add" m_display="0" m_delay="0.87" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="191" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="zext_ln191" lineNumber="191" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln191_fu_369_p1" coreId="49" contextFuncName="track_pss_peak" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="191" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="pss_rslt_temp_addr_1" lineNumber="191" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="49" contextFuncName="track_pss_peak" bitwidth="19" opcode="getelementptr" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="191" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>pss_rslt_temp</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="add_ln192" lineNumber="192" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="add_ln192_fu_434_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="track_pss_peak" bitwidth="19" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.88" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="192" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="zext_ln192" lineNumber="192" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln192_fu_440_p1" coreId="132" contextFuncName="track_pss_peak" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="192" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="pss_rslt_temp_addr_2" lineNumber="192" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="1709900824" contextFuncName="track_pss_peak" bitwidth="19" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="192" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>pss_rslt_temp</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="pss_rslt_temp_addr_write_ln190" lineNumber="190" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="track_pss_peak" opcode="store" m_display="0" m_delay="1.23" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="190" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="r_V_2" lineNumber="259" originalName="r.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="r_V_2_fu_374_p3" coreId="1857" contextFuncName="lteCellSearch" bitwidth="42" opcode="bitconcatenate" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="zext_ln1115_1" lineNumber="259" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="r_V_7_fu_386_p00" coreId="1709903256" contextFuncName="lteCellSearch" bitwidth="78" opcode="zext" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="r_V_7" lineNumber="259" originalName="r.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="mul_42ns_37ns_78_1_1_U54" opType="mul" coreId="49" contextFuncName="lteCellSearch" bitwidth="78" opcode="mul" m_display="0" m_delay="3.56" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="ret_V_1" lineNumber="259" originalName="ret.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="pss_rslt_temp_d0" coreId="1704315433" contextFuncName="lteCellSearch" bitwidth="12" opcode="partselect" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="pss_rslt_temp_addr_1_write_ln191" lineNumber="191" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="track_pss_peak" opcode="store" m_display="0" m_delay="1.23" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="191" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="r_V_4" lineNumber="259" originalName="r.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="r_V_4_fu_403_p3" coreId="1704317968" contextFuncName="lteCellSearch" bitwidth="42" opcode="bitconcatenate" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="zext_ln1115_2" lineNumber="259" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="r_V_8_fu_415_p00" coreId="132" contextFuncName="lteCellSearch" bitwidth="78" opcode="zext" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="r_V_8" lineNumber="259" originalName="r.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="mul_42ns_37ns_78_1_1_U55" opType="mul" coreId="0" contextFuncName="lteCellSearch" bitwidth="78" opcode="mul" m_display="0" m_delay="3.56" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="ret_V_2" lineNumber="259" originalName="ret.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="ret_V_2_reg_456" coreId="10" contextFuncName="lteCellSearch" bitwidth="12" opcode="partselect" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="pss_rslt_temp_addr_2_write_ln192" lineNumber="192" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="track_pss_peak" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.23" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="192" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="track_pss_peak"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="_ln259" lineNumber="259" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="1699828297" contextFuncName="lteCellSearch" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="259" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="lte_cell_search.cpp">
+      <validLinenumbers>259</validLinenumbers>
+      <validLinenumbers>190</validLinenumbers>
+      <validLinenumbers>191</validLinenumbers>
+      <validLinenumbers>192</validLinenumbers>
+      <validLinenumbers>264</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="ret_V_2_reg_456">
+    <nodeIds>79</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln264_read_reg_445">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <expressionNodes realName="select_ln148_fu_174">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln176_fu_236">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pss_rslt_temp_addr_gep_fu_113">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="is_valid_2_fu_194">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_1_fu_392">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln169_fu_212">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_4_fu_403">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_fu_337">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln192_fu_434">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1494_fu_200">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln183_1_fu_304">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pss_rslt_temp_addr_1_gep_fu_120">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1115_1_fu_382">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln142_2_fu_160">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="is_valid_0_fu_182">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln190_1_fu_359">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_2_fu_421">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1115_2_fu_411">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln183_fu_268">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln183_3_fu_262">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln142_1_fu_156">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln183_2_fu_282">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_fu_319">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_7_fu_386">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln191_fu_369">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pss_rslt_temp_addr_2_gep_fu_138">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln176_fu_232">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln183_fu_274">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln183_4_fu_298">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln534_fu_354">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln169_fu_206">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln176_fu_226">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln148_fu_168">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln190_fu_431">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln183_1_fu_310">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="run_fu_146">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1494_2_fu_244">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_8_fu_415">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_2_fu_374">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln191_fu_363">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_6_fu_331">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln183_3_fu_290">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1494_1_fu_220">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln183_2_fu_256">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1115_fu_327">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="is_valid_1_fu_188">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln142_fu_152">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln183_fu_250">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln192_fu_440">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="p_read_2_read_fu_74">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="trunc_ln264_read_read_fu_92">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="curr_max_V_load_load_fu_164">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln173_write_fu_98">
+    <nodeIds>51</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read_1_read_fu_68">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln172_write_fu_106">
+    <nodeIds>52</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read_3_read_fu_80">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln150_store_fu_348">
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read22_read_fu_86">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="pss_rslt_temp">
+    <nodeIds>75</nodeIds>
+    <nodeIds>80</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pss_rslt_temp" portID="1">
+    <nodeIds>70</nodeIds>
+  </memoryPorts>
+  <ioPorts name="p_read">
+    <contents name="read">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read1">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read2">
+    <contents name="read">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read3">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="peak_id_temp">
+    <contents name="write">
+      <nodeIds>51</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="pss_id_temp">
+    <contents name="write">
+      <nodeIds>52</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="pss_rslt_temp(p0)">
+    <contents name="store">
+      <nodeIds>75</nodeIds>
+      <nodeIds>80</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="pss_rslt_temp(p1)">
+    <contents name="store">
+      <nodeIds>70</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="trunc_ln264">
+    <contents name="read">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="track_pss_peak" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="1" mMaxLatency="1">
+      <basicBlocks>50</basicBlocks>
+      <basicBlocks>54</basicBlocks>
+      <basicBlocks>56</basicBlocks>
+      <basicBlocks>59</basicBlocks>
+      <basicBlocks>82</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

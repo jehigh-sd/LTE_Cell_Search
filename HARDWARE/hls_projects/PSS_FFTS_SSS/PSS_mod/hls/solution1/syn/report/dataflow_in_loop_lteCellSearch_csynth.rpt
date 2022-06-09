@@ -1,0 +1,213 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_lteCellSearch'
+================================================================
+* Date:           Thu Jun  2 15:26:19 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  16.30 ns|  11.899 ns|     4.40 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |      271|      400|  4.417 us|  6.520 us|  269|  398|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                           |                                        |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                  Instance                 |                 Module                 |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +-------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |compute_pss_U0                             |compute_pss                             |      268|      397|   4.368 us|   6.471 us|  268|  397|     none|
+        |compute_threshold_U0                       |compute_threshold                       |      132|      261|   2.152 us|   4.254 us|  132|  261|     none|
+        |track_pss_peak_U0                          |track_pss_peak                          |        1|        1|  16.300 ns|  16.300 ns|    1|    1|     none|
+        |dataflow_in_loop_lteCellSearch_entry25_U0  |dataflow_in_loop_lteCellSearch_entry25  |        0|        0|       0 ns|       0 ns|    0|    0|     none|
+        +-------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      32|    -|
+|FIFO             |        -|     -|     693|     469|    -|
+|Instance         |       16|    25|    2999|   22383|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      54|    -|
+|Register         |        -|     -|       6|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       16|    25|    3698|   22938|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2160|  4272|  850560|  425280|   80|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |       ~0|    ~0|      ~0|       5|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------+----------------------------------------+---------+----+------+-------+-----+
+    |                  Instance                 |                 Module                 | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +-------------------------------------------+----------------------------------------+---------+----+------+-------+-----+
+    |compute_pss_U0                             |compute_pss                             |       12|  14|  2672|  21295|    0|
+    |compute_threshold_U0                       |compute_threshold                       |        4|   8|   254|    612|    0|
+    |dataflow_in_loop_lteCellSearch_entry25_U0  |dataflow_in_loop_lteCellSearch_entry25  |        0|   0|     2|     29|    0|
+    |track_pss_peak_U0                          |track_pss_peak                          |        0|   3|    71|    447|    0|
+    +-------------------------------------------+----------------------------------------+---------+----+------+-------+-----+
+    |Total                                      |                                        |       16|  25|  2999|  22383|    0|
+    +-------------------------------------------+----------------------------------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------+---------+----+----+-----+------+-----+---------+
+    |       Name       | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------+---------+----+----+-----+------+-----+---------+
+    |pss_rslt_0_V_U    |        0|  99|   0|    -|     2|   20|       40|
+    |pss_rslt_1_V_U    |        0|  99|   0|    -|     2|   20|       40|
+    |pss_rslt_2_V_U    |        0|  99|   0|    -|     2|   20|       40|
+    |thresh_V_U        |        0|  99|   0|    -|     2|   32|       64|
+    |trunc_ln264_c1_U  |        0|  99|   0|    -|     2|   17|       34|
+    |trunc_ln264_c2_U  |        0|  99|   0|    -|     2|   17|       34|
+    |trunc_ln264_c_U   |        0|  99|   0|    -|     2|   17|       34|
+    +------------------+---------+----+----+-----+------+-----+---------+
+    |Total             |        0| 693|   0|    0|    14|  143|      286|
+    +------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                        Variable Name                       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_pss_rslt_0_V                                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pss_rslt_1_V                                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pss_rslt_2_V                                |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                                     |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                                               |       and|   0|  0|   2|           1|           1|
+    |compute_pss_U0_ap_continue                                  |       and|   0|  0|   2|           1|           1|
+    |compute_pss_U0_ap_start                                     |       and|   0|  0|   2|           1|           1|
+    |compute_threshold_U0_ap_start                               |       and|   0|  0|   2|           1|           1|
+    |dataflow_in_loop_lteCellSearch_entry25_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |track_pss_peak_U0_ap_start                                  |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pss_rslt_0_V                          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pss_rslt_1_V                          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pss_rslt_2_V                          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_compute_pss_U0_ap_ready                             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_compute_threshold_U0_ap_ready                       |        or|   0|  0|   2|           1|           1|
+    |ap_sync_dataflow_in_loop_lteCellSearch_entry25_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                       |          |   0|  0|  32|          16|          16|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |                              Name                              | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_pss_rslt_0_V                          |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pss_rslt_1_V                          |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pss_rslt_2_V                          |   9|          2|    1|          2|
+    |ap_sync_reg_compute_pss_U0_ap_ready                             |   9|          2|    1|          2|
+    |ap_sync_reg_compute_threshold_U0_ap_ready                       |   9|          2|    1|          2|
+    |ap_sync_reg_dataflow_in_loop_lteCellSearch_entry25_U0_ap_ready  |   9|          2|    1|          2|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                           |  54|         12|    6|         12|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------+---+----+-----+-----------+
+    |                              Name                              | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_pss_rslt_0_V                          |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pss_rslt_1_V                          |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pss_rslt_2_V                          |  1|   0|    1|          0|
+    |ap_sync_reg_compute_pss_U0_ap_ready                             |  1|   0|    1|          0|
+    |ap_sync_reg_compute_threshold_U0_ap_ready                       |  1|   0|    1|          0|
+    |ap_sync_reg_dataflow_in_loop_lteCellSearch_entry25_U0_ap_ready  |  1|   0|    1|          0|
+    +----------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                           |  6|   0|    6|          0|
+    +----------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++------------------------+-----+-----+------------+--------------------------------+--------------+
+|IN_real_V_address0      |  out|   17|   ap_memory|                       IN_real_V|         array|
+|IN_real_V_ce0           |  out|    1|   ap_memory|                       IN_real_V|         array|
+|IN_real_V_d0            |  out|   23|   ap_memory|                       IN_real_V|         array|
+|IN_real_V_q0            |   in|   23|   ap_memory|                       IN_real_V|         array|
+|IN_real_V_we0           |  out|    1|   ap_memory|                       IN_real_V|         array|
+|IN_real_V_address1      |  out|   17|   ap_memory|                       IN_real_V|         array|
+|IN_real_V_ce1           |  out|    1|   ap_memory|                       IN_real_V|         array|
+|IN_real_V_d1            |  out|   23|   ap_memory|                       IN_real_V|         array|
+|IN_real_V_q1            |   in|   23|   ap_memory|                       IN_real_V|         array|
+|IN_real_V_we1           |  out|    1|   ap_memory|                       IN_real_V|         array|
+|trunc_ln264             |   in|   17|     ap_none|                     trunc_ln264|        scalar|
+|trunc_ln264_ap_vld      |   in|    1|     ap_none|                     trunc_ln264|        scalar|
+|IN_imag_V_address0      |  out|   17|   ap_memory|                       IN_imag_V|         array|
+|IN_imag_V_ce0           |  out|    1|   ap_memory|                       IN_imag_V|         array|
+|IN_imag_V_d0            |  out|   23|   ap_memory|                       IN_imag_V|         array|
+|IN_imag_V_q0            |   in|   23|   ap_memory|                       IN_imag_V|         array|
+|IN_imag_V_we0           |  out|    1|   ap_memory|                       IN_imag_V|         array|
+|IN_imag_V_address1      |  out|   17|   ap_memory|                       IN_imag_V|         array|
+|IN_imag_V_ce1           |  out|    1|   ap_memory|                       IN_imag_V|         array|
+|IN_imag_V_d1            |  out|   23|   ap_memory|                       IN_imag_V|         array|
+|IN_imag_V_q1            |   in|   23|   ap_memory|                       IN_imag_V|         array|
+|IN_imag_V_we1           |  out|    1|   ap_memory|                       IN_imag_V|         array|
+|pss_id_temp             |  out|    2|      ap_vld|                     pss_id_temp|       pointer|
+|pss_id_temp_ap_vld      |  out|    1|      ap_vld|                     pss_id_temp|       pointer|
+|peak_id_temp            |  out|   17|      ap_vld|                    peak_id_temp|       pointer|
+|peak_id_temp_ap_vld     |  out|    1|      ap_vld|                    peak_id_temp|       pointer|
+|pss_rslt_temp_address0  |  out|   19|   ap_memory|                   pss_rslt_temp|         array|
+|pss_rslt_temp_ce0       |  out|    1|   ap_memory|                   pss_rslt_temp|         array|
+|pss_rslt_temp_d0        |  out|   12|   ap_memory|                   pss_rslt_temp|         array|
+|pss_rslt_temp_q0        |   in|   12|   ap_memory|                   pss_rslt_temp|         array|
+|pss_rslt_temp_we0       |  out|    1|   ap_memory|                   pss_rslt_temp|         array|
+|pss_rslt_temp_address1  |  out|   19|   ap_memory|                   pss_rslt_temp|         array|
+|pss_rslt_temp_ce1       |  out|    1|   ap_memory|                   pss_rslt_temp|         array|
+|pss_rslt_temp_d1        |  out|   12|   ap_memory|                   pss_rslt_temp|         array|
+|pss_rslt_temp_q1        |   in|   12|   ap_memory|                   pss_rslt_temp|         array|
+|pss_rslt_temp_we1       |  out|    1|   ap_memory|                   pss_rslt_temp|         array|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_lteCellSearch|  return value|
++------------------------+-----+-----+------------+--------------------------------+--------------+
+

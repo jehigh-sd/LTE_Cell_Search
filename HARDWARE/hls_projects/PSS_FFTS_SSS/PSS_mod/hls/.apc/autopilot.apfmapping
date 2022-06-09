@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lte_cell_search.cpp" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/lte_cell_search.cpp"/>
+    <originFiles name="lte_cell_search.h" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/lte_cell_search.h"/>
+    <originFiles name="data_types.h" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/data_types.h"/>
+  </source>
+  <testbench>
+    <originFiles name="output.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/output.dat"/>
+    <originFiles name="input.imag.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/input.imag.dat"/>
+    <originFiles name="input.real.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/input.real.dat"/>
+    <originFiles name="lte_cell_search_test.cpp" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/lte_cell_search_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

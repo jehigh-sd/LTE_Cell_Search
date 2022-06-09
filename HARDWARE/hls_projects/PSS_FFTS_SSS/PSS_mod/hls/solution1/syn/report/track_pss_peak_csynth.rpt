@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'track_pss_peak'
+================================================================
+* Date:           Thu Jun  2 15:26:18 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  16.30 ns|  8.393 ns|     4.40 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1|  16.300 ns|  16.300 ns|    1|    1|     none|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     303|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     3|       0|      66|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      78|    -|
+|Register         |        -|     -|      71|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     3|      71|     447|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2160|  4272|  850560|  425280|   80|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|    ~0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+----+---+----+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------------+----------------------+---------+----+---+----+-----+
+    |mul_42ns_37ns_78_1_1_U53  |mul_42ns_37ns_78_1_1  |        0|   1|  0|  22|    0|
+    |mul_42ns_37ns_78_1_1_U54  |mul_42ns_37ns_78_1_1  |        0|   1|  0|  22|    0|
+    |mul_42ns_37ns_78_1_1_U55  |mul_42ns_37ns_78_1_1  |        0|   1|  0|  22|    0|
+    +--------------------------+----------------------+---------+----+---+----+-----+
+    |Total                     |                      |        0|   3|  0|  66|    0|
+    +--------------------------+----------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |add_ln191_fu_363_p2       |         +|   0|  0|  25|          18|          17|
+    |add_ln192_fu_434_p2       |         +|   0|  0|  26|          19|          18|
+    |and_ln169_fu_206_p2       |       and|   0|  0|   2|           1|           1|
+    |and_ln176_fu_226_p2       |       and|   0|  0|   2|           1|           1|
+    |and_ln183_fu_250_p2       |       and|   0|  0|   2|           1|           1|
+    |icmp_ln1494_1_fu_220_p2   |      icmp|   0|  0|  14|          20|          20|
+    |icmp_ln1494_2_fu_244_p2   |      icmp|   0|  0|  14|          20|          20|
+    |icmp_ln1494_fu_200_p2     |      icmp|   0|  0|  14|          20|          20|
+    |is_valid_0_fu_182_p2      |      icmp|   0|  0|  20|          32|          32|
+    |is_valid_1_fu_188_p2      |      icmp|   0|  0|  20|          32|          32|
+    |is_valid_2_fu_194_p2      |      icmp|   0|  0|  20|          32|          32|
+    |run_fu_146_p2             |      icmp|   0|  0|  13|          17|           1|
+    |ap_block_state1           |        or|   0|  0|   2|           1|           1|
+    |or_ln183_1_fu_304_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln183_2_fu_256_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln183_3_fu_262_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln183_4_fu_298_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln183_fu_268_p2        |        or|   0|  0|   2|           1|           1|
+    |select_ln148_fu_174_p3    |    select|   0|  0|  19|           1|          20|
+    |select_ln169_fu_212_p3    |    select|   0|  0|  19|           1|          20|
+    |select_ln176_fu_236_p3    |    select|   0|  0|  19|           1|          20|
+    |select_ln183_1_fu_310_p3  |    select|   0|  0|   3|           1|           3|
+    |select_ln183_2_fu_282_p3  |    select|   0|  0|  19|           1|          20|
+    |select_ln183_3_fu_290_p3  |    select|   0|  0|  19|           1|          20|
+    |select_ln183_fu_274_p3    |    select|   0|  0|  19|           1|          20|
+    |xor_ln148_fu_168_p2       |       xor|   0|  0|   2|           1|           2|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0| 303|         227|         326|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm               |  14|          3|    1|          3|
+    |ap_done                 |   9|          2|    1|          2|
+    |peak_id_temp            |   9|          2|   17|         34|
+    |pss_id_temp             |   9|          2|    2|          4|
+    |pss_rslt_temp_address0  |  14|          3|   19|         57|
+    |pss_rslt_temp_d0        |  14|          3|   12|         36|
+    |trunc_ln264_blk_n       |   9|          2|    1|          2|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   |  78|         17|   53|        138|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                 |   2|   0|    2|          0|
+    |ap_done_reg               |   1|   0|    1|          0|
+    |curr_max_V                |  20|   0|   20|          0|
+    |peak_id_temp_preg         |  17|   0|   17|          0|
+    |pss_id_temp_preg          |   2|   0|    2|          0|
+    |ret_V_2_reg_456           |  12|   0|   12|          0|
+    |trunc_ln264_read_reg_445  |  17|   0|   17|          0|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     |  71|   0|   71|          0|
+    +--------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+----------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++------------------------+-----+-----+------------+----------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  track_pss_peak|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  track_pss_peak|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  track_pss_peak|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  track_pss_peak|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  track_pss_peak|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  track_pss_peak|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  track_pss_peak|  return value|
+|p_read                  |   in|   20|     ap_none|          p_read|        scalar|
+|p_read1                 |   in|   20|     ap_none|         p_read1|        scalar|
+|p_read2                 |   in|   20|     ap_none|         p_read2|        scalar|
+|p_read3                 |   in|   32|     ap_none|         p_read3|        scalar|
+|pss_id_temp             |  out|    2|      ap_vld|     pss_id_temp|       pointer|
+|pss_id_temp_ap_vld      |  out|    1|      ap_vld|     pss_id_temp|       pointer|
+|peak_id_temp            |  out|   17|      ap_vld|    peak_id_temp|       pointer|
+|peak_id_temp_ap_vld     |  out|    1|      ap_vld|    peak_id_temp|       pointer|
+|trunc_ln264_dout        |   in|   17|     ap_fifo|     trunc_ln264|       pointer|
+|trunc_ln264_empty_n     |   in|    1|     ap_fifo|     trunc_ln264|       pointer|
+|trunc_ln264_read        |  out|    1|     ap_fifo|     trunc_ln264|       pointer|
+|pss_rslt_temp_address0  |  out|   19|   ap_memory|   pss_rslt_temp|         array|
+|pss_rslt_temp_ce0       |  out|    1|   ap_memory|   pss_rslt_temp|         array|
+|pss_rslt_temp_we0       |  out|    1|   ap_memory|   pss_rslt_temp|         array|
+|pss_rslt_temp_d0        |  out|   12|   ap_memory|   pss_rslt_temp|         array|
+|pss_rslt_temp_address1  |  out|   19|   ap_memory|   pss_rslt_temp|         array|
+|pss_rslt_temp_ce1       |  out|    1|   ap_memory|   pss_rslt_temp|         array|
+|pss_rslt_temp_we1       |  out|    1|   ap_memory|   pss_rslt_temp|         array|
+|pss_rslt_temp_d1        |  out|   12|   ap_memory|   pss_rslt_temp|         array|
++------------------------+-----+-----+------------+----------------+--------------+
+

@@ -1,0 +1,46 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'jhigh' on host 'jhigh-XPS-13-9370' (Linux_x86_64 version 5.4.0-113-generic) on Thu Jun 02 15:29:42 PDT 2022
+INFO: [HLS 200-10] On os Ubuntu 20.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod'
+Sourcing Tcl script '/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/hls/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: open_project hls 
+INFO: [HLS 200-10] Opening project '/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/hls'.
+INFO: [HLS 200-1510] Running: set_top lteCellSearch 
+INFO: [HLS 200-1510] Running: add_files lte_cell_search.cpp 
+INFO: [HLS 200-10] Adding design file 'lte_cell_search.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files lte_cell_search.h 
+INFO: [HLS 200-10] Adding design file 'lte_cell_search.h' to the project
+INFO: [HLS 200-1510] Running: add_files data_types.h 
+INFO: [HLS 200-10] Adding design file 'data_types.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb output.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'output.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb input.imag.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'input.imag.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb input.real.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'input.real.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb lte_cell_search_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'lte_cell_search_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/hls/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 16.3ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 16.3 -name default 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/lteCellSearch.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  2 15:30:17 2022...
+INFO: [HLS 200-802] Generated output file /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/lteCellSearch.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 26.06 seconds. CPU system time: 5.01 seconds. Elapsed time: 32.67 seconds; current allocated memory: 203.080 MB.

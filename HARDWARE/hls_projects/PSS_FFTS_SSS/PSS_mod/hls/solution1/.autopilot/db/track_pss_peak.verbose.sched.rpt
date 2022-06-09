@@ -1,0 +1,194 @@
+
+
+================================================================
+== Vitis HLS Report for 'track_pss_peak'
+================================================================
+* Date:           Thu Jun  2 15:25:37 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  16.30 ns|  8.393 ns|     4.40 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1|  16.300 ns|  16.300 ns|    1|    1|     none|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.39>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i17 %trunc_ln264, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_read_1 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read3" [lte_cell_search.cpp:173->lte_cell_search.cpp:264]   --->   Operation 4 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_read_2 = read i20 @_ssdm_op_Read.ap_auto.i20, i20 %p_read2" [lte_cell_search.cpp:173->lte_cell_search.cpp:264]   --->   Operation 5 'read' 'p_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_read_3 = read i20 @_ssdm_op_Read.ap_auto.i20, i20 %p_read1" [lte_cell_search.cpp:173->lte_cell_search.cpp:264]   --->   Operation 6 'read' 'p_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read22 = read i20 @_ssdm_op_Read.ap_auto.i20, i20 %p_read" [lte_cell_search.cpp:173->lte_cell_search.cpp:264]   --->   Operation 7 'read' 'p_read22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.83ns)   --->   "%trunc_ln264_read = read i17 @_ssdm_op_Read.ap_fifo.i17P0A, i17 %trunc_ln264" [lte_cell_search.cpp:173->lte_cell_search.cpp:264]   --->   Operation 8 'read' 'trunc_ln264_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 17> <Depth = 2> <FIFO>
+ST_1 : Operation 9 [1/1] (1.09ns)   --->   "%run = icmp_ne  i17 %trunc_ln264_read, i17 0" [lte_cell_search.cpp:260->lte_cell_search.cpp:259]   --->   Operation 9 'icmp' 'run' <Predicate = true> <Delay = 1.09> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%zext_ln142 = zext i20 %p_read_2" [lte_cell_search.cpp:142->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 10 'zext' 'zext_ln142' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln142_1 = zext i20 %p_read_3" [lte_cell_search.cpp:142->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 11 'zext' 'zext_ln142_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln142_2 = zext i20 %p_read22" [lte_cell_search.cpp:142->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 12 'zext' 'zext_ln142_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%curr_max_V_load = load i20 %curr_max_V" [lte_cell_search.cpp:259]   --->   Operation 13 'load' 'curr_max_V_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns) (grouped into LUT with out node or_ln183)   --->   "%xor_ln148 = xor i1 %run, i1 1" [lte_cell_search.cpp:148->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 14 'xor' 'xor_ln148' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.36ns)   --->   "%select_ln148 = select i1 %run, i20 %curr_max_V_load, i20 0" [lte_cell_search.cpp:148->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 15 'select' 'select_ln148' <Predicate = true> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.99ns)   --->   "%is_valid_0 = icmp_sgt  i32 %zext_ln142_2, i32 %p_read_1" [lte_cell_search.cpp:259]   --->   Operation 16 'icmp' 'is_valid_0' <Predicate = true> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.99ns)   --->   "%is_valid_1 = icmp_sgt  i32 %zext_ln142_1, i32 %p_read_1" [lte_cell_search.cpp:259]   --->   Operation 17 'icmp' 'is_valid_1' <Predicate = true> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.99ns)   --->   "%is_valid_2 = icmp_sgt  i32 %zext_ln142, i32 %p_read_1" [lte_cell_search.cpp:259]   --->   Operation 18 'icmp' 'is_valid_2' <Predicate = true> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (1.07ns)   --->   "%icmp_ln1494 = icmp_ult  i20 %select_ln148, i20 %p_read22" [lte_cell_search.cpp:259]   --->   Operation 19 'icmp' 'icmp_ln1494' <Predicate = true> <Delay = 1.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.28ns)   --->   "%and_ln169 = and i1 %is_valid_0, i1 %icmp_ln1494" [lte_cell_search.cpp:169->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 20 'and' 'and_ln169' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.36ns)   --->   "%select_ln169 = select i1 %and_ln169, i20 %p_read22, i20 %select_ln148" [lte_cell_search.cpp:169->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 21 'select' 'select_ln169' <Predicate = true> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (1.07ns)   --->   "%icmp_ln1494_1 = icmp_ult  i20 %select_ln169, i20 %p_read_3" [lte_cell_search.cpp:259]   --->   Operation 22 'icmp' 'icmp_ln1494_1' <Predicate = true> <Delay = 1.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.28ns)   --->   "%and_ln176 = and i1 %is_valid_1, i1 %icmp_ln1494_1" [lte_cell_search.cpp:176->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 23 'and' 'and_ln176' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln176 = zext i1 %and_ln176" [lte_cell_search.cpp:176->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 24 'zext' 'zext_ln176' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln1494_2)   --->   "%select_ln176 = select i1 %and_ln176, i20 %p_read_3, i20 %select_ln169" [lte_cell_search.cpp:176->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 25 'select' 'select_ln176' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (1.07ns) (out node of the LUT)   --->   "%icmp_ln1494_2 = icmp_ult  i20 %select_ln176, i20 %p_read_2" [lte_cell_search.cpp:259]   --->   Operation 26 'icmp' 'icmp_ln1494_2' <Predicate = true> <Delay = 1.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.28ns)   --->   "%and_ln183 = and i1 %is_valid_2, i1 %icmp_ln1494_2" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 27 'and' 'and_ln183' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.00ns) (grouped into LUT with out node or_ln183)   --->   "%or_ln183_2 = or i1 %and_ln169, i1 %xor_ln148" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 28 'or' 'or_ln183_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.28ns)   --->   "%or_ln183_3 = or i1 %and_ln176, i1 %and_ln183" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 29 'or' 'or_ln183_3' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln183 = or i1 %or_ln183_3, i1 %or_ln183_2" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 30 'or' 'or_ln183' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node select_ln183_3)   --->   "%select_ln183 = select i1 %and_ln183, i20 %p_read_2, i20 %p_read_3" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 31 'select' 'select_ln183' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node select_ln183_3)   --->   "%select_ln183_2 = select i1 %and_ln169, i20 %p_read22, i20 0" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 32 'select' 'select_ln183_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.36ns) (out node of the LUT)   --->   "%select_ln183_3 = select i1 %or_ln183_3, i20 %select_ln183, i20 %select_ln183_2" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 33 'select' 'select_ln183_3' <Predicate = true> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node or_ln183_1)   --->   "%or_ln183_4 = or i1 %and_ln169, i1 %and_ln183" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 34 'or' 'or_ln183_4' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln183_1 = or i1 %or_ln183_4, i1 %and_ln176" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 35 'or' 'or_ln183_1' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.17ns)   --->   "%select_ln183_1 = select i1 %and_ln183, i2 2, i2 %zext_ln176" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 36 'select' 'select_ln183_1' <Predicate = true> <Delay = 0.17> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%r_V = bitconcatenate i42 @_ssdm_op_BitConcatenate.i42.i20.i22, i20 %p_read22, i22 0" [lte_cell_search.cpp:259]   --->   Operation 37 'bitconcatenate' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln1115 = zext i42 %r_V" [lte_cell_search.cpp:259]   --->   Operation 38 'zext' 'zext_ln1115' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (3.56ns)   --->   "%r_V_6 = mul i78 %zext_ln1115, i78 41943040000" [lte_cell_search.cpp:259]   --->   Operation 39 'mul' 'r_V_6' <Predicate = true> <Delay = 3.56> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%ret_V = partselect i12 @_ssdm_op_PartSelect.i12.i78.i32.i32, i78 %r_V_6, i32 66, i32 77" [lte_cell_search.cpp:259]   --->   Operation 40 'partselect' 'ret_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln183 = br i1 %or_ln183_1, void %_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit140.new2.i.i, void %mergeST3.i.i" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 41 'br' 'br_ln183' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i17P0A, i17 %peak_id_temp, i17 %trunc_ln264_read" [lte_cell_search.cpp:173->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 42 'write' 'write_ln173' <Predicate = (or_ln183_1)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%write_ln172 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %pss_id_temp, i2 %select_ln183_1" [lte_cell_search.cpp:172->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 43 'write' 'write_ln172' <Predicate = (or_ln183_1)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln0 = br void %_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit140.new2.i.i"   --->   Operation 44 'br' 'br_ln0' <Predicate = (or_ln183_1)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln183 = br i1 %or_ln183, void %.exit, void %mergeST.i.i" [lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 45 'br' 'br_ln183' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%store_ln150 = store i20 %select_ln183_3, i20 %curr_max_V" [lte_cell_search.cpp:150->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 46 'store' 'store_ln150' <Predicate = (or_ln183)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit"   --->   Operation 47 'br' 'br_ln0' <Predicate = (or_ln183)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln534 = zext i17 %trunc_ln264_read" [lte_cell_search.cpp:259]   --->   Operation 48 'zext' 'zext_ln534' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln190_1 = zext i17 %trunc_ln264_read" [lte_cell_search.cpp:190->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 49 'zext' 'zext_ln190_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%pss_rslt_temp_addr = getelementptr i12 %pss_rslt_temp, i64 0, i64 %zext_ln534" [lte_cell_search.cpp:190->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 50 'getelementptr' 'pss_rslt_temp_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.87ns)   --->   "%add_ln191 = add i18 %zext_ln190_1, i18 96000" [lte_cell_search.cpp:191->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 51 'add' 'add_ln191' <Predicate = true> <Delay = 0.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%zext_ln191 = zext i18 %add_ln191" [lte_cell_search.cpp:191->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 52 'zext' 'zext_ln191' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%pss_rslt_temp_addr_1 = getelementptr i12 %pss_rslt_temp, i64 0, i64 %zext_ln191" [lte_cell_search.cpp:191->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 53 'getelementptr' 'pss_rslt_temp_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (1.23ns)   --->   "%store_ln190 = store i12 %ret_V, i19 %pss_rslt_temp_addr" [lte_cell_search.cpp:190->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 54 'store' 'store_ln190' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 288000> <RAM>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%r_V_2 = bitconcatenate i42 @_ssdm_op_BitConcatenate.i42.i20.i22, i20 %p_read_3, i22 0" [lte_cell_search.cpp:259]   --->   Operation 55 'bitconcatenate' 'r_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln1115_1 = zext i42 %r_V_2" [lte_cell_search.cpp:259]   --->   Operation 56 'zext' 'zext_ln1115_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (3.56ns)   --->   "%r_V_7 = mul i78 %zext_ln1115_1, i78 41943040000" [lte_cell_search.cpp:259]   --->   Operation 57 'mul' 'r_V_7' <Predicate = true> <Delay = 3.56> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%ret_V_1 = partselect i12 @_ssdm_op_PartSelect.i12.i78.i32.i32, i78 %r_V_7, i32 66, i32 77" [lte_cell_search.cpp:259]   --->   Operation 58 'partselect' 'ret_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (1.23ns)   --->   "%store_ln191 = store i12 %ret_V_1, i19 %pss_rslt_temp_addr_1" [lte_cell_search.cpp:191->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 59 'store' 'store_ln191' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 288000> <RAM>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%r_V_4 = bitconcatenate i42 @_ssdm_op_BitConcatenate.i42.i20.i22, i20 %p_read_2, i22 0" [lte_cell_search.cpp:259]   --->   Operation 60 'bitconcatenate' 'r_V_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%zext_ln1115_2 = zext i42 %r_V_4" [lte_cell_search.cpp:259]   --->   Operation 61 'zext' 'zext_ln1115_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (3.56ns)   --->   "%r_V_8 = mul i78 %zext_ln1115_2, i78 41943040000" [lte_cell_search.cpp:259]   --->   Operation 62 'mul' 'r_V_8' <Predicate = true> <Delay = 3.56> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%ret_V_2 = partselect i12 @_ssdm_op_PartSelect.i12.i78.i32.i32, i78 %r_V_8, i32 66, i32 77" [lte_cell_search.cpp:259]   --->   Operation 63 'partselect' 'ret_V_2' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.12>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln190 = zext i17 %trunc_ln264_read" [lte_cell_search.cpp:190->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 64 'zext' 'zext_ln190' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.88ns)   --->   "%add_ln192 = add i19 %zext_ln190, i19 192000" [lte_cell_search.cpp:192->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 65 'add' 'add_ln192' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%zext_ln192 = zext i19 %add_ln192" [lte_cell_search.cpp:192->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 66 'zext' 'zext_ln192' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%pss_rslt_temp_addr_2 = getelementptr i12 %pss_rslt_temp, i64 0, i64 %zext_ln192" [lte_cell_search.cpp:192->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 67 'getelementptr' 'pss_rslt_temp_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (1.23ns)   --->   "%store_ln192 = store i12 %ret_V_2, i19 %pss_rslt_temp_addr_2" [lte_cell_search.cpp:192->lte_cell_search.cpp:264->lte_cell_search.cpp:259]   --->   Operation 68 'store' 'store_ln192' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 288000> <RAM>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%ret_ln259 = ret" [lte_cell_search.cpp:259]   --->   Operation 69 'ret' 'ret_ln259' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 16.3ns, clock uncertainty: 4.4ns.
+
+ <State 1>: 8.39ns
+The critical path consists of the following:
+	fifo read on port 'trunc_ln264' (lte_cell_search.cpp:173->lte_cell_search.cpp:264) [16]  (1.84 ns)
+	'icmp' operation ('run', lte_cell_search.cpp:260->lte_cell_search.cpp:259) [17]  (1.1 ns)
+	'select' operation ('select_ln148', lte_cell_search.cpp:148->lte_cell_search.cpp:264->lte_cell_search.cpp:259) [23]  (0.363 ns)
+	'icmp' operation ('icmp_ln1494', lte_cell_search.cpp:259) [27]  (1.07 ns)
+	'and' operation ('and_ln169', lte_cell_search.cpp:169->lte_cell_search.cpp:264->lte_cell_search.cpp:259) [28]  (0.287 ns)
+	'select' operation ('select_ln169', lte_cell_search.cpp:169->lte_cell_search.cpp:264->lte_cell_search.cpp:259) [29]  (0.363 ns)
+	'icmp' operation ('icmp_ln1494_1', lte_cell_search.cpp:259) [30]  (1.07 ns)
+	'and' operation ('and_ln176', lte_cell_search.cpp:176->lte_cell_search.cpp:264->lte_cell_search.cpp:259) [31]  (0.287 ns)
+	'select' operation ('select_ln176', lte_cell_search.cpp:176->lte_cell_search.cpp:264->lte_cell_search.cpp:259) [33]  (0 ns)
+	'icmp' operation ('icmp_ln1494_2', lte_cell_search.cpp:259) [34]  (1.07 ns)
+	'and' operation ('and_ln183', lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259) [35]  (0.287 ns)
+	'or' operation ('or_ln183_3', lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259) [37]  (0.287 ns)
+	'select' operation ('select_ln183_3', lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259) [41]  (0.363 ns)
+	'store' operation ('store_ln150', lte_cell_search.cpp:150->lte_cell_search.cpp:264->lte_cell_search.cpp:259) of variable 'select_ln183_3', lte_cell_search.cpp:183->lte_cell_search.cpp:264->lte_cell_search.cpp:259 on static variable 'curr_max_V' [57]  (0 ns)
+
+ <State 2>: 2.12ns
+The critical path consists of the following:
+	'add' operation ('add_ln192', lte_cell_search.cpp:192->lte_cell_search.cpp:264->lte_cell_search.cpp:259) [67]  (0.884 ns)
+	'getelementptr' operation ('pss_rslt_temp_addr_2', lte_cell_search.cpp:192->lte_cell_search.cpp:264->lte_cell_search.cpp:259) [69]  (0 ns)
+	'store' operation ('store_ln192', lte_cell_search.cpp:192->lte_cell_search.cpp:264->lte_cell_search.cpp:259) of variable 'ret.V', lte_cell_search.cpp:259 on array 'pss_rslt_temp' [80]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

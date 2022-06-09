@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sss_corr.h" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/SSS_core/sss_corr.h"/>
+    <originFiles name="sss_corr.cpp" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/SSS_core/sss_corr.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="out2.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/SSS_core/out2.dat"/>
+    <originFiles name="out1.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/SSS_core/out1.dat"/>
+    <originFiles name="output.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/SSS_core/output.dat"/>
+    <originFiles name="input.real.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/SSS_core/input.real.dat"/>
+    <originFiles name="input.imag.dat" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/SSS_core/input.imag.dat"/>
+    <originFiles name="sss_corr_test.cpp" path="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/SSS_core/sss_corr_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

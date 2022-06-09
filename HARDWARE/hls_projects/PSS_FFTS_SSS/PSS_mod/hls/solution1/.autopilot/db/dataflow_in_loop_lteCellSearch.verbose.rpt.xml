@@ -1,0 +1,186 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'dataflow_in_loop_lteCellSearch'" level="0">
+<item name = "Date">Thu Jun  2 15:26:19 2022
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu28dr-ffvg1517-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">16.30 ns, 11.899 ns, 4.40 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">271, 400, 4.417 us, 6.520 us, 269, 398, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="compute_pss_U0">compute_pss, 268, 397, 4.368 us, 6.471 us, 268, 397, none</column>
+<column name="compute_threshold_U0">compute_threshold, 132, 261, 2.152 us, 4.254 us, 132, 261, none</column>
+<column name="track_pss_peak_U0">track_pss_peak, 1, 1, 16.300 ns, 16.300 ns, 1, 1, none</column>
+<column name="dataflow_in_loop_lteCellSearch_entry25_U0">dataflow_in_loop_lteCellSearch_entry25, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 32, -</column>
+<column name="FIFO">-, -, 693, 469, -</column>
+<column name="Instance">16, 25, 2999, 22383, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 54, -</column>
+<column name="Register">-, -, 6, -, -</column>
+<specialColumn name="Available">2160, 4272, 850560, 425280, 80</specialColumn>
+<specialColumn name="Utilization (%)">~0, ~0, ~0, 5, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="compute_pss_U0">compute_pss, 12, 14, 2672, 21295, 0</column>
+<column name="compute_threshold_U0">compute_threshold, 4, 8, 254, 612, 0</column>
+<column name="dataflow_in_loop_lteCellSearch_entry25_U0">dataflow_in_loop_lteCellSearch_entry25, 0, 0, 2, 29, 0</column>
+<column name="track_pss_peak_U0">track_pss_peak, 0, 3, 71, 447, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="pss_rslt_0_V_U">0, 99, 0, -, 2, 20, 40</column>
+<column name="pss_rslt_1_V_U">0, 99, 0, -, 2, 20, 40</column>
+<column name="pss_rslt_2_V_U">0, 99, 0, -, 2, 20, 40</column>
+<column name="thresh_V_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="trunc_ln264_c1_U">0, 99, 0, -, 2, 17, 34</column>
+<column name="trunc_ln264_c2_U">0, 99, 0, -, 2, 17, 34</column>
+<column name="trunc_ln264_c_U">0, 99, 0, -, 2, 17, 34</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_channel_done_pss_rslt_0_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_pss_rslt_1_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_pss_rslt_2_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="compute_pss_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="compute_pss_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="compute_threshold_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="dataflow_in_loop_lteCellSearch_entry25_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="track_pss_peak_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_pss_rslt_0_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_pss_rslt_1_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_pss_rslt_2_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_compute_pss_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_compute_threshold_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_dataflow_in_loop_lteCellSearch_entry25_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_channel_write_pss_rslt_0_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_pss_rslt_1_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_pss_rslt_2_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_compute_pss_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_compute_threshold_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_dataflow_in_loop_lteCellSearch_entry25_U0_ap_ready">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_reg_channel_write_pss_rslt_0_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_pss_rslt_1_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_pss_rslt_2_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_compute_pss_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_compute_threshold_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_dataflow_in_loop_lteCellSearch_entry25_U0_ap_ready">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="IN_real_V_address0">out, 17, ap_memory, IN_real_V, array</column>
+<column name="IN_real_V_ce0">out, 1, ap_memory, IN_real_V, array</column>
+<column name="IN_real_V_d0">out, 23, ap_memory, IN_real_V, array</column>
+<column name="IN_real_V_q0">in, 23, ap_memory, IN_real_V, array</column>
+<column name="IN_real_V_we0">out, 1, ap_memory, IN_real_V, array</column>
+<column name="IN_real_V_address1">out, 17, ap_memory, IN_real_V, array</column>
+<column name="IN_real_V_ce1">out, 1, ap_memory, IN_real_V, array</column>
+<column name="IN_real_V_d1">out, 23, ap_memory, IN_real_V, array</column>
+<column name="IN_real_V_q1">in, 23, ap_memory, IN_real_V, array</column>
+<column name="IN_real_V_we1">out, 1, ap_memory, IN_real_V, array</column>
+<column name="trunc_ln264">in, 17, ap_none, trunc_ln264, scalar</column>
+<column name="trunc_ln264_ap_vld">in, 1, ap_none, trunc_ln264, scalar</column>
+<column name="IN_imag_V_address0">out, 17, ap_memory, IN_imag_V, array</column>
+<column name="IN_imag_V_ce0">out, 1, ap_memory, IN_imag_V, array</column>
+<column name="IN_imag_V_d0">out, 23, ap_memory, IN_imag_V, array</column>
+<column name="IN_imag_V_q0">in, 23, ap_memory, IN_imag_V, array</column>
+<column name="IN_imag_V_we0">out, 1, ap_memory, IN_imag_V, array</column>
+<column name="IN_imag_V_address1">out, 17, ap_memory, IN_imag_V, array</column>
+<column name="IN_imag_V_ce1">out, 1, ap_memory, IN_imag_V, array</column>
+<column name="IN_imag_V_d1">out, 23, ap_memory, IN_imag_V, array</column>
+<column name="IN_imag_V_q1">in, 23, ap_memory, IN_imag_V, array</column>
+<column name="IN_imag_V_we1">out, 1, ap_memory, IN_imag_V, array</column>
+<column name="pss_id_temp">out, 2, ap_vld, pss_id_temp, pointer</column>
+<column name="pss_id_temp_ap_vld">out, 1, ap_vld, pss_id_temp, pointer</column>
+<column name="peak_id_temp">out, 17, ap_vld, peak_id_temp, pointer</column>
+<column name="peak_id_temp_ap_vld">out, 1, ap_vld, peak_id_temp, pointer</column>
+<column name="pss_rslt_temp_address0">out, 19, ap_memory, pss_rslt_temp, array</column>
+<column name="pss_rslt_temp_ce0">out, 1, ap_memory, pss_rslt_temp, array</column>
+<column name="pss_rslt_temp_d0">out, 12, ap_memory, pss_rslt_temp, array</column>
+<column name="pss_rslt_temp_q0">in, 12, ap_memory, pss_rslt_temp, array</column>
+<column name="pss_rslt_temp_we0">out, 1, ap_memory, pss_rslt_temp, array</column>
+<column name="pss_rslt_temp_address1">out, 19, ap_memory, pss_rslt_temp, array</column>
+<column name="pss_rslt_temp_ce1">out, 1, ap_memory, pss_rslt_temp, array</column>
+<column name="pss_rslt_temp_d1">out, 12, ap_memory, pss_rslt_temp, array</column>
+<column name="pss_rslt_temp_q1">in, 12, ap_memory, pss_rslt_temp, array</column>
+<column name="pss_rslt_temp_we1">out, 1, ap_memory, pss_rslt_temp, array</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, dataflow_in_loop_lteCellSearch, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, dataflow_in_loop_lteCellSearch, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, dataflow_in_loop_lteCellSearch, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, dataflow_in_loop_lteCellSearch, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, dataflow_in_loop_lteCellSearch, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, dataflow_in_loop_lteCellSearch, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, dataflow_in_loop_lteCellSearch, return value</column>
+</table>
+</item>
+</section>
+</profile>

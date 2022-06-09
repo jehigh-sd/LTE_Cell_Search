@@ -1,0 +1,190 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 16ns.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 16 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 208.251 MB.
+INFO: [HLS 200-10] Analyzing design file 'sss_corr.cpp' ... 
+WARNING: [HLS 207-5301] unused parameter 'data_type': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:146:77
+WARNING: [HLS 207-5301] unused parameter 'has_nfft': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:171:65
+WARNING: [HLS 207-5301] unused parameter 'cp_len_enable': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:184:66
+WARNING: [HLS 207-5301] unused parameter 'scaling_opt': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:197:68
+WARNING: [HLS 207-5301] unused parameter 'scaling_opt': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:361:71
+WARNING: [HLS 207-5301] unused parameter 'has_ovflo': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:374:66
+WARNING: [HLS 207-5498] the 'complete/partial/region' option to 'Unroll' pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:498:28
+WARNING: [HLS 207-5498] the 'complete/partial/region' option to 'Unroll' pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:143:28
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:566:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:568:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:569:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:715:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:722:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:723:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:719:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:720:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:718:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:717:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:787:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:885:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:892:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:893:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:889:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:890:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:888:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:887:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:920:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:927:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:928:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:924:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:925:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:923:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:922:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:958:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:964:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:965:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:966:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:962:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:963:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:961:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:960:9
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 12.32 seconds. CPU system time: 0.98 seconds. Elapsed time: 13.7 seconds; current allocated memory: 210.312 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::axis<int, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:293:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<int, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:296:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<int, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<int, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<int, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<int, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:23)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:293:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:296:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:23)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>&, int&)' (sss_corr.cpp:9:17)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>&, int&)' (sss_corr.cpp:16:16)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>&, int&)' (sss_corr.cpp:15:16)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'compute_sss_1_0(float*, float*, float*)' (sss_corr.cpp:47:0)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'compute_sss_2_0(float*, float*, float*)' (sss_corr.cpp:63:0)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'compute_sss_1_1(float*, float*, float*)' (sss_corr.cpp:79:0)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'compute_sss_2_1(float*, float*, float*)' (sss_corr.cpp:95:0)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'compute_sss_1_2(float*, float*, float*)' (sss_corr.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'compute_sss_2_2(float*, float*, float*)' (sss_corr.cpp:127:0)
+INFO: [HLS 214-178] Inlining function 'compute_sss_1_0(float*, float*, float*)' into 'get_sss_id(float*, float*, int, float*, float*)' (sss_corr.cpp:143:0)
+INFO: [HLS 214-178] Inlining function 'compute_sss_2_0(float*, float*, float*)' into 'get_sss_id(float*, float*, int, float*, float*)' (sss_corr.cpp:143:0)
+INFO: [HLS 214-178] Inlining function 'compute_sss_1_1(float*, float*, float*)' into 'get_sss_id(float*, float*, int, float*, float*)' (sss_corr.cpp:143:0)
+INFO: [HLS 214-178] Inlining function 'compute_sss_2_1(float*, float*, float*)' into 'get_sss_id(float*, float*, int, float*, float*)' (sss_corr.cpp:143:0)
+INFO: [HLS 214-178] Inlining function 'compute_sss_1_2(float*, float*, float*)' into 'get_sss_id(float*, float*, int, float*, float*)' (sss_corr.cpp:143:0)
+INFO: [HLS 214-178] Inlining function 'compute_sss_2_2(float*, float*, float*)' into 'get_sss_id(float*, float*, int, float*, float*)' (sss_corr.cpp:143:0)
+INFO: [HLS 214-178] Inlining function 'copy_input(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>&, int&)' into 'sss_corr(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, float*, hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>&)' (sss_corr.cpp:172:0)
+INFO: [HLS 214-178] Inlining function 'write_output(float*, float*, float*, float*)' into 'sss_corr(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, float*, hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>&)' (sss_corr.cpp:172:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'sss_corr(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, float*, hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>&)' (sss_corr.cpp:172:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'sss_corr(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, float*, float*, hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>&)' (sss_corr.cpp:172:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.31 seconds. CPU system time: 0.41 seconds. Elapsed time: 6.96 seconds; current allocated memory: 212.681 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 212.682 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 218.937 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 225.983 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_51_2' (sss_corr.cpp:48) in function 'get_sss_id' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_67_2' (sss_corr.cpp:64) in function 'get_sss_id' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_83_2' (sss_corr.cpp:80) in function 'get_sss_id' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_99_2' (sss_corr.cpp:96) in function 'get_sss_id' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_115_2' (sss_corr.cpp:112) in function 'get_sss_id' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_131_2' (sss_corr.cpp:128) in function 'get_sss_id' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_13_1' in function 'sss_corr' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_164_1' (sss_corr.cpp:164) in function 'sss_corr' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.49 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.55 seconds; current allocated memory: 253.421 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_49_1' (sss_corr.cpp:49:28) in function 'get_sss_id' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_65_1' (sss_corr.cpp:65:28) in function 'get_sss_id' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_81_1' (sss_corr.cpp:81:28) in function 'get_sss_id' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_97_1' (sss_corr.cpp:97:28) in function 'get_sss_id' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_113_1' (sss_corr.cpp:113:29) in function 'get_sss_id' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_129_1' (sss_corr.cpp:129:29) in function 'get_sss_id' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-472] Inferring partial write operation for 'IN_real' (sss_corr.cpp:18:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'IN_imag' (sss_corr.cpp:19:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_1' (sss_corr.cpp:56:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_2' (sss_corr.cpp:72:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_1' (sss_corr.cpp:88:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_2' (sss_corr.cpp:104:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_1' (sss_corr.cpp:120:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_2' (sss_corr.cpp:136:12)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.55 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.59 seconds; current allocated memory: 266.408 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sss_corr' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'get_sss_id' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_115_2'.
+WARNING: [HLS 200-881] Unable to enforce a carried constraint (II = 1) between 'fsub' operation ('temp_i', sss_corr.cpp:118) and 'fsub' operation ('temp_i', sss_corr.cpp:118).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 6, loop 'VITIS_LOOP_115_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_131_2'.
+WARNING: [HLS 200-881] Unable to enforce a carried constraint (II = 1) between 'fsub' operation ('temp_i', sss_corr.cpp:134) and 'fsub' operation ('temp_i', sss_corr.cpp:134).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 6, loop 'VITIS_LOOP_131_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_83_2'.
+WARNING: [HLS 200-881] Unable to enforce a carried constraint (II = 1) between 'fsub' operation ('temp_i', sss_corr.cpp:86) and 'fsub' operation ('temp_i', sss_corr.cpp:86).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 6, loop 'VITIS_LOOP_83_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_99_2'.
+WARNING: [HLS 200-881] Unable to enforce a carried constraint (II = 1) between 'fsub' operation ('temp_i', sss_corr.cpp:102) and 'fsub' operation ('temp_i', sss_corr.cpp:102).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 6, loop 'VITIS_LOOP_99_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_51_2'.
+WARNING: [HLS 200-881] Unable to enforce a carried constraint (II = 1) between 'fsub' operation ('temp_i', sss_corr.cpp:54) and 'fsub' operation ('temp_i', sss_corr.cpp:54).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 6, loop 'VITIS_LOOP_51_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_67_2'.
+WARNING: [HLS 200-881] Unable to enforce a carried constraint (II = 1) between 'fsub' operation ('temp_i', sss_corr.cpp:70) and 'fsub' operation ('temp_i', sss_corr.cpp:70).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 6, loop 'VITIS_LOOP_67_2'
+WARNING: [HLS 200-871] Estimated clock period (21.088ns) exceeds the target (target clock period: 16ns, clock uncertainty: 4.32ns, effective delay budget: 11.68ns).
+WARNING: [HLS 200-1016] The critical path in module 'get_sss_id' consists of the following:	'fsub' operation ('temp_i', sss_corr.cpp:118) [58]  (10.5 ns)
+	'phi' operation ('temp_i') with incoming values : ('temp_i', sss_corr.cpp:118) [35]  (0 ns)
+	'fsub' operation ('temp_i', sss_corr.cpp:118) [58]  (10.5 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.84 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.94 seconds; current allocated memory: 267.520 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.75 seconds. CPU system time: 0 seconds. Elapsed time: 0.77 seconds; current allocated memory: 268.798 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sss_corr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_13_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_164_1'.
+WARNING: [HLS 200-885] Unable to schedule bus request on port 'gmem' (sss_corr.cpp:167) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 9, loop 'VITIS_LOOP_164_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.59 seconds. CPU system time: 0 seconds. Elapsed time: 0.63 seconds; current allocated memory: 269.082 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 269.493 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'get_sss_id' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_3_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'get_sss_id'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.43 seconds; current allocated memory: 272.100 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================

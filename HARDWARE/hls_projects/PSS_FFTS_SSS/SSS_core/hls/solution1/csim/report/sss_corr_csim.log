@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../sss_corr_test.cpp in debug mode
+   Compiling ../../../../sss_corr.cpp in debug mode
+   Generating csim.exe
+obj/sss_corr_test.o: In function `main':
+/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/SSS_core/hls/solution1/csim/build/../../../../sss_corr_test.cpp:81: undefined reference to `sss_corr(hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<int, 0ul, 0ul, 0ul>, 0>&)'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile.rules:393: csim.exe] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

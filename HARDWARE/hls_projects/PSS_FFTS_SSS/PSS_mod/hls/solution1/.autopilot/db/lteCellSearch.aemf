@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1654208798204">
+  <ports id="1" name="gmem" type="PortType" coreId="513" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="2" name="IN_R_V_data_V" type="PortType" originalName="IN_R" coreId="129" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="IN_R_V_keep_V" type="PortType" originalName="IN_R" coreId="1869375036" bitwidth="2">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="IN_R_V_strb_V" type="PortType" originalName="IN_R" coreId="2348810368" bitwidth="2">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="IN_R_V_last_V" type="PortType" originalName="IN_R" coreId="100" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="IN_I_V_data_V" type="PortType" originalName="IN_I" coreId="1707105880" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="IN_I_V_keep_V" type="PortType" originalName="IN_I" coreId="840972901" bitwidth="2">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="8" name="IN_I_V_strb_V" type="PortType" originalName="IN_I" coreId="49" bitwidth="2">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="9" name="IN_I_V_last_V" type="PortType" originalName="IN_I" coreId="49" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="10" name="OUT_FFT_V_data_V" type="PortType" originalName="OUT_FFT" coreId="305" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="11" name="OUT_FFT_V_keep_V" type="PortType" originalName="OUT_FFT" coreId="132" bitwidth="8" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="12" name="OUT_FFT_V_strb_V" type="PortType" originalName="OUT_FFT" coreId="353" bitwidth="8" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="13" name="OUT_FFT_V_last_V" type="PortType" originalName="OUT_FFT" coreId="25" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="14" name="pss_id_V_data_V" type="PortType" originalName="pss_id" coreId="1931506529" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="15" name="pss_id_V_keep_V" type="PortType" originalName="pss_id" coreId="49" bitwidth="4" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="16" name="pss_id_V_strb_V" type="PortType" originalName="pss_id" coreId="913" bitwidth="4" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="17" name="pss_id_V_last_V" type="PortType" originalName="pss_id" coreId="132" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="18" name="OUT_PSS_ID" type="PortType" originalName="OUT_PSS_ID" coreId="132" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="19" name="OUT_PEAK_INDEX" type="PortType" originalName="OUT_PEAK_INDEX" coreId="132" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="20" name="OUT_RSLT" type="PortType" originalName="OUT_RSLT" coreId="11" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="156" source_obj="//@ports.19" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="165" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="168" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="169" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="172" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="173" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="174" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="175" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="178" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="181" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="182" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="183" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="184" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="185" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="186" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="189" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="192" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="193" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="194" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="195" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="197" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0"/>
+  <edges id="198" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1"/>
+  <edges id="201" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
+  <edges id="204" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="205" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="206" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="209" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="210" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="211" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="212" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="213" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="214" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="215" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="216" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="217" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="218" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="221" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="224" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="225" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="226" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@ports.9"/>
+  <edges id="227" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@ports.10"/>
+  <edges id="228" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@ports.11"/>
+  <edges id="229" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@ports.12"/>
+  <edges id="230" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="231" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="232" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@ports.13"/>
+  <edges id="233" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@ports.14"/>
+  <edges id="234" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@ports.15"/>
+  <edges id="235" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@ports.16"/>
+  <edges id="238" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="243" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="244" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@ports.0"/>
+  <edges id="245" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="248" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="251" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="252" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
+  <edges id="255" source_obj="//@ports.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="256" source_obj="//@ports.2" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="257" source_obj="//@ports.3" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="258" source_obj="//@ports.4" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="259" source_obj="//@regions.1/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="261" source_obj="//@ports.5" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
+  <edges id="262" source_obj="//@ports.6" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
+  <edges id="263" source_obj="//@ports.7" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
+  <edges id="264" source_obj="//@ports.8" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
+  <edges id="265" source_obj="//@regions.1/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.4"/>
+  <edges id="268" source_obj="//@regions.1/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.5"/>
+  <edges id="271" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6"/>
+  <edges id="273" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6"/>
+  <edges id="274" source_obj="//@regions.1/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.7"/>
+  <edges id="275" source_obj="//@regions.1/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.7"/>
+  <edges id="277" source_obj="//@regions.1/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.8"/>
+  <edges id="279" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.9"/>
+  <edges id="281" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.9"/>
+  <edges id="282" source_obj="//@regions.1/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.10"/>
+  <edges id="283" source_obj="//@regions.1/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.10"/>
+  <edges id="284" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.11"/>
+  <edges id="285" source_obj="//@regions.2/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="286" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.1" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="288" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.0"/>
+  <edges id="289" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.1"/>
+  <edges id="291" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.2"/>
+  <edges id="293" source_obj="//@regions.2/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.3"/>
+  <edges id="294" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.1" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.3"/>
+  <edges id="295" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.3"/>
+  <edges id="296" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.0"/>
+  <edges id="297" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.1"/>
+  <edges id="298" source_obj="//@regions.2/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.1"/>
+  <edges id="299" source_obj="//@regions.2/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.2"/>
+  <edges id="300" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.3"/>
+  <edges id="302" source_obj="//@regions.2/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.3"/>
+  <edges id="303" source_obj="//@regions.2/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.4"/>
+  <edges id="304" source_obj="//@regions.2/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.5"/>
+  <edges id="307" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.6"/>
+  <edges id="308" source_obj="//@regions.2/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.6"/>
+  <edges id="311" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.7"/>
+  <edges id="314" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="317" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@ports.17"/>
+  <edges id="318" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="320" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@ports.18"/>
+  <edges id="321" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="322" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="323" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="324" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="325" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="326" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="327" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="328" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="329" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="330" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="331" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="332" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="333" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="334" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="335" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="637" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="638" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="639" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="640" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="641" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.1/@basic_blocks.0"/>
+  <edges id="642" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.2"/>
+  <edges id="643" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1"/>
+  <edges id="644" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="645" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.2/@basic_blocks.0"/>
+  <edges id="646" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="647" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@regions.2/@basic_blocks.1"/>
+  <edges id="648" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.1" sink_obj="//@regions.2/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="649" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="650" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="651" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="652" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="653" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="654" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="655" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="656" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.6"/>
+  <edges id="657" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.7"/>
+  <blocks id="82" name="codeRepl" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>memset.loop.i.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="OUT_RSLT_read" originalName="OUT_RSLT" coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>OUT_RSLT</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="pss_id_temp" lineNumber="249" originalName="pss_id_temp" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="113" contextFuncName="lteCellSearch" bitwidth="2" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="249" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="peak_id_temp" lineNumber="249" originalName="peak_id_temp" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="113" contextFuncName="lteCellSearch" bitwidth="17" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="249" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="pss_rslt_temp" lineNumber="250" originalName="pss_rslt_temp" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="pss_rslt_temp_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="lteCellSearch" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="250" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="IN_real_V" lineNumber="251" originalName="IN_real.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="IN_real_V_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="lteCellSearch" bitwidth="23" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="251" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="IN_imag_V" lineNumber="251" originalName="IN_imag.V" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="IN_imag_V_U" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="lteCellSearch" bitwidth="23" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="251" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="pss_id_temp_write_ln249" lineNumber="249" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="529" contextFuncName="lteCellSearch" opcode="store" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="249" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="peak_id_temp_write_ln249" lineNumber="249" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="0" contextFuncName="lteCellSearch" opcode="store" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="249" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="br_ln0" coreId="0" opcode="br" m_display="0" m_delay="0.42" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <controlInputObjs>memset.loop.i.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="lte_cell_search.cpp">
+      <validLinenumbers>249</validLinenumbers>
+      <validLinenumbers>250</validLinenumbers>
+      <validLinenumbers>251</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="96" name="_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i.preheader" type="BlockType">
+    <controlInputObjs>memset.loop.i.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="br_ln878" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="0" contextFuncName="operator_lt_32_true" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.42" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+      <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>878</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="131" name="_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit.preheader" type="BlockType">
+    <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_137</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="_ln0" rtlName="grp_dataflow_parent_loop_proc_fu_337" coreId="132" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>dataflow_parent_loop_proc</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="peak_id_temp_load" lineNumber="267" originalName="peak_id_temp" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="0" contextFuncName="lteCellSearch" bitwidth="17" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="267" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="zext_ln267" lineNumber="267" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln267_fu_497_p1" coreId="1707110432" contextFuncName="lteCellSearch" bitwidth="32" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="267" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="pss_id_temp_load" lineNumber="267" originalName="pss_id_temp" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="49" contextFuncName="lteCellSearch" bitwidth="2" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="267" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="zext_ln203_1" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="mul_ln203_fu_503_p00" coreId="1711577848" contextFuncName="copy_output" bitwidth="19" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="mul_ln203" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="mul_2ns_18ns_19_1_1_U95" opType="mul" coreId="2529" contextFuncName="copy_output" bitwidth="19" opcode="mul" nodeLabel="7.0" m_display="0" m_delay="2.45" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="zext_ln267_1" lineNumber="267" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln267_1_fu_509_p1" coreId="1711580224" contextFuncName="lteCellSearch" bitwidth="32" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="267" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="_ln267" lineNumber="267" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="grp_write_buffer_fft_fu_374" coreId="2348810368" contextFuncName="lteCellSearch" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="1.29" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="267" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>OUT_FFT_V_data_V</dataOutputObjs>
+      <dataOutputObjs>OUT_FFT_V_keep_V</dataOutputObjs>
+      <dataOutputObjs>OUT_FFT_V_strb_V</dataOutputObjs>
+      <dataOutputObjs>OUT_FFT_V_last_V</dataOutputObjs>
+      <dataOutputObjs>pss_id_V_data_V</dataOutputObjs>
+      <dataOutputObjs>pss_id_V_keep_V</dataOutputObjs>
+      <dataOutputObjs>pss_id_V_strb_V</dataOutputObjs>
+      <dataOutputObjs>pss_id_V_last_V</dataOutputObjs>
+      <constName>write_buffer_fft</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="trunc_ln" lineNumber="200" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="trunc_ln_fu_469_p4" coreId="49" contextFuncName="copy_output" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="200" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="sext_ln203" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="sext_ln203_fu_478_p1" coreId="2348810368" contextFuncName="copy_output" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="gmem_addr" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="132" contextFuncName="copy_output" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>gmem</dataOutputObjs>
+      <dataOutputObjs>writereq</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>writeresp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="gmem_addr_1_wr_req" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="auto" opType="writereq" coreId="121" contextFuncName="copy_output" bitwidth="1" opcode="writereq" nodeLabel="4.0" m_display="0" m_delay="11.8" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="br_ln200" lineNumber="200" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="1711575440" contextFuncName="copy_output" opcode="br" nodeLabel="7.0" m_display="0" m_delay="0.42" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="200" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+      <controlInputObjs>block_137</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="lte_cell_search.cpp">
+      <validLinenumbers>267</validLinenumbers>
+      <validLinenumbers>203</validLinenumbers>
+      <validLinenumbers>200</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="153" name="_Z11copy_outputPA96000_iiiPiS1_S1_.exit" type="BlockType">
+    <controlInputObjs>block_137</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="gmem_addr_1_wr_resp" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="auto" opType="writereq" coreId="121" contextFuncName="copy_output" bitwidth="1" opcode="writeresp" nodeLabel="11.0" nodeLatency="4" m_display="0" m_delay="11.8" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="150" name="OUT_PSS_ID_write_ln206" lineNumber="206" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="copy_output" opcode="write" nodeLabel="11.0" m_display="0" m_delay="1.0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="206" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>OUT_PSS_ID</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="151" name="OUT_PEAK_INDEX_write_ln207" lineNumber="207" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="copy_output" opcode="write" nodeLabel="11.0" m_display="0" m_delay="1.0" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="207" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>OUT_PEAK_INDEX</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="_ln269" lineNumber="269" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="0" contextFuncName="lteCellSearch" opcode="ret" nodeLabel="15.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="269" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="lte_cell_search.cpp">
+      <validLinenumbers>203</validLinenumbers>
+      <validLinenumbers>206</validLinenumbers>
+      <validLinenumbers>207</validLinenumbers>
+      <validLinenumbers>269</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="430" pipe_depth="1" RegionName="Loop 1">
+    <basic_blocks id="89" name="memset.loop.i.i" type="BlockType">
+      <controlInputObjs>codeRepl</controlInputObjs>
+      <controlInputObjs>memset.loop.split.i.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i.preheader</controlOutputObjs>
+      <controlOutputObjs>memset.loop.split.i.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="empty" coreId="0" bitwidth="19" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>codeRepl</controlInputObjs>
+        <controlInputObjs>memset.loop.split.i.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="empty_91" rtlName="empty_91_fu_408_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" bitwidth="19" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.88" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="exitcond894_i_i" rtlName="exitcond894_i_i_fu_414_p2" opType="icmp" coreId="858861869" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.08" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="br_ln0" coreId="913" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>memset.loop.split.i.i</controlInputObjs>
+        <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i.preheader</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="94" name="memset.loop.split.i.i" type="BlockType">
+      <controlInputObjs>memset.loop.i.i</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>memset.loop.i.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="p_cast" rtlName="p_cast_fu_420_p1" coreId="1885414944" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="pss_rslt_temp_addr" coreId="49" bitwidth="19" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="pss_rslt_temp_addr_write_ln0" coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.23" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="br_ln0" coreId="0" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <controlInputObjs>memset.loop.i.i</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="431" pipe_depth="1" RegionName="copy_input">
+    <basic_blocks id="102" name="_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i" type="BlockType">
+      <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i.preheader</controlInputObjs>
+      <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit.preheader</controlOutputObjs>
+      <controlOutputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="i_V" lineNumber="691" originalName="i.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="49" contextFuncName="operator_add_assign_1_false" bitwidth="17" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i.split</controlInputObjs>
+        <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i.preheader</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="add_ln691" lineNumber="691" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="add_ln691_fu_425_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="17" opcode="add" nodeLabel="3.0" m_display="0" m_delay="0.86" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="icmp_ln878" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln878_fu_431_p2" opType="icmp" coreId="1852402805" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="1.09" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="br_ln11" lineNumber="11" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="575620686" contextFuncName="copy_input" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="11" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_input"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i.split</controlInputObjs>
+        <controlInputObjs>_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit.preheader</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="lte_cell_search.cpp">
+        <validLinenumbers>11</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>691</validLinenumbers>
+        <validLinenumbers>878</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="117" name="_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i.split" type="BlockType">
+      <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="zext_ln878" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln878_fu_437_p1" coreId="1700572296" contextFuncName="operator_lt_32_true" bitwidth="64" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="empty_94" lineNumber="293" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="auto" opType="adapter" coreId="123" contextFuncName="read" bitwidth="21" opcode="read" nodeLabel="3.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="293" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="read"/>
+        <dataInputObjs>IN_R_V_data_V</dataInputObjs>
+        <dataInputObjs>IN_R_V_keep_V</dataInputObjs>
+        <dataInputObjs>IN_R_V_strb_V</dataInputObjs>
+        <dataInputObjs>IN_R_V_last_V</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="t_r_in_data_V" lineNumber="293" originalName="t_r_in.data.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="1700568816" contextFuncName="read" bitwidth="16" opcode="extractvalue" nodeLabel="3.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="293" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="read"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="empty_95" lineNumber="293" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="auto" opType="adapter" coreId="123" contextFuncName="read" bitwidth="21" opcode="read" nodeLabel="3.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="293" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="read"/>
+        <dataInputObjs>IN_I_V_data_V</dataInputObjs>
+        <dataInputObjs>IN_I_V_keep_V</dataInputObjs>
+        <dataInputObjs>IN_I_V_strb_V</dataInputObjs>
+        <dataInputObjs>IN_I_V_last_V</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="t_i_in_data_V" lineNumber="293" originalName="t_i_in.data.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="132" contextFuncName="read" bitwidth="16" opcode="extractvalue" nodeLabel="3.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="293" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="read"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="110" name="shl_ln" lineNumber="708" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="IN_real_V_d0" coreId="0" contextFuncName="operator_assign_80_36_true_AP_TRN_AP_WRAP_0" bitwidth="23" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="708" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator=&amp;lt;80, 36, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="IN_real_V_addr" lineNumber="23" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="49" contextFuncName="copy_input" bitwidth="17" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="23" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_input"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="IN_real_V_addr_write_ln23" lineNumber="23" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="copy_input" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.23" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="23" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_input"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="113" name="shl_ln708_1" lineNumber="708" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="IN_imag_V_d0" coreId="74" contextFuncName="operator_assign_80_36_true_AP_TRN_AP_WRAP_0" bitwidth="23" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h" linenumber="708" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator=&amp;lt;80, 36, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="IN_imag_V_addr" lineNumber="24" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="625" contextFuncName="copy_input" bitwidth="17" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="24" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_input"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="IN_imag_V_addr_write_ln24" lineNumber="24" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="copy_input" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.23" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="24" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_input"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="br_ln0" coreId="2020501868" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <controlInputObjs>_ZN8ap_fixedILi40ELi18EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi16ELb1EEERK11ap_int_baseIXT_EXT0_EE.exit51.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="lte_cell_search.cpp">
+        <validLinenumbers>23</validLinenumbers>
+        <validLinenumbers>24</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h">
+        <validLinenumbers>293</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_fixed_base.h">
+        <validLinenumbers>708</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>878</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="432" pipe_depth="3" RegionName="copy_output">
+    <basic_blocks id="137" name="block_137" type="BlockType">
+      <controlInputObjs>_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit.preheader</controlInputObjs>
+      <controlInputObjs>.split1</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_Z11copy_outputPA96000_iiiPiS1_S1_.exit</controlOutputObjs>
+      <controlOutputObjs>.split1</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="132" name="i_V_1" lineNumber="691" originalName="i.V" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="1698675696" contextFuncName="operator_add_assign_1_false" bitwidth="17" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>.split1</controlInputObjs>
+        <controlInputObjs>_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit.preheader</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="133" name="add_ln691_1" lineNumber="691" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="add_ln691_1_fu_512_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="17" opcode="add" nodeLabel="8.0" m_display="0" m_delay="0.86" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="icmp_ln878_1" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln878_1_fu_518_p2" opType="icmp" coreId="49" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="1.09" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="136" name="br_ln200" lineNumber="200" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="0" contextFuncName="copy_output" opcode="br" nodeLabel="8.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="200" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split1</controlInputObjs>
+        <controlInputObjs>_Z11copy_outputPA96000_iiiPiS1_S1_.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="lte_cell_search.cpp">
+        <validLinenumbers>200</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>691</validLinenumbers>
+        <validLinenumbers>878</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="148" name=".split1" type="BlockType">
+      <controlInputObjs>block_137</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_137</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="138" name="zext_ln203_2" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln203_2_fu_524_p1" coreId="0" contextFuncName="copy_output" bitwidth="19" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="139" name="add_ln203" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="add_ln203_fu_528_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="copy_output" bitwidth="19" opcode="add" nodeLabel="8.0" m_display="0" m_delay="0.88" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="140" name="zext_ln203_3" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="zext_ln203_3_fu_533_p1" coreId="225" contextFuncName="copy_output" bitwidth="64" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="141" name="pss_rslt_temp_addr_3" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="132" contextFuncName="copy_output" bitwidth="19" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="144" name="pss_rslt_temp_load" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="copy_output" bitwidth="12" opcode="load" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="1.23" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="zext_ln203" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="gmem_WDATA" coreId="0" contextFuncName="copy_output" bitwidth="32" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="146" name="gmem_addr_write_ln203" lineNumber="203" fileName="lte_cell_search.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="auto" coreId="121" contextFuncName="copy_output" opcode="write" nodeLabel="10.0" m_display="0" m_delay="11.8" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="203" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="copy_output"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="147" name="br_ln0" coreId="1711213936" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_137</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="lte_cell_search.cpp">
+        <validLinenumbers>203</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <regnodes realName="OUT_RSLT_read_reg_542">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="i_V_1_reg_326">
+    <nodeIds>132</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem_addr_reg_577">
+    <nodeIds>128</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln267_reg_589">
+    <nodeIds>120</nodeIds>
+  </regnodes>
+  <regnodes realName="peak_id_temp_reg_554">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="pss_rslt_temp_addr_3_reg_613">
+    <nodeIds>141</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln691_1_reg_604">
+    <nodeIds>133</nodeIds>
+  </regnodes>
+  <regnodes realName="pss_id_temp_reg_547">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln203_reg_594">
+    <nodeIds>123</nodeIds>
+  </regnodes>
+  <regnodes realName="pss_rslt_temp_load_reg_618">
+    <nodeIds>144</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln878_1_reg_609">
+    <nodeIds>134</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln691_reg_569">
+    <nodeIds>98</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_reg_304">
+    <nodeIds>83</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln267_1_reg_599">
+    <nodeIds>124</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_91_reg_561">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="i_V_reg_315">
+    <nodeIds>97</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln878_1_fu_518">
+    <nodeIds>134</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln203_3_fu_533">
+    <nodeIds>140</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln203_fu_503">
+    <nodeIds>123</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pss_rslt_temp_alloca_fu_188">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln708_1_fu_460">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln_fu_469">
+    <nodeIds>126</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="IN_imag_V_alloca_fu_196">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln_fu_451">
+    <nodeIds>110</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln878_fu_431">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="peak_id_temp_fu_184">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_phi_fu_308">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln691_1_fu_512">
+    <nodeIds>133</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_cast_fu_420">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln267_1_fu_509">
+    <nodeIds>124</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pss_rslt_temp_addr_3_gep_fu_297">
+    <nodeIds>141</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln691_fu_425">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem_addr_fu_482">
+    <nodeIds>128</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="t_i_in_data_V_fu_447">
+    <nodeIds>109</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln203_fu_538">
+    <nodeIds>145</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_V_phi_fu_319">
+    <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond894_i_i_fu_414">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln203_fu_528">
+    <nodeIds>139</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln203_1_fu_500">
+    <nodeIds>122</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="IN_real_V_addr_gep_fu_273">
+    <nodeIds>111</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="IN_real_V_alloca_fu_192">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pss_id_temp_fu_180">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pss_rslt_temp_addr_gep_fu_260">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln203_fu_478">
+    <nodeIds>127</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln203_2_fu_524">
+    <nodeIds>138</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="t_r_in_data_V_fu_443">
+    <nodeIds>107</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln878_fu_437">
+    <nodeIds>103</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="IN_imag_V_addr_gep_fu_285">
+    <nodeIds>114</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln267_fu_497">
+    <nodeIds>120</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_91_fu_408">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_V_1_phi_fu_330">
+    <nodeIds>132</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_dataflow_parent_loop_proc_fu_337">
+    <nodeIds>118</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_write_buffer_fft_fu_374">
+    <nodeIds>125</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="write_ln206_write_fu_246">
+    <nodeIds>150</nodeIds>
+  </ioNodes>
+  <ioNodes realName="peak_id_temp_load_load_fu_489">
+    <nodeIds>119</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln203_write_fu_237">
+    <nodeIds>146</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln207_write_fu_253">
+    <nodeIds>151</nodeIds>
+  </ioNodes>
+  <ioNodes realName="empty_94_read_fu_206">
+    <nodeIds>106</nodeIds>
+  </ioNodes>
+  <ioNodes realName="pss_id_temp_load_load_fu_493">
+    <nodeIds>121</nodeIds>
+  </ioNodes>
+  <ioNodes realName="OUT_RSLT_read_read_fu_200">
+    <nodeIds>73</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln249_store_fu_403">
+    <nodeIds>80</nodeIds>
+  </ioNodes>
+  <ioNodes realName="empty_95_read_fu_218">
+    <nodeIds>108</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln249_store_fu_398">
+    <nodeIds>79</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_writeresp_fu_230">
+    <nodeIds>129</nodeIds>
+    <nodeIds>149</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="IN_I_buff_V_0" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="IN_I_buff_V_1" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="IN_R_buff_V_0" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="IN_R_buff_V_1" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="IN_imag_V">
+    <nodeIds>115</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="IN_imag_V" portID="100">
+    <nodeIds>118</nodeIds>
+    <nodeIds>125</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="IN_real_V">
+    <nodeIds>112</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="IN_real_V" portID="100">
+    <nodeIds>118</nodeIds>
+    <nodeIds>125</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="mag_buff_V_0" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="mag_buff_V_1" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pss_rslt_temp">
+    <nodeIds>92</nodeIds>
+    <nodeIds>144</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pss_rslt_temp" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_imag_V_0" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_imag_V_1" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_imag_V_2" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_real_V_0" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_real_V_1" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_real_V_2" portID="100">
+    <nodeIds>118</nodeIds>
+  </memoryPorts>
+  <ioPorts name="IN_I_V_data_V">
+    <contents name="read">
+      <nodeIds>108</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="IN_I_V_keep_V">
+    <contents name="read">
+      <nodeIds>108</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="IN_I_V_last_V">
+    <contents name="read">
+      <nodeIds>108</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="IN_I_V_strb_V">
+    <contents name="read">
+      <nodeIds>108</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="IN_R_V_data_V">
+    <contents name="read">
+      <nodeIds>106</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="IN_R_V_keep_V">
+    <contents name="read">
+      <nodeIds>106</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="IN_R_V_last_V">
+    <contents name="read">
+      <nodeIds>106</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="IN_R_V_strb_V">
+    <contents name="read">
+      <nodeIds>106</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="OUT_FFT_V_data_V">
+    <contents name="call">
+      <nodeIds>125</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="OUT_FFT_V_keep_V">
+    <contents name="call">
+      <nodeIds>125</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="OUT_FFT_V_last_V">
+    <contents name="call">
+      <nodeIds>125</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="OUT_FFT_V_strb_V">
+    <contents name="call">
+      <nodeIds>125</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="OUT_PEAK_INDEX">
+    <contents name="write">
+      <nodeIds>151</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="OUT_PSS_ID">
+    <contents name="write">
+      <nodeIds>150</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="OUT_RSLT">
+    <contents name="read">
+      <nodeIds>73</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem"/>
+  <ioPorts name="pss_id_V_data_V">
+    <contents name="call">
+      <nodeIds>125</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="pss_id_V_keep_V">
+    <contents name="call">
+      <nodeIds>125</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="pss_id_V_last_V">
+    <contents name="call">
+      <nodeIds>125</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="pss_id_V_strb_V">
+    <contents name="call">
+      <nodeIds>125</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="95" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="118" stage="2" latency="2"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="118" stage="1" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="125" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="125" stage="1" latency="2"/>
+      <operations id="130" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="133" stage="1" latency="1"/>
+      <operations id="134" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="1"/>
+      <operations id="138" stage="1" latency="1"/>
+      <operations id="139" stage="1" latency="1"/>
+      <operations id="140" stage="1" latency="1"/>
+      <operations id="141" stage="1" latency="1"/>
+      <operations id="144" stage="2" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="144" stage="1" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="142" stage="1" latency="1"/>
+      <operations id="143" stage="1" latency="1"/>
+      <operations id="145" stage="1" latency="1"/>
+      <operations id="146" stage="1" latency="1"/>
+      <operations id="147" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="149" stage="5" latency="5"/>
+      <operations id="150" stage="1" latency="1"/>
+      <operations id="151" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="149" stage="4" latency="5"/>
+    </states>
+    <states id="14">
+      <operations id="149" stage="3" latency="5"/>
+    </states>
+    <states id="15">
+      <operations id="149" stage="2" latency="5"/>
+    </states>
+    <states id="16">
+      <operations id="149" stage="1" latency="5"/>
+      <operations id="152" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="lteCellSearch" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>82</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop_1" mII="1" mDepth="1" mMinTripCount="288000" mMaxTripCount="288000" mMinLatency="288000" mMaxLatency="288000" mType="1">
+      <basicBlocks>89</basicBlocks>
+      <basicBlocks>94</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>96</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="copy_input" mII="1" mDepth="1" mMinTripCount="96000" mMaxTripCount="96000" mMinLatency="96000" mMaxLatency="96000" mType="1">
+      <basicBlocks>102</basicBlocks>
+      <basicBlocks>117</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-2" mMaxLatency="-2">
+      <basicBlocks>131</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="copy_output" mII="1" mDepth="3" mMinTripCount="96000" mMaxTripCount="96000" mMinLatency="96001" mMaxLatency="96001" mType="1">
+      <basicBlocks>137</basicBlocks>
+      <basicBlocks>148</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4" mMaxLatency="4">
+      <basicBlocks>153</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

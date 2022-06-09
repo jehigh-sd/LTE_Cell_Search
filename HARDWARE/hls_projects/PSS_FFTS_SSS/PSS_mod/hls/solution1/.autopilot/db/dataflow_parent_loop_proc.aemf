@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1654208789484">
+  <ports id="1" name="IN_real_V" type="PortType" coreName="RAM" coreId="2020176500" bitwidth="23" iftype="IfTypeRegister" arraysize="96000">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="IN_imag_V" type="PortType" coreName="RAM" coreId="49" bitwidth="23" iftype="IfTypeRegister" arraysize="96000">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="pss_id_temp" type="PortType" coreId="49" bitwidth="2" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="4" name="peak_id_temp" type="PortType" coreId="193" bitwidth="17" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="5" name="pss_rslt_temp" type="PortType" coreName="RAM" coreId="305" bitwidth="12" direction="DirOut" iftype="IfTypeRegister" arraysize="288000">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="43" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="44" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="45" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="48" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="49" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="55" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="56" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="57" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="60" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="61" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="62" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="64" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@ports.3"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@ports.4"/>
+  <edges id="66" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="67" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="68" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="69" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="70" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="71" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="72" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="73" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="74" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="75" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="76" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="77" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="78" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="79" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="80" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="102" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="103" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="104" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="105" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <blocks id="29" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln0" coreId="1734964069" opcode="br" m_display="0" m_delay="0.42" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <controlInputObjs>_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="42" name=".exitStub" type="BlockType">
+    <controlInputObjs>_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="_ln0" coreId="49" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" id="104" RegionName="lteCellSearch">
+    <basic_blocks id="36" name="_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.exitStub</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="sample_V" lineNumber="264" originalName="sample.V" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="0" contextFuncName="lteCellSearch" bitwidth="17" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>newFuncRoot</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="add_ln691" lineNumber="691" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="17" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.86" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="icmp_ln878_1" lineNumber="878" fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." opType="icmp" coreId="49" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.09" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="br_ln256" lineNumber="256" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="1600417385" contextFuncName="lteCellSearch" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="256" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="lte_cell_search.cpp">
+        <validLinenumbers>264</validLinenumbers>
+        <validLinenumbers>256</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>691</validLinenumbers>
+        <validLinenumbers>878</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="40" name=".split" type="BlockType">
+      <controlInputObjs>_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="_ln264" lineNumber="264" fileName="lte_cell_search.cpp" fileDirectory=".." rtlName="dataflow_in_loop_lteCellSearch_U0" coreId="49" contextFuncName="lteCellSearch" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="264" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+        <dataInputObjs>IN_real_V</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>IN_imag_V</dataInputObjs>
+        <dataOutputObjs>pss_id_temp</dataOutputObjs>
+        <dataOutputObjs>peak_id_temp</dataOutputObjs>
+        <dataOutputObjs>pss_rslt_temp</dataOutputObjs>
+        <constName>dataflow_in_loop_lteCellSearch</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="br_ln256" lineNumber="256" fileName="lte_cell_search.cpp" fileDirectory=".." coreId="49" contextFuncName="lteCellSearch" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="lte_cell_search.cpp" linenumber="256" fileDirectory="/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod" functionName="lteCellSearch"/>
+        <controlInputObjs>_Z10copy_inputRN3hls6streamINS_4axisI9ap_ufixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EELm0ELm0ELm0EEELi0EEES8_P8ap_fixedILi32ELi12ELS3_5ELS4_3ELi0EESB_.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="lte_cell_search.cpp">
+        <validLinenumbers>264</validLinenumbers>
+        <validLinenumbers>256</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <regnodes realName="sample_V_reg_62">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln691_reg_130">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln878_1_reg_135">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <expressionNodes realName="sample_V_phi_fu_66">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln691_fu_118">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln878_1_fu_124">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_dataflow_in_loop_lteCellSearch_fu_74">
+    <nodeIds>38</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="IN_I_buff_V_0" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="IN_I_buff_V_1" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="IN_R_buff_V_0" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="IN_R_buff_V_1" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="mag_buff_V_0" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="mag_buff_V_1" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_imag_V_0" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_imag_V_1" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_imag_V_2" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_real_V_0" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_real_V_1" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="td_pss_real_V_2" portID="100">
+    <nodeIds>38</nodeIds>
+  </memoryPorts>
+  <ioPorts name="peak_id_temp">
+    <contents name="call">
+      <nodeIds>38</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="pss_id_temp">
+    <contents name="call">
+      <nodeIds>38</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="28" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="38" stage="2" latency="2"/>
+      <operations id="41" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="2"/>
+      <operations id="39" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="dataflow_parent_loop_proc" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="25824004" mMaxLatency="38208004">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>29</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="lteCellSearch" mII="-1" mDepth="-1" mMinTripCount="96000" mMaxTripCount="96000" mMinLatency="25824003" mMaxLatency="38208003" mIsDfPipe="true" mType="1">
+      <basicBlocks>36</basicBlocks>
+      <basicBlocks>40</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.2/@mDfPipe/@processe_list.0/@pins.0/@inst">
+        <processe_list name="dataflow_in_loop_lteCellSearch_U0" ssdmobj_id="38">
+          <pins>
+            <port name="IN_real_V" type="MEMType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_64" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="dataflow_in_loop_lteCellSearch_U0" ssdmobj_id="38" object_id="_72"/>
+          </pins>
+          <pins>
+            <port name="trunc_ln264" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="dataflow_in_loop_lteCellSearch_U0" ssdmobj_id="38" object_id="_72"/>
+          </pins>
+          <pins>
+            <port name="IN_imag_V" type="MEMType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_65" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="dataflow_in_loop_lteCellSearch_U0" ssdmobj_id="38" object_id="_72"/>
+          </pins>
+          <pins>
+            <port name="pss_id_temp" dir="DirOut" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_66" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="dataflow_in_loop_lteCellSearch_U0" ssdmobj_id="38" object_id="_72"/>
+          </pins>
+          <pins>
+            <port name="peak_id_temp" dir="DirOut" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_67" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="dataflow_in_loop_lteCellSearch_U0" ssdmobj_id="38" object_id="_72"/>
+          </pins>
+          <pins>
+            <port name="pss_rslt_temp" dir="DirOut" type="MEMType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_68" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="dataflow_in_loop_lteCellSearch_U0" ssdmobj_id="38" object_id="_72"/>
+          </pins>
+        </processe_list>
+      </mDfPipe>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>42</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

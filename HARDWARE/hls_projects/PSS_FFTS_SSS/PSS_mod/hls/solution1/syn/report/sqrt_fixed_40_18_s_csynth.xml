@@ -1,0 +1,103 @@
+<profile>
+
+<ReportVersion>
+<Version>2020.2</Version>
+</ReportVersion>
+
+<UserAssignments>
+<unit>ns</unit>
+<ProductFamily>zynquplus</ProductFamily>
+<Part>xczu28dr-ffvg1517-2-e</Part>
+<TopModelName>sqrt_fixed_40_18_s</TopModelName>
+<TargetClockPeriod>16.30</TargetClockPeriod>
+<ClockUncertainty>4.40</ClockUncertainty>
+<TargetInitiationInterval>4294967295</TargetInitiationInterval>
+<FlowTarget>vivado</FlowTarget>
+</UserAssignments>
+
+<PerformanceEstimates>
+<PipelineType>yes</PipelineType>
+<SummaryOfTimingAnalysis>
+<unit>ns</unit>
+<EstimatedClockPeriod>11.892</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<unit>clock cycles</unit>
+<Best-caseLatency>4</Best-caseLatency>
+<Average-caseLatency>4</Average-caseLatency>
+<Worst-caseLatency>4</Worst-caseLatency>
+<Best-caseRealTimeLatency>65.200 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>65.200 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>65.200 ns</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>1</PipelineInitiationInterval>
+<PipelineDepth>5</PipelineDepth>
+<Interval-min>1</Interval-min>
+<Interval-max>1</Interval-max>
+</SummaryOfOverallLatency>
+</PerformanceEstimates>
+
+<AreaEstimates>
+<Resources>
+<FF>720</FF>
+<LUT>6456</LUT>
+<BRAM_18K>0</BRAM_18K>
+<DSP>0</DSP>
+<URAM>0</URAM>
+</Resources>
+<AvailableResources>
+<BRAM_18K>2160</BRAM_18K>
+<DSP>4272</DSP>
+<FF>850560</FF>
+<LUT>425280</LUT>
+<URAM>80</URAM>
+</AvailableResources>
+</AreaEstimates>
+
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>sqrt_fixed&lt;40, 18&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>sqrt_fixed&lt;40, 18&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return</name>
+<Object>sqrt_fixed&lt;40, 18&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>31</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>x</name>
+<Object>x</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>40</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+
+</profile>

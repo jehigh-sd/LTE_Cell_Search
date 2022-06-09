@@ -1,0 +1,1085 @@
+INFO-FLOW: Workspace /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1 opened at Thu Jun 02 15:53:56 PDT 2022
+Execute     ap_set_clock -name default -period 16 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 16ns.
+Execute     import_lib /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.16 sec.
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.27 sec.
+Execute     set_part xczu28dr-ffvg1517-2-e 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=/tools/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=/tools/Xilinx/Vivado/2020.2/data:/tools/Xilinx/Vitis_HLS/2020.2/data
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data single -quiet 
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2020.2/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2020.2/data/parts/arch.xml
+Command       ap_part_info done; 2.42 sec.
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu28dr:-ffvg1517:-2-e 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         ap_part_info -data single -name xczu28dr-ffvg1517-2-e 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data resources 
+Execute         config_chip_info -resource {SLICE 53160} {LUT 425280} {FF 850560} {DSP 4272} {BRAM 2160} {URAM 80} 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute         config_chip_info -speed medium 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute         config_library_info -library zynquplus_medium 
+Execute         config_library_info -family zynquplus 
+Execute         config_library_info -part xczu28dr:-ffvg1517:-2-e 
+Execute         import_lib /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/zynquplus_dsp48e2.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command         ap_source done; 0.13 sec.
+Command       add_library done; 0.23 sec.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.7 sec.
+Execute     ap_part_info -data single -name xczu28dr-ffvg1517-2-e 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data resources 
+Execute     config_chip_info -resource {SLICE 53160} {LUT 425280} {FF 850560} {DSP 4272} {BRAM 2160} {URAM 80} 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute     config_chip_info -speed medium 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -m_axi_offset 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 3.05 sec.
+Execute   set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=/tools/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=/tools/Xilinx/Vivado/2020.2/data:/tools/Xilinx/Vitis_HLS/2020.2/data
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data single -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu28dr:-ffvg1517:-2-e 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       ap_part_info -data single -name xczu28dr-ffvg1517-2-e 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data resources 
+Execute       config_chip_info -resource {SLICE 53160} {LUT 425280} {FF 850560} {DSP 4272} {BRAM 2160} {URAM 80} 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute       config_chip_info -speed medium 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute       config_library_info -library zynquplus_medium 
+Execute       config_library_info -family zynquplus 
+Execute       config_library_info -part xczu28dr:-ffvg1517:-2-e 
+Execute       import_lib /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/zynquplus_dsp48e2.hlp 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.14 sec.
+Command     add_library done; 0.21 sec.
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.28 sec.
+Execute   create_clock -period 16 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 16 -name default 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 191.551 MB.
+INFO: [HLS 200-10] Analyzing design file 'fft_shift.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling fft_shift.cpp as C++
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/clang fft_shift.cpp -foptimization-record-file=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang.fft_shift.cpp.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2020.2/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -I /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/39 -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang.fft_shift.cpp.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang.fft_shift.cpp.err.log 
+Command       ap_eval done; 0.22 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Execute       set_directive_top fft_shift -name=fft_shift 
+INFO-FLOW: Setting directive 'TOP' name=fft_shift 
+INFO-FLOW: Setting directive 'TOP' name=fft_shift 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=fft_shift 
+Execute       list_core -type functional_unit 
+Execute       clang_tidy xilinx-systemc-detector /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/.systemc_flag -fix-errors /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 1.84 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/all.directive.json -fix-errors /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 1.6 sec.
+Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.97 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 2.6 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute       clang_tidy -errorcheck xilinx-label-all-loops,xilinx-top-parameters,xilinx-array-stream-check,xilinx-warn-mayneed-no-ctor-attribute /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang-tidy.fft_shift.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-top-parameters,xilinx-array-stream-check,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang-tidy.fft_shift.pp.0.cpp.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang-tidy.fft_shift.pp.0.cpp.err.log 
+Command         ap_eval done; 1.78 sec.
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command       clang_tidy done; 1.93 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.fft_shift.pp.0.cpp.diag.yml /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.fft_shift.pp.0.cpp.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.fft_shift.pp.0.cpp.err.log 
+Command       ap_eval done; 0.79 sec.
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang.fft_shift.pp.0.cpp.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.bc > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang.fft_shift.pp.0.cpp.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang.fft_shift.pp.0.cpp.err.log 
+Command       ap_eval done; 0.89 sec.
+WARNING: [HLS 207-5301] unused parameter 'data_type': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:146:77
+WARNING: [HLS 207-5301] unused parameter 'has_nfft': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:171:65
+WARNING: [HLS 207-5301] unused parameter 'cp_len_enable': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:184:66
+WARNING: [HLS 207-5301] unused parameter 'scaling_opt': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:197:68
+WARNING: [HLS 207-5301] unused parameter 'scaling_opt': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:361:71
+WARNING: [HLS 207-5301] unused parameter 'has_ovflo': /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:374:66
+WARNING: [HLS 207-5498] the 'complete/partial/region' option to 'Unroll' pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft.h:498:28
+WARNING: [HLS 207-5498] the 'complete/partial/region' option to 'Unroll' pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:143:28
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:566:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:568:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:569:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:715:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:722:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:723:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:719:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:720:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:718:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:717:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:787:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:885:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:892:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:893:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:889:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:890:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:888:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:887:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:920:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:927:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:928:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:924:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:925:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:923:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:922:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:958:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:964:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:965:9
+WARNING: [HLS 207-5496] the pragma is not supported and will be ignored: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:966:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:962:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:963:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:961:9
+WARNING: [HLS 207-5524] Ignore interface attribute or pragma which is not used in top function: /tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_fft_x_complex.h:960:9
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 8 seconds. CPU system time: 0.57 seconds. Elapsed time: 8.6 seconds; current allocated memory: 193.377 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.g.bc"  
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.g.bc -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.0.bc > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2020.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2020.2/lnx64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2020.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2020.2/lnx64/lib/libhlsmc++_39.bc -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command         ap_eval done; 3.53 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 3.53 sec.
+Execute       run_link_or_opt -opt -out /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fft_shift -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fft_shift -reflow-float-conversion -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command         ap_eval done; 1.21 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.21 sec.
+Execute       run_link_or_opt -out /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2020.2/lnx64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2020.2/lnx64/lib/libfloatconversion_39.bc -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+Command         ap_eval done; 0.13 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.13 sec.
+Execute       run_link_or_opt -opt -out /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=fft_shift 
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=fft_shift -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pipeline_style 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=fft_shift -mllvm -hls-db-dir -mllvm /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=off -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=0 -mllvm -disable-inlined-alloca-merging=true -x ir /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.lto.bc > /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Command       ap_eval done; 0.5 sec.
+INFO: [HLS 214-131] Inlining function 'hls::axis<std::complex<float>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:293:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<std::complex<float>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:296:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<std::complex<float>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<std::complex<float>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<std::complex<float>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<std::complex<float>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>::read()' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:23)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>::read()' into 'copy_input(hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>&, float*, float*)' (fft_shift.cpp:9:9)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::write(hls::axis<float, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::write(hls::axis<float, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::write(hls::axis<float, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::write(hls::axis<float, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::write(hls::axis<float, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::write(hls::axis<float, 0ul, 0ul, 0ul> const&)' (/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::write(hls::axis<float, 0ul, 0ul, 0ul> const&)' into 'copy_output(float*, float*, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&)' (fft_shift.cpp:52:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::write(hls::axis<float, 0ul, 0ul, 0ul> const&)' into 'copy_output(float*, float*, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&)' (fft_shift.cpp:51:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::write(hls::axis<float, 0ul, 0ul, 0ul> const&)' into 'copy_output(float*, float*, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&)' (fft_shift.cpp:44:11)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>::write(hls::axis<float, 0ul, 0ul, 0ul> const&)' into 'copy_output(float*, float*, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&)' (fft_shift.cpp:43:11)
+INFO: [HLS 214-178] Inlining function 'copy_input(hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>&, float*, float*)' into 'fft_shift(hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&)' (fft_shift.cpp:56:0)
+INFO: [HLS 214-178] Inlining function 'fft_sh(float*, float*, float*, float*)' into 'fft_shift(hls::stream<hls::axis<std::complex<float>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul>, 0>&)' (fft_shift.cpp:56:0)
+INFO-FLOW: DBG:CMD: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.74 seconds. CPU system time: 0.38 seconds. Elapsed time: 6.34 seconds; current allocated memory: 194.941 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 194.943 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top fft_shift -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.0.bc -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.12 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 204.160 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.1.bc -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.14 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 217.479 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.g.1.bc to /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.o.1.bc -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_39_1' (fft_shift.cpp:39) in function 'copy_output' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_7_1' in function 'fft_shift' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_16_1' (fft_shift.cpp:16) in function 'fft_shift' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_22_2' (fft_shift.cpp:22) in function 'fft_shift' automatically.
+Command         transform done; 0.3 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.18 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 252.665 MB.
+Execute         get_config_compile -enable_loop_extract 
+Execute         get_config_compile -disable_auto_rewind 
+Execute         get_config_compile -enable_auto_rewind 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin2 -bitwidthmin2 -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.o.2.bc -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [HLS 200-472] Inferring partial write operation for 'in_temp_r' (fft_shift.cpp:10:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'in_temp_i' (fft_shift.cpp:11:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_temp_r' (fft_shift.cpp:18:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_temp_i' (fft_shift.cpp:19:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_temp_r' (fft_shift.cpp:24:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_temp_i' (fft_shift.cpp:25:21)
+Command         transform done; 0.26 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.27 seconds; current allocated memory: 261.724 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 1.12 sec.
+Command     elaborate done; 16.1 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'fft_shift' ...
+Execute       ap_set_top_model fft_shift 
+Execute       get_model_list fft_shift -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model fft_shift 
+Execute       preproc_iomode -model copy_output 
+Execute       get_model_list fft_shift -filter all-wo-channel 
+INFO-FLOW: Model list for configure: copy_output fft_shift
+INFO-FLOW: Configuring Module : copy_output ...
+Execute       set_default_model copy_output 
+Execute       apply_spec_resource_limit copy_output 
+INFO-FLOW: Configuring Module : fft_shift ...
+Execute       set_default_model fft_shift 
+Execute       apply_spec_resource_limit fft_shift 
+INFO-FLOW: Model list for preprocess: copy_output fft_shift
+INFO-FLOW: Preprocessing Module: copy_output ...
+Execute       set_default_model copy_output 
+Execute       cdfg_preprocess -model copy_output 
+Execute       rtl_gen_preprocess copy_output 
+INFO-FLOW: Preprocessing Module: fft_shift ...
+Execute       set_default_model fft_shift 
+Execute       cdfg_preprocess -model fft_shift 
+Execute       rtl_gen_preprocess fft_shift 
+INFO-FLOW: Model list for synthesis: copy_output fft_shift
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'copy_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model copy_output 
+Execute       schedule -model copy_output 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_39_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_39_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.1 seconds; current allocated memory: 261.910 MB.
+Execute       syn_report -verbosereport -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.sched.adb -f 
+INFO-FLOW: Finish scheduling copy_output.
+Execute       set_default_model copy_output 
+Execute       bind -model copy_output 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 262.086 MB.
+Execute       syn_report -verbosereport -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.bind.adb -f 
+INFO-FLOW: Finish binding copy_output.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_shift' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_shift 
+Execute       schedule -model fft_shift 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_7_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_7_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_16_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_16_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_22_2'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.15 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 262.363 MB.
+Execute       syn_report -verbosereport -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_shift.
+Execute       set_default_model fft_shift 
+Execute       bind -model fft_shift 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 262.679 MB.
+Execute       syn_report -verbosereport -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.bind.adb -f 
+INFO-FLOW: Finish binding fft_shift.
+Execute       get_model_list fft_shift -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess copy_output 
+Execute       rtl_gen_preprocess fft_shift 
+INFO-FLOW: Model list for RTL generation: copy_output fft_shift
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'copy_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model copy_output -top_prefix fft_shift_ -sub_prefix fft_shift_ -mg_file /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'copy_output'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 262.986 MB.
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute       gen_rtl copy_output -style xilinx -f -lang vhdl -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/syn/vhdl/fft_shift_copy_output 
+Execute       gen_rtl copy_output -style xilinx -f -lang vlog -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/syn/verilog/fft_shift_copy_output 
+Execute       syn_report -csynth -model copy_output -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/syn/report/copy_output_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model copy_output -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/syn/report/copy_output_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model copy_output -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model copy_output -f -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.adb 
+Execute       gen_tb_info copy_output -p /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_shift' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model fft_shift -top_prefix  -sub_prefix fft_shift_ -mg_file /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/IN_R_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/IN_R_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/IN_R_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/IN_R_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/OUT_R_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/OUT_R_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/OUT_R_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/OUT_R_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/OUT_I_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/OUT_I_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/OUT_I_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_shift/OUT_I_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft_shift' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_shift'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.27 seconds; current allocated memory: 264.447 MB.
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_shift -istop -style xilinx -f -lang vhdl -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/syn/vhdl/fft_shift 
+Execute       gen_rtl fft_shift -istop -style xilinx -f -lang vlog -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/syn/verilog/fft_shift 
+Execute       syn_report -csynth -model fft_shift -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/syn/report/fft_shift_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model fft_shift -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/syn/report/fft_shift_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model fft_shift -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model fft_shift -f -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.adb 
+Execute       gen_tb_info fft_shift -p /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift 
+Execute       export_constraint_db -f -tool general -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.constraint.tcl 
+Execute       syn_report -designview -model fft_shift -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.design.xml 
+Execute       syn_report -csynthDesign -model fft_shift -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/syn/report/csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model fft_shift -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model fft_shift -o /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks fft_shift 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain fft_shift 
+INFO-FLOW: Model list for RTL component generation: copy_output fft_shift
+INFO-FLOW: Handling components in module [copy_output] ... 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.compgen.tcl 
+INFO-FLOW: Handling components in module [fft_shift] ... 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.tcl 
+INFO-FLOW: Found component fft_shift_in_temp_r.
+INFO-FLOW: Append model fft_shift_in_temp_r
+INFO-FLOW: Found component fft_shift_control_s_axi.
+INFO-FLOW: Append model fft_shift_control_s_axi
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Found component fft_shift_regslice_both.
+INFO-FLOW: Append model fft_shift_regslice_both
+INFO-FLOW: Append model copy_output
+INFO-FLOW: Append model fft_shift
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: fft_shift_in_temp_r fft_shift_control_s_axi fft_shift_regslice_both fft_shift_regslice_both fft_shift_regslice_both fft_shift_regslice_both fft_shift_regslice_both fft_shift_regslice_both fft_shift_regslice_both fft_shift_regslice_both fft_shift_regslice_both fft_shift_regslice_both fft_shift_regslice_both fft_shift_regslice_both copy_output fft_shift
+INFO-FLOW: To file: write model fft_shift_in_temp_r
+INFO-FLOW: To file: write model fft_shift_control_s_axi
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model fft_shift_regslice_both
+INFO-FLOW: To file: write model copy_output
+INFO-FLOW: To file: write model fft_shift
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): fft_shift
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/common.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=16.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.compgen.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'fft_shift_in_temp_r_ram (RAM)' using auto RAMs.
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute         source ./control.slave.tcl 
+Command       ap_source done; 0.12 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/common.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.14 sec.
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=fft_shift xml_exists=0
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.compgen.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.compgen.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.tcl 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Command       ap_source done; 0.16 sec.
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.compgen.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.tcl 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.constraint.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=24
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=12
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=16 #gSsdmPorts=24
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.dataonly.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.dataonly.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.tbgen.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.constraint.tcl 
+Execute       sc_get_clocks fft_shift 
+Execute       source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.38 seconds. CPU system time: 0.08 seconds. Elapsed time: 1.79 seconds; current allocated memory: 272.715 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fft_shift.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft_shift.
+INFO-FLOW: DBG:CMD:       update_csynth_xml_report append design.xml content design_xml=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.design.xml
+INFO-FLOW: DBG:CMD:       update_csynth_xml_report json2reportxml
+INFO-FLOW: DBG:CMD:       update_csynth_xml_report done
+Execute       syn_report -model fft_shift -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 404.20 MHz
+Command     autosyn done; 3.1 sec.
+Command   csynth_design done; 19.21 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 17.1 seconds. CPU system time: 1.14 seconds. Elapsed time: 19.21 seconds; current allocated memory: 273.101 MB.
+Command ap_source done; 22.69 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1 opened at Thu Jun 02 16:07:51 PDT 2022
+Execute     ap_set_clock -name default -period 16 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 16ns.
+Execute     import_lib /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.12 sec.
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.21 sec.
+Execute     set_part xczu28dr-ffvg1517-2-e 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=/tools/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=/tools/Xilinx/Vivado/2020.2/data:/tools/Xilinx/Vitis_HLS/2020.2/data
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data single -quiet 
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2020.2/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2020.2/data/parts/arch.xml
+Command       ap_part_info done; 2.58 sec.
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu28dr:-ffvg1517:-2-e 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         ap_part_info -data single -name xczu28dr-ffvg1517-2-e 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data resources 
+Execute         config_chip_info -resource {SLICE 53160} {LUT 425280} {FF 850560} {DSP 4272} {BRAM 2160} {URAM 80} 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute         config_chip_info -speed medium 
+Execute         ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute         config_library_info -library zynquplus_medium 
+Execute         config_library_info -family zynquplus 
+Execute         config_library_info -part xczu28dr:-ffvg1517:-2-e 
+Execute         import_lib /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/zynquplus_dsp48e2.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command         ap_source done; 0.14 sec.
+Command       add_library done; 0.24 sec.
+INFO: [HLS 200-10] Setting target device to 'xczu28dr-ffvg1517-2-e'
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.88 sec.
+Execute     ap_part_info -data single -name xczu28dr-ffvg1517-2-e 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data resources 
+Execute     config_chip_info -resource {SLICE 53160} {LUT 425280} {FF 850560} {DSP 4272} {BRAM 2160} {URAM 80} 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute     config_chip_info -speed medium 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -m_axi_offset 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 3.15 sec.
+Execute   set_part xczu28dr-ffvg1517-2-e 
+INFO: [HLS 200-1510] Running: set_part xczu28dr-ffvg1517-2-e 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=/tools/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=/tools/Xilinx/Vivado/2020.2/data:/tools/Xilinx/Vitis_HLS/2020.2/data
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data single -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu28dr:-ffvg1517:-2-e 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       ap_part_info -data single -name xczu28dr-ffvg1517-2-e 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data resources 
+Execute       config_chip_info -resource {SLICE 53160} {LUT 425280} {FF 850560} {DSP 4272} {BRAM 2160} {URAM 80} 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute       config_chip_info -speed medium 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute       config_library_info -library zynquplus_medium 
+Execute       config_library_info -family zynquplus 
+Execute       config_library_info -part xczu28dr:-ffvg1517:-2-e 
+Execute       import_lib /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/zynquplus_dsp48e2.hlp 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.14 sec.
+Command     add_library done; 0.24 sec.
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.3 sec.
+Execute   create_clock -period 16 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 16 -name default 
+Execute   export_design -rtl verilog -format ip_catalog -output /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift.zip 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift.zip 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -library 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -output=/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift.zip -rtl=verilog 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_export -ipname 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): fft_shift
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -rtl verilog
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/common.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.14 sec.
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=16.000 (was NA)
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=fft_shift xml_exists=1
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.compgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.tcl 
+Execute     get_config_export -disable_deadlock_detection 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     get_config_rtl -module_prefix 
+INFO-FLOW: DBG:CMD:       cosim_export_main adding deadlock detection to fft_shift
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.compgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.tcl 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute       ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Command     ap_source done; 0.2 sec.
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/copy_output.compgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.tcl 
+Execute     get_config_export -disable_deadlock_detection 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     get_config_rtl -module_prefix 
+INFO-FLOW: DBG:CMD:       cosim_export_main adding deadlock detection to fft_shift
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.constraint.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=24
+INFO-FLOW: DBG:CMD:       copying IP vlog from /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/impl/verilog
+INFO-FLOW: DBG:CMD:       copying IP vhdl from /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/impl/vhdl
+INFO-FLOW: DBG:CMD:       copy ip_driver_dir 1_0 /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/driver
+Execute     get_config_export -format 
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=24 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.dataonly.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.compgen.dataonly.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=fft_shift
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=fft_shift
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.rtl_wrap.cfg.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.constraint.tcl 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/fft_shift.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/common.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.19 sec.
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data names -quiet 
+Execute     ap_part_info -name xczu28dr-ffvg1517-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:     exec /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift/hls/solution1/impl/ip/pack.sh
+Execute     get_config_export -output 
+Execute     send_msg_by_id INFO @200-802@%s /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift.zip 
+INFO: [HLS 200-802] Generated output file /home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/fft_shift.zip
+Command   export_design done; 26.5 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 22.65 seconds. CPU system time: 3.9 seconds. Elapsed time: 26.5 seconds; current allocated memory: 201.015 MB.
+Command ap_source done; 30.03 sec.
+Execute cleanup_all 

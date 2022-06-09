@@ -1,0 +1,188 @@
+
+
+================================================================
+== Vitis HLS Report for 'copy_output'
+================================================================
+* Date:           Thu Jun  2 15:54:15 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  16.00 ns|  1.237 ns|     4.32 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      131|      131|  2.096 us|  2.096 us|  131|  131|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_39_1  |      127|      127|         2|          1|          1|   127|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 4 3 
+3 --> 2 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %OUT_I_V_last_V, i4 %OUT_I_V_strb_V, i4 %OUT_I_V_keep_V, i32 %OUT_I_V_data_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %OUT_R_V_last_V, i4 %OUT_R_V_strb_V, i4 %OUT_R_V_keep_V, i32 %OUT_R_V_data_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.42ns)   --->   "%br_ln39 = br void" [fft_shift.cpp:39]   --->   Operation 9 'br' 'br_ln39' <Predicate = true> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.23>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%i = phi i7 %add_ln39, void %.split, i7 0, void" [fft_shift.cpp:39]   --->   Operation 10 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.77ns)   --->   "%add_ln39 = add i7 %i, i7 1" [fft_shift.cpp:39]   --->   Operation 11 'add' 'add_ln39' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 12 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.81ns)   --->   "%icmp_ln39 = icmp_eq  i7 %i, i7 127" [fft_shift.cpp:39]   --->   Operation 13 'icmp' 'icmp_ln39' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 127, i64 127, i64 127"   --->   Operation 14 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln39 = br i1 %icmp_ln39, void %.split, void" [fft_shift.cpp:39]   --->   Operation 15 'br' 'br_ln39' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%i_cast = zext i7 %i" [fft_shift.cpp:39]   --->   Operation 16 'zext' 'i_cast' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%OUT_temp_R_addr_1 = getelementptr i32 %OUT_temp_R, i64 0, i64 %i_cast" [fft_shift.cpp:41]   --->   Operation 17 'getelementptr' 'OUT_temp_R_addr_1' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (1.23ns)   --->   "%t_r_data_1 = load i7 %OUT_temp_R_addr_1" [fft_shift.cpp:41]   --->   Operation 18 'load' 't_r_data_1' <Predicate = (!icmp_ln39)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%OUT_temp_I_addr_1 = getelementptr i32 %OUT_temp_I, i64 0, i64 %i_cast" [fft_shift.cpp:42]   --->   Operation 19 'getelementptr' 'OUT_temp_I_addr_1' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_2 : Operation 20 [2/2] (1.23ns)   --->   "%t_i_data_1 = load i7 %OUT_temp_I_addr_1" [fft_shift.cpp:42]   --->   Operation 20 'load' 't_i_data_1' <Predicate = (!icmp_ln39)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+
+State 3 <SV = 2> <Delay = 1.23>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln39 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [fft_shift.cpp:39]   --->   Operation 21 'specloopname' 'specloopname_ln39' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_3 : Operation 22 [1/2] (1.23ns)   --->   "%t_r_data_1 = load i7 %OUT_temp_R_addr_1" [fft_shift.cpp:41]   --->   Operation 22 'load' 't_r_data_1' <Predicate = (!icmp_ln39)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_3 : Operation 23 [1/2] (1.23ns)   --->   "%t_i_data_1 = load i7 %OUT_temp_I_addr_1" [fft_shift.cpp:42]   --->   Operation 23 'load' 't_i_data_1' <Predicate = (!icmp_ln39)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%bitcast_ln303_2 = bitcast i32 %t_r_data_1"   --->   Operation 24 'bitcast' 'bitcast_ln303_2' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %OUT_R_V_data_V, i4 %OUT_R_V_keep_V, i4 %OUT_R_V_strb_V, i1 %OUT_R_V_last_V, i32 %bitcast_ln303_2, i4 15, i4 1, i1 0"   --->   Operation 25 'write' 'write_ln304' <Predicate = (!icmp_ln39)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%bitcast_ln303_3 = bitcast i32 %t_i_data_1"   --->   Operation 26 'bitcast' 'bitcast_ln303_3' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %OUT_I_V_data_V, i4 %OUT_I_V_keep_V, i4 %OUT_I_V_strb_V, i1 %OUT_I_V_last_V, i32 %bitcast_ln303_3, i4 15, i4 1, i1 0"   --->   Operation 27 'write' 'write_ln304' <Predicate = (!icmp_ln39)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 28 'br' 'br_ln0' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 1.23>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%OUT_temp_R_addr = getelementptr i32 %OUT_temp_R, i64 0, i64 127" [fft_shift.cpp:49]   --->   Operation 29 'getelementptr' 'OUT_temp_R_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [2/2] (1.23ns)   --->   "%t_r_data = load i7 %OUT_temp_R_addr" [fft_shift.cpp:49]   --->   Operation 30 'load' 't_r_data' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%OUT_temp_I_addr = getelementptr i32 %OUT_temp_I, i64 0, i64 127" [fft_shift.cpp:50]   --->   Operation 31 'getelementptr' 'OUT_temp_I_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [2/2] (1.23ns)   --->   "%t_i_data = load i7 %OUT_temp_I_addr" [fft_shift.cpp:50]   --->   Operation 32 'load' 't_i_data' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+
+State 5 <SV = 3> <Delay = 1.23>
+ST_5 : Operation 33 [1/2] (1.23ns)   --->   "%t_r_data = load i7 %OUT_temp_R_addr" [fft_shift.cpp:49]   --->   Operation 33 'load' 't_r_data' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_5 : Operation 34 [1/2] (1.23ns)   --->   "%t_i_data = load i7 %OUT_temp_I_addr" [fft_shift.cpp:50]   --->   Operation 34 'load' 't_i_data' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%bitcast_ln303 = bitcast i32 %t_r_data"   --->   Operation 35 'bitcast' 'bitcast_ln303' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %OUT_R_V_data_V, i4 %OUT_R_V_keep_V, i4 %OUT_R_V_strb_V, i1 %OUT_R_V_last_V, i32 %bitcast_ln303, i4 15, i4 1, i1 1"   --->   Operation 36 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%bitcast_ln303_1 = bitcast i32 %t_i_data"   --->   Operation 37 'bitcast' 'bitcast_ln303_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %OUT_I_V_data_V, i4 %OUT_I_V_keep_V, i4 %OUT_I_V_strb_V, i1 %OUT_I_V_last_V, i32 %bitcast_ln303_1, i4 15, i4 1, i1 1"   --->   Operation 38 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 6 <SV = 4> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%ret_ln53 = ret" [fft_shift.cpp:53]   --->   Operation 39 'ret' 'ret_ln53' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 16ns, clock uncertainty: 4.32ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i', fft_shift.cpp:39) with incoming values : ('add_ln39', fft_shift.cpp:39) [15]  (0.427 ns)
+
+ <State 2>: 1.24ns
+The critical path consists of the following:
+	'phi' operation ('i', fft_shift.cpp:39) with incoming values : ('add_ln39', fft_shift.cpp:39) [15]  (0 ns)
+	'getelementptr' operation ('OUT_temp_R_addr_1', fft_shift.cpp:41) [24]  (0 ns)
+	'load' operation ('t_r.data', fft_shift.cpp:41) on array 'OUT_temp_R' [25]  (1.24 ns)
+
+ <State 3>: 1.24ns
+The critical path consists of the following:
+	'load' operation ('t_r.data', fft_shift.cpp:41) on array 'OUT_temp_R' [25]  (1.24 ns)
+
+ <State 4>: 1.24ns
+The critical path consists of the following:
+	'getelementptr' operation ('OUT_temp_R_addr', fft_shift.cpp:49) [34]  (0 ns)
+	'load' operation ('t_r.data', fft_shift.cpp:49) on array 'OUT_temp_R' [35]  (1.24 ns)
+
+ <State 5>: 1.24ns
+The critical path consists of the following:
+	'load' operation ('t_r.data', fft_shift.cpp:49) on array 'OUT_temp_R' [35]  (1.24 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

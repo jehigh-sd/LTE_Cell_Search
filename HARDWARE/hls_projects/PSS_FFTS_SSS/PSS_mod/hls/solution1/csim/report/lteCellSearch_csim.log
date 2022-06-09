@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../lte_cell_search_test.cpp in debug mode
+   Compiling ../../../../lte_cell_search.cpp in debug mode
+   Generating csim.exe
+In file included from /tools/Xilinx/Vitis_HLS/2020.2/include/hls_hotbm_apfixed.h:45:0,
+                 from /tools/Xilinx/Vitis_HLS/2020.2/include/hls_math.h:1065,
+                 from ../../../../lte_cell_search.cpp:1:
+/tools/Xilinx/Vitis_HLS/2020.2/include/utils/x_hls_utils.h:243:40: warning: ‘hls_preserve’ attribute directive ignored [-Wattributes]
+ __attribute__((hls_preserve)) T reg(T d)
+                                        ^
+obj/lte_cell_search_test.o: In function `main':
+/home/jhigh/Capstone_Project/main/HARDWARE/HLS_Pjts/PSS_FFTS_SSS/PSS_mod/hls/solution1/csim/build/../../../../lte_cell_search_test.cpp:87: undefined reference to `lteCellSearch(hls::stream<hls::axis<ap_ufixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_ufixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>, 0ul, 0ul, 0ul>, 0>&, int*, int*, int*)'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile.rules:393: csim.exe] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

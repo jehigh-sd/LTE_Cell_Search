@@ -1,0 +1,207 @@
+<stg><name>dataflow_in_loop_lteCellSearch.entry25</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="0" op_0_bw="0" op_1_bw="17" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i17 %trunc_ln264_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="17" op_0_bw="17" op_1_bw="17">
+<![CDATA[
+entry:1 %trunc_ln264_read = read i17 @_ssdm_op_Read.ap_auto.i17, i17 %trunc_ln264
+
+]]></Node>
+<StgValue><ssdm name="trunc_ln264_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="0" op_0_bw="0" op_1_bw="17" op_2_bw="17">
+<![CDATA[
+entry:2 %write_ln259 = write void @_ssdm_op_Write.ap_fifo.i17P0A, i17 %trunc_ln264_out, i17 %trunc_ln264_read
+
+]]></Node>
+<StgValue><ssdm name="write_ln259"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="0" op_1_bw="17" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+entry:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i17 %trunc_ln264_out1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="17" op_2_bw="17">
+<![CDATA[
+entry:4 %write_ln259 = write void @_ssdm_op_Write.ap_fifo.i17P0A, i17 %trunc_ln264_out1, i17 %trunc_ln264_read
+
+]]></Node>
+<StgValue><ssdm name="write_ln259"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="0">
+<![CDATA[
+entry:5 %ret_ln259 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln259"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="8" name="trunc_ln264" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="trunc_ln264"/></StgValue>
+</port>
+<port id="9" name="trunc_ln264_out" dir="1" iftype="3">
+<core>FIFO_SRL</core><StgValue><ssdm name="trunc_ln264_out"/></StgValue>
+</port>
+<port id="10" name="trunc_ln264_out1" dir="1" iftype="3">
+<core>FIFO_SRL</core><StgValue><ssdm name="trunc_ln264_out1"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="12" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="11" toId="2">
+</dataflow>
+<dataflow id="13" from="trunc_ln264_out" to="specinterface_ln0" fromId="9" toId="2">
+</dataflow>
+<dataflow id="15" from="ap_fifo_str" to="specinterface_ln0" fromId="14" toId="2">
+</dataflow>
+<dataflow id="17" from="StgValue_16" to="specinterface_ln0" fromId="16" toId="2">
+</dataflow>
+<dataflow id="18" from="StgValue_16" to="specinterface_ln0" fromId="16" toId="2">
+</dataflow>
+<dataflow id="20" from="p_str" to="specinterface_ln0" fromId="19" toId="2">
+</dataflow>
+<dataflow id="21" from="StgValue_16" to="specinterface_ln0" fromId="16" toId="2">
+</dataflow>
+<dataflow id="22" from="StgValue_16" to="specinterface_ln0" fromId="16" toId="2">
+</dataflow>
+<dataflow id="23" from="p_str" to="specinterface_ln0" fromId="19" toId="2">
+</dataflow>
+<dataflow id="24" from="p_str" to="specinterface_ln0" fromId="19" toId="2">
+</dataflow>
+<dataflow id="25" from="p_str" to="specinterface_ln0" fromId="19" toId="2">
+</dataflow>
+<dataflow id="27" from="StgValue_26" to="specinterface_ln0" fromId="26" toId="2">
+</dataflow>
+<dataflow id="28" from="StgValue_26" to="specinterface_ln0" fromId="26" toId="2">
+</dataflow>
+<dataflow id="30" from="StgValue_29" to="specinterface_ln0" fromId="29" toId="2">
+</dataflow>
+<dataflow id="31" from="StgValue_29" to="specinterface_ln0" fromId="29" toId="2">
+</dataflow>
+<dataflow id="32" from="p_str" to="specinterface_ln0" fromId="19" toId="2">
+</dataflow>
+<dataflow id="34" from="ScalarProp_str" to="specinterface_ln0" fromId="33" toId="2">
+</dataflow>
+<dataflow id="36" from="_ssdm_op_Read.ap_auto.i17" to="trunc_ln264_read" fromId="35" toId="3">
+</dataflow>
+<dataflow id="37" from="trunc_ln264" to="trunc_ln264_read" fromId="8" toId="3">
+</dataflow>
+<dataflow id="39" from="_ssdm_op_Write.ap_fifo.i17P0A" to="write_ln259" fromId="38" toId="4">
+</dataflow>
+<dataflow id="40" from="trunc_ln264_out" to="write_ln259" fromId="9" toId="4">
+</dataflow>
+<dataflow id="41" from="trunc_ln264_read" to="write_ln259" fromId="3" toId="4">
+</dataflow>
+<dataflow id="42" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="11" toId="5">
+</dataflow>
+<dataflow id="43" from="trunc_ln264_out1" to="specinterface_ln0" fromId="10" toId="5">
+</dataflow>
+<dataflow id="44" from="ap_fifo_str" to="specinterface_ln0" fromId="14" toId="5">
+</dataflow>
+<dataflow id="45" from="StgValue_16" to="specinterface_ln0" fromId="16" toId="5">
+</dataflow>
+<dataflow id="46" from="StgValue_16" to="specinterface_ln0" fromId="16" toId="5">
+</dataflow>
+<dataflow id="47" from="p_str" to="specinterface_ln0" fromId="19" toId="5">
+</dataflow>
+<dataflow id="48" from="StgValue_16" to="specinterface_ln0" fromId="16" toId="5">
+</dataflow>
+<dataflow id="49" from="StgValue_16" to="specinterface_ln0" fromId="16" toId="5">
+</dataflow>
+<dataflow id="50" from="p_str" to="specinterface_ln0" fromId="19" toId="5">
+</dataflow>
+<dataflow id="51" from="p_str" to="specinterface_ln0" fromId="19" toId="5">
+</dataflow>
+<dataflow id="52" from="p_str" to="specinterface_ln0" fromId="19" toId="5">
+</dataflow>
+<dataflow id="53" from="StgValue_26" to="specinterface_ln0" fromId="26" toId="5">
+</dataflow>
+<dataflow id="54" from="StgValue_26" to="specinterface_ln0" fromId="26" toId="5">
+</dataflow>
+<dataflow id="55" from="StgValue_29" to="specinterface_ln0" fromId="29" toId="5">
+</dataflow>
+<dataflow id="56" from="StgValue_29" to="specinterface_ln0" fromId="29" toId="5">
+</dataflow>
+<dataflow id="57" from="p_str" to="specinterface_ln0" fromId="19" toId="5">
+</dataflow>
+<dataflow id="58" from="ScalarProp_str" to="specinterface_ln0" fromId="33" toId="5">
+</dataflow>
+<dataflow id="59" from="_ssdm_op_Write.ap_fifo.i17P0A" to="write_ln259" fromId="38" toId="6">
+</dataflow>
+<dataflow id="60" from="trunc_ln264_out1" to="write_ln259" fromId="10" toId="6">
+</dataflow>
+<dataflow id="61" from="trunc_ln264_read" to="write_ln259" fromId="3" toId="6">
+</dataflow>
+</dataflows>
+
+
+</stg>

@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_parent_loop_proc'
+================================================================
+* Date:           Thu Jun  2 15:26:24 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu28dr-ffvg1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  16.30 ns|  11.899 ns|     4.40 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |   Latency (cycles)  |   Latency (absolute)  |       Interval      | Pipeline|
+    |    min   |    max   |    min    |    max    |    min   |    max   |   Type  |
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |  25824004|  38208004|  0.421 sec|  0.623 sec|  25824004|  38208004|     none|
+    +----------+----------+-----------+-----------+----------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |                                   |                                |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+        |              Instance             |             Module             |   min   |   max   |    min   |    max   | min | max |   Type   |
+        +-----------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |dataflow_in_loop_lteCellSearch_U0  |dataflow_in_loop_lteCellSearch  |      271|      400|  4.417 us|  6.520 us|  269|  398|  dataflow|
+        +-----------------------------------+--------------------------------+---------+---------+----------+----------+-----+-----+----------+
+
+        * Loop: 
+        +-----------------+----------+----------+-----------+-----------+-----------+-------+----------+
+        |                 |   Latency (cycles)  | Iteration |  Initiation Interval  |  Trip |          |
+        |    Loop Name    |    min   |    max   |  Latency  |  achieved |   target  | Count | Pipelined|
+        +-----------------+----------+----------+-----------+-----------+-----------+-------+----------+
+        |- lteCellSearch  |  25824003|  38208003|  273 ~ 402|          -|          -|  96000|        no|
+        +-----------------+----------+----------+-----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|     240|      57|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |       16|    25|    3698|   22938|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      18|    -|
+|Register         |        -|     -|      34|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       16|    25|    3972|   23013|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2160|  4272|  850560|  425280|   80|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |       ~0|    ~0|      ~0|       5|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------+--------------------------------+---------+----+------+-------+-----+
+    |              Instance             |             Module             | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +-----------------------------------+--------------------------------+---------+----+------+-------+-----+
+    |dataflow_in_loop_lteCellSearch_U0  |dataflow_in_loop_lteCellSearch  |       16|  25|  3698|  22938|    0|
+    +-----------------------------------+--------------------------------+---------+----+------+-------+-----+
+    |Total                              |                                |       16|  25|  3698|  22938|    0|
+    +-----------------------------------+--------------------------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------+----------+----+----+----+------------+------------+
+    |        Variable Name       | Operation| DSP| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------+----------+----+----+----+------------+------------+
+    |loop_dataflow_input_count   |         +|   0|  80|  19|          17|           1|
+    |loop_dataflow_output_count  |         +|   0|  80|  19|          17|           1|
+    |bound_minus_1               |         -|   0|  80|  19|          17|           1|
+    +----------------------------+----------+----+----+----+------------+------------+
+    |Total                       |          |   0| 240|  57|          51|           3|
+    +----------------------------+----------+----+----+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |loop_dataflow_input_count   |   9|          2|   17|         34|
+    |loop_dataflow_output_count  |   9|          2|   17|         34|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  18|          4|   34|         68|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------+----+----+-----+-----------+
+    |            Name            | FF | LUT| Bits| Const Bits|
+    +----------------------------+----+----+-----+-----------+
+    |loop_dataflow_input_count   |  17|   0|   17|          0|
+    |loop_dataflow_output_count  |  17|   0|   17|          0|
+    +----------------------------+----+----+-----+-----------+
+    |Total                       |  34|   0|   34|          0|
+    +----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+---------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++------------------------+-----+-----+------------+---------------------------+--------------+
+|IN_real_V_address0      |  out|   17|   ap_memory|                  IN_real_V|         array|
+|IN_real_V_ce0           |  out|    1|   ap_memory|                  IN_real_V|         array|
+|IN_real_V_d0            |  out|   23|   ap_memory|                  IN_real_V|         array|
+|IN_real_V_q0            |   in|   23|   ap_memory|                  IN_real_V|         array|
+|IN_real_V_we0           |  out|    1|   ap_memory|                  IN_real_V|         array|
+|IN_real_V_address1      |  out|   17|   ap_memory|                  IN_real_V|         array|
+|IN_real_V_ce1           |  out|    1|   ap_memory|                  IN_real_V|         array|
+|IN_real_V_d1            |  out|   23|   ap_memory|                  IN_real_V|         array|
+|IN_real_V_q1            |   in|   23|   ap_memory|                  IN_real_V|         array|
+|IN_real_V_we1           |  out|    1|   ap_memory|                  IN_real_V|         array|
+|IN_imag_V_address0      |  out|   17|   ap_memory|                  IN_imag_V|         array|
+|IN_imag_V_ce0           |  out|    1|   ap_memory|                  IN_imag_V|         array|
+|IN_imag_V_d0            |  out|   23|   ap_memory|                  IN_imag_V|         array|
+|IN_imag_V_q0            |   in|   23|   ap_memory|                  IN_imag_V|         array|
+|IN_imag_V_we0           |  out|    1|   ap_memory|                  IN_imag_V|         array|
+|IN_imag_V_address1      |  out|   17|   ap_memory|                  IN_imag_V|         array|
+|IN_imag_V_ce1           |  out|    1|   ap_memory|                  IN_imag_V|         array|
+|IN_imag_V_d1            |  out|   23|   ap_memory|                  IN_imag_V|         array|
+|IN_imag_V_q1            |   in|   23|   ap_memory|                  IN_imag_V|         array|
+|IN_imag_V_we1           |  out|    1|   ap_memory|                  IN_imag_V|         array|
+|pss_id_temp             |  out|    2|      ap_vld|                pss_id_temp|       pointer|
+|pss_id_temp_ap_vld      |  out|    1|      ap_vld|                pss_id_temp|       pointer|
+|peak_id_temp            |  out|   17|      ap_vld|               peak_id_temp|       pointer|
+|peak_id_temp_ap_vld     |  out|    1|      ap_vld|               peak_id_temp|       pointer|
+|pss_rslt_temp_address0  |  out|   19|   ap_memory|              pss_rslt_temp|         array|
+|pss_rslt_temp_ce0       |  out|    1|   ap_memory|              pss_rslt_temp|         array|
+|pss_rslt_temp_d0        |  out|   12|   ap_memory|              pss_rslt_temp|         array|
+|pss_rslt_temp_q0        |   in|   12|   ap_memory|              pss_rslt_temp|         array|
+|pss_rslt_temp_we0       |  out|    1|   ap_memory|              pss_rslt_temp|         array|
+|pss_rslt_temp_address1  |  out|   19|   ap_memory|              pss_rslt_temp|         array|
+|pss_rslt_temp_ce1       |  out|    1|   ap_memory|              pss_rslt_temp|         array|
+|pss_rslt_temp_d1        |  out|   12|   ap_memory|              pss_rslt_temp|         array|
+|pss_rslt_temp_q1        |   in|   12|   ap_memory|              pss_rslt_temp|         array|
+|pss_rslt_temp_we1       |  out|    1|   ap_memory|              pss_rslt_temp|         array|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  dataflow_parent_loop_proc|  return value|
++------------------------+-----+-----+------------+---------------------------+--------------+
+
