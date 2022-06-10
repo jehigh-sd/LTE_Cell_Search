@@ -151,8 +151,19 @@ Click on below link to see the documentation on the Hardware configurations
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- Simulation -->
+<a id="Simulation"></a>
+
+## Simulation:
+
+Click on below link to see the documentation on the Hardware configurations
+* [MATLAB Simulation](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/SYSTEMS/Simulation)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- Test_Bench -->
 <a id="Test_Bench"></a>
+
 ## Test_Bench:
 
 Click on below link to see the documentation on the Test bench
