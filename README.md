@@ -173,7 +173,7 @@ Click on the link to see the simulation files used to verify calculations prior 
 
 Click on the links to see the documentation on the Test bench
 * [Test Bench Files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/TEST_BENCH)
-* [How To Enable TestBench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Test_Bench_Procedure.docx)
+* [How To Enable TestBench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Test_Bench_Procedure.pdf)
 * [TestBench ReadMe](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Readme.txt)
 * [Verification Using Test Bench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/Verification_Test_Bench.pdf)
 
