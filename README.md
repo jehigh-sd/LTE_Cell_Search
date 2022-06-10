@@ -42,6 +42,7 @@ This system will perform cell search, establishes timing, frequency synchronizat
 1. [Synchronization Signals (PSS and SSS)](#Synchronization_Signals)
 1. [Hardware](#Hardware)
 1. [IP Blocks](#IP_Blocks)
+1. [Simulation](#Simulation)
 1. [Test Bench](#Test_Bench)
 1. [Demo](#demo)
 1. [Contact](#contact)
