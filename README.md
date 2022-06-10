@@ -36,7 +36,7 @@ This system will perform cell search, establishes timing, frequency synchronizat
 
 1. [About The Project](#about-the-project)
 1. [Getting Started](#getting-started)
-	1. [RF SoC Details](#rf-soc-details)
+	1. [RFSoC Details](#rf-soc-details)
 	1. [Prerequisites](#prerequisites)
 	1. [Installation](#installation)
 1. [Synchronization Signals (PSS and SSS)](#Synchronization_Signals)
@@ -88,7 +88,7 @@ This section shows RF SoC Image, schematic and details.
 
 * [Image](http://www.pynq.io/board.html)
 * [Schematics](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
-* [User Manual](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
+* [User Manual](https://www.rfsoc-pynq.io/pdf/RFSoC_2x2_UG.pdf)
 * [Accessories](https://www.rfsoc-pynq.io/accessories.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
