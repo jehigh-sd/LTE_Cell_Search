@@ -138,7 +138,7 @@ Click on below link to see the demo presentation on the LTE Cell search
 <a id="Hardware"></a>
 ## Hardware:
 
-Click on below link to see the documentation on the Hardware used in this project
+Click on the link to see the documentation on the Board-Level Hardware
 * [LTE_Cell_Hardware_Information](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Hardware_Info.docx)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -147,7 +147,7 @@ Click on below link to see the documentation on the Hardware used in this projec
 <a id="IP_Blocks"></a>
 ## IP_Blocks:
 
-Click on below link to see the documentation on the Hardware configurations
+Click on the link to see the documentation on the Chip-Level Hardware IP Configuration
 * [LTE_Cell_Search_Hardware_Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Hardware_Description.pptx)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -157,7 +157,7 @@ Click on below link to see the documentation on the Hardware configurations
 
 ## Simulation:
 
-Click on below link to see the documentation on the Hardware configurations
+Click on the link to see the simulation files used to verify calculations prior to IP Block implementation
 * [MATLAB Simulation](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/SYSTEMS/Simulation)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -167,7 +167,7 @@ Click on below link to see the documentation on the Hardware configurations
 
 ## Test_Bench:
 
-Click on below link to see the documentation on the Test bench
+Click on the links to see the documentation on the Test bench
 * [Test_Bench_Files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/TEST_BENCH)
 * [How_To_Enable_TestBench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Test_Bench_Procedure.docx)
 * [TestBench_ReadMe](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Readme.txt)
