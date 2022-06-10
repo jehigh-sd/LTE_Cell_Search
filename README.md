@@ -66,7 +66,7 @@ LTE signal will be captured with SDR Radio hardware such as Xilinx Zynq-Based Ra
 
 The BCH is transmitted in the middle six resource blocks (RBs) of an LTE transmission, therefore a capture bandwidth of only 1.92 MHz is required to decode the MIB, regardless of the cell bandwidth. Only subframe #0 of a frame is required to decode the MIB
 
-![image](https://user-images.githubusercontent.com/77175120/171319703-b1458e3a-5ede-4891-a12f-7d03127a3fa8.png)
+![image](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/IMAGES/SystemBlockDiagram.jpg)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
