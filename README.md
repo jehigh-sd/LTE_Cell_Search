@@ -36,12 +36,13 @@ This system will perform cell search, establishes timing, frequency synchronizat
 
 1. [About The Project](#about-the-project)
 1. [Getting Started](#getting-started)
-	1. [RF SoC Details](#rf-soc-details)
+	1. [RFSoC Details](#rfsoc-details)
 	1. [Prerequisites](#prerequisites)
 	1. [Installation](#installation)
 1. [Synchronization Signals (PSS and SSS)](#Synchronization_Signals)
 1. [Hardware](#Hardware)
 1. [IP Blocks](#IP_Blocks)
+1. [Simulation](#Simulation)
 1. [Test Bench](#Test_Bench)
 1. [Demo](#demo)
 1. [Contact](#contact)
@@ -77,22 +78,24 @@ To get start with your RF Soc visit below page for instructions:
 
 	(https://www.rfsoc-pynq.io/getting_started.html)
 
+<!-- Prerequisites -->
 ### Prerequisites
 
 Matlab 2022a or above is recommened.
   
 <!-- RFSOC-DETAILS -->
-### RF SoC Details
+### RFSoC Details
 
 This section shows RF SoC Image, schematic and details.
 
 * [Image](http://www.pynq.io/board.html)
 * [Schematics](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
-* [User Manual](https://www.rfsoc-pynq.io/pdf/HTG-ZRF2-XUP_REV_11_Schematic_20Jan21.pdf)
+* [User Manual](https://www.rfsoc-pynq.io/pdf/RFSoC_2x2_UG.pdf)
 * [Accessories](https://www.rfsoc-pynq.io/accessories.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- Installation -->
 ### Installation
 
 For this project, you need to install Xilinx Vitis, Vivado and Matlab
@@ -118,8 +121,8 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
 ## Synchronization_Signals:
 
 Click on below link to see the documentation on the Synchronization_Signals
-* [LTE_Cell_Search_Thoery](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Thoery.docx)
-* [LTE_Cell_Search_3_Main_Components](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_3_Main_Components.pptx)
+* [LTE Cell Search Thoery](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Thoery.docx)
+* [LTE Cell Search 3 Main Components](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_3_Main_Components.pptx)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -128,7 +131,8 @@ Click on below link to see the documentation on the Synchronization_Signals
 ## Demo:
 Click on below link to see the demo presentation on the LTE Cell search
 
-* [LTE_Cell_Search_Project_Presentation](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/DOCUMENTATION/presentation)
+* [LTE Cell Search Project Presentation](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/DOCUMENTATION/presentation)
+* [Jupyter Notebook](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/NOTEBOOKS)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -136,8 +140,9 @@ Click on below link to see the demo presentation on the LTE Cell search
 <a id="Hardware"></a>
 ## Hardware:
 
-Click on below link to see the documentation on the Hardware used in this project
-* [LTE_Cell_Hardware_Information](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Hardware_Info.docx)
+Click on the links to see the documentation on the Board-Level Hardware
+* [LTE Cell Search Board-Level Hardware Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Hardware_Info.docx)
+* [Vivado Project](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/HARDWARE)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -145,19 +150,31 @@ Click on below link to see the documentation on the Hardware used in this projec
 <a id="IP_Blocks"></a>
 ## IP_Blocks:
 
-Click on below link to see the documentation on the Hardware configurations
-* [LTE_Cell_Search_Hardware_Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Hardware_Description.pptx)
+Click on the links to see the documentation on the Chip-Level Hardware IP Configuration
+* [LTE Cell Search Chip-Level Hardware Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Hardware_Description.pptx)
+* [Vitis HLS Projects](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/HARDWARE/hls_projects)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- Simulation -->
+<a id="Simulation"></a>
+
+## Simulation:
+
+Click on the link to see the simulation files used to verify calculations prior to IP Block implementation
+* [MATLAB Simulation](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/SYSTEMS/Simulation)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Test_Bench -->
 <a id="Test_Bench"></a>
+
 ## Test_Bench:
 
-Click on below link to see the documentation on the Test bench
-* [Test_Bench_Files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/TEST_BENCH)
-* [How_To_Enable_TestBench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Test_Bench_Procedure.docx)
-* [TestBench_ReadMe](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Readme.txt)
+Click on the links to see the documentation on the Test bench
+* [Test Bench Files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/TEST_BENCH)
+* [How To Enable TestBench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Test_Bench_Procedure.docx)
+* [TestBench ReadMe](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Readme.txt)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -167,6 +184,8 @@ Click on below link to see the documentation on the Test bench
 Jeff High - jehigh@ucsd.edu
 
 Project Link: https://github.com/jehigh-sd/LTE_Cell_Search
+
+Capstone Project [Academic Program](https://jacobsschool.ucsd.edu/mas/wes)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -178,7 +197,7 @@ Project Link: https://github.com/jehigh-sd/LTE_Cell_Search
 We would like acknowledge
 
 * [Vitis HLS Guide](https://pp4fpgas.readthedocs.io/en/latest/)
-* [Kastner Research Group] https://kastner.ucsd.edu/
+* [Kastner Research Group](https://kastner.ucsd.edu/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -191,10 +210,12 @@ We would like acknowledge
 * [3]https://github.com/Xilinx/RFSoC2x2-PYNQ.git
 * [4]https://github.com/strath-sdr/rfsoc_sam
 * [5]https://github.com/strath-sdr/rfsoc_ofdm
+
 * [6]https://www.mathworks.com/help/wireless-hdl/ug/lte-hdl-cell-search.html 
 * [7]https://www.mathworks.com/help/lte/ug/synchronization-signals-pss-and-sss.html
 * [8]https://ieeexplore.ieee.org/document/599949
 * [9]https://www.mathworks.com/help/lte/ug/cell-search-mib-and-sib1-recovery.html
-* [10]https://www.sharetechnote.com/html/FrameStructure_DL.html#Overview
+* [10]https://www.mathworks.com/help/supportpkg/xilinxzynqbasedradio/ug/LTE-MIB-Recovery-Using-Analog-Devices-AD9361-AD9364.html
+* [11]https://www.sharetechnote.com/html/FrameStructure_DL.html#Overview
 
 <p align="right">(<a href="#top">back to top</a>)</p>
