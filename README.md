@@ -121,8 +121,8 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
 ## Synchronization_Signals:
 
 Click on below link to see the documentation on the Synchronization_Signals
-* [LTE Cell Search Thoery](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Thoery.docx)
-* [LTE Cell Search 3 Main Components](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_3_Main_Components.pptx)
+* [LTE Cell Search Thoery](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Thoery.pdf)
+* [LTE Cell Search 3 Main Components](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_3_Main_Components.pdf)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -141,7 +141,7 @@ Click on below link to see the demo presentation on the LTE Cell search
 ## Hardware:
 
 Click on the links to see the documentation on the Board-Level Hardware
-* [LTE Cell Search Board-Level Hardware Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Hardware_Info.docx)
+* [LTE Cell Search Board-Level Hardware Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Board-Level_Hardware.pdf)
 * [Vivado Project](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/HARDWARE)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -151,7 +151,7 @@ Click on the links to see the documentation on the Board-Level Hardware
 ## IP_Blocks:
 
 Click on the links to see the documentation on the Chip-Level Hardware IP Configuration
-* [LTE Cell Search Chip-Level Hardware Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Hardware_Description.pptx)
+* [LTE Cell Search Chip-Level Hardware Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Chip-Level_Hardware.pdf)
 * [Vitis HLS Projects](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/HARDWARE/hls_projects)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -175,6 +175,7 @@ Click on the links to see the documentation on the Test bench
 * [Test Bench Files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/TEST_BENCH)
 * [How To Enable TestBench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Test_Bench_Procedure.docx)
 * [TestBench ReadMe](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Readme.txt)
+* [Verification Using Test Bench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/Verification_Test_Bench.pdf)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
