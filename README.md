@@ -82,7 +82,7 @@ To get start with your RF Soc visit below page for instructions:
 Matlab 2022a or above is recommened.
   
 <!-- RFSOC-DETAILS -->
-### RF SoC Details
+### RFSoC Details
 
 This section shows RF SoC Image, schematic and details.
 
