@@ -169,6 +169,8 @@ Jeff High - jehigh@ucsd.edu
 
 Project Link: https://github.com/jehigh-sd/LTE_Cell_Search
 
+Capstone Project [Academic Program](https://jacobsschool.ucsd.edu/mas/wes)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
