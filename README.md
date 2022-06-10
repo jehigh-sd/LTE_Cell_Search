@@ -142,6 +142,7 @@ Click on below link to see the demo presentation on the LTE Cell search
 
 Click on the link to see the documentation on the Board-Level Hardware
 * [LTE Cell Search Board-Level Hardware Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Hardware_Info.docx)
+* [Vivado Project](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/HARDWARE)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -151,6 +152,7 @@ Click on the link to see the documentation on the Board-Level Hardware
 
 Click on the link to see the documentation on the Chip-Level Hardware IP Configuration
 * [LTE Cell Search Chip-Level Hardware Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Hardware_Description.pptx)
+* [Vitis HLS Projects](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/HARDWARE/hls_projects)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
