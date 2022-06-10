@@ -36,7 +36,7 @@ This system will perform cell search, establishes timing, frequency synchronizat
 
 1. [About The Project](#about-the-project)
 1. [Getting Started](#getting-started)
-	1. [RFSoC Details](#rf-soc-details)
+	1. [RFSoC Details](#rfsoc-details)
 	1. [Prerequisites](#prerequisites)
 	1. [Installation](#installation)
 1. [Synchronization Signals (PSS and SSS)](#Synchronization_Signals)
@@ -78,6 +78,7 @@ To get start with your RF Soc visit below page for instructions:
 
 	(https://www.rfsoc-pynq.io/getting_started.html)
 
+<!-- Prerequisites -->
 ### Prerequisites
 
 Matlab 2022a or above is recommened.
@@ -94,6 +95,7 @@ This section shows RF SoC Image, schematic and details.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- Installation -->
 ### Installation
 
 For this project, you need to install Xilinx Vitis, Vivado and Matlab
@@ -119,8 +121,8 @@ For this project, you need to install Xilinx Vitis, Vivado and Matlab
 ## Synchronization_Signals:
 
 Click on below link to see the documentation on the Synchronization_Signals
-* [LTE_Cell_Search_Thoery](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Thoery.docx)
-* [LTE_Cell_Search_3_Main_Components](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_3_Main_Components.pptx)
+* [LTE Cell Search Thoery](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Thoery.docx)
+* [LTE Cell Search 3 Main Components](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_3_Main_Components.pptx)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -129,7 +131,7 @@ Click on below link to see the documentation on the Synchronization_Signals
 ## Demo:
 Click on below link to see the demo presentation on the LTE Cell search
 
-* [LTE_Cell_Search_Project_Presentation](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/DOCUMENTATION/presentation)
+* [LTE Cell Search Project Presentation](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/DOCUMENTATION/presentation)
 * [Jupyter Notebook](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/NOTEBOOKS)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -139,7 +141,7 @@ Click on below link to see the demo presentation on the LTE Cell search
 ## Hardware:
 
 Click on the link to see the documentation on the Board-Level Hardware
-* [LTE_Cell_Hardware_Information](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Hardware_Info.docx)
+* [LTE Cell Search Board-Level Hardware Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Hardware_Info.docx)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -148,7 +150,7 @@ Click on the link to see the documentation on the Board-Level Hardware
 ## IP_Blocks:
 
 Click on the link to see the documentation on the Chip-Level Hardware IP Configuration
-* [LTE_Cell_Search_Hardware_Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Hardware_Description.pptx)
+* [LTE Cell Search Chip-Level Hardware Description](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/LTE_Cell_Search_Hardware_Description.pptx)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -168,9 +170,9 @@ Click on the link to see the simulation files used to verify calculations prior 
 ## Test_Bench:
 
 Click on the links to see the documentation on the Test bench
-* [Test_Bench_Files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/TEST_BENCH)
-* [How_To_Enable_TestBench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Test_Bench_Procedure.docx)
-* [TestBench_ReadMe](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Readme.txt)
+* [Test Bench Files](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/TEST_BENCH)
+* [How To Enable TestBench](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Test_Bench_Procedure.docx)
+* [TestBench ReadMe](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/TEST_BENCH/Readme.txt)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
