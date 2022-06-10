@@ -179,7 +179,7 @@ Project Link: https://github.com/jehigh-sd/LTE_Cell_Search
 We would like acknowledge
 
 * [Vitis HLS Guide](https://pp4fpgas.readthedocs.io/en/latest/)
-* [Kastner Research Group] https://kastner.ucsd.edu/
+* [Kastner Research Group](https://kastner.ucsd.edu/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
