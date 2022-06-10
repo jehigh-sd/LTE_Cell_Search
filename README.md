@@ -194,10 +194,12 @@ We would like acknowledge
 * [3]https://github.com/Xilinx/RFSoC2x2-PYNQ.git
 * [4]https://github.com/strath-sdr/rfsoc_sam
 * [5]https://github.com/strath-sdr/rfsoc_ofdm
+
 * [6]https://www.mathworks.com/help/wireless-hdl/ug/lte-hdl-cell-search.html 
 * [7]https://www.mathworks.com/help/lte/ug/synchronization-signals-pss-and-sss.html
 * [8]https://ieeexplore.ieee.org/document/599949
 * [9]https://www.mathworks.com/help/lte/ug/cell-search-mib-and-sib1-recovery.html
-* [10]https://www.sharetechnote.com/html/FrameStructure_DL.html#Overview
+* [10]https://www.mathworks.com/help/supportpkg/xilinxzynqbasedradio/ug/LTE-MIB-Recovery-Using-Analog-Devices-AD9361-AD9364.html
+* [11]https://www.sharetechnote.com/html/FrameStructure_DL.html#Overview
 
 <p align="right">(<a href="#top">back to top</a>)</p>
