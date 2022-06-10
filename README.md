@@ -131,8 +131,8 @@ Click on below link to see the documentation on the Synchronization_Signals
 ## Demo:
 Click on below link to see the demo presentation on the LTE Cell search
 
-* [LTE Cell Search Project Presentation](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/DOCUMENTATION/presentation)
-* [Jupyter Notebook](https://github.com/jehigh-sd/LTE_Cell_Search/tree/main/NOTEBOOKS)
+* [LTE Cell Search Project Presentation](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/DOCUMENTATION/presentation/LTE_Cell_Search_presentation.pdf)
+* [Jupyter Notebook](https://github.com/jehigh-sd/LTE_Cell_Search/blob/main/NOTEBOOKS/lteCellSearch.ipynb)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
